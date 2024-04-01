@@ -163,15 +163,15 @@ body {
 }
 
 .button:after {
-    background-color: #5D00FF;
+    background-color: #8e5bf5;
 }
 
 .button:before {
-    background-color: #FF1731;
+    background-color: #6249a7;
 }
 
 .button:hover {
-    background-color: #FFF65B;
+    background-color: #162ba1;
     transition: background 0.3s 0.1s;
     transform: scale(1.05);
 }

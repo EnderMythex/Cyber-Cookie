@@ -308,5 +308,5 @@ cookie.addEventListener('click', function () {
 window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
+  src="googletagmanager.com/gtag/js?id=G-WFEWHP2MJX"
   gtag('config', 'G-WFEWHP2MJX');
