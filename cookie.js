@@ -270,7 +270,7 @@ cookie.addEventListener('click', function () {
   }, 2000);
 
   document.addEventListener('keydown', function(event) {
-    if (event.ctrlKey && event.shiftKey && event.key === '*') {
+    if (event.ctrlKey && event.shiftKey && event.key === '+') {
         count += 1000000; // Ajoute 1 million au compteur de cookies
         display.textContent = count.toLocaleString('fr-FR'); // Met à jour l'affichage
         saveToCookies(); // Sauvegarde la nouvelle valeur dans les cookies
