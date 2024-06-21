@@ -21,8 +21,8 @@ Last Update (V1.5.0) :
 - Reflect Added only in full screen ( rtx mode :D )
 
 Bugs Patched : 
-#1 System Issue Patched (spam main cookie button save)
-#2 Visual Issue Patched (cookies effects is now in the window)
+- #1 System Issue Patched (spam main cookie button save)
+- #2 Visual Issue Patched (cookies effects is now in the window)
   
 -----------------------------------------------------------------------------------------------
 
