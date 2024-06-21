@@ -37,7 +37,17 @@ div {
     background-size: cover;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
+    position: relative;
+    box-shadow: 0 0 8px #ffffffc5; /* Ombre autour de l'image */
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.3)); /* Effet de réflexion */
 }
+
+/*
+.container img:hover {
+    box-shadow: 0 0 15px #fffd;
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.5));
+}
+*/
 
 /* --------------------------------------------------------------------------
 

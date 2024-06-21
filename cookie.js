@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', function () {
   var theme1Purchased = false;
   var theme2Purchased = false;
   var theme3Purchased = false;
+  var theme4Purchased = false;
+  var theme5Purchased = false;
+  var theme6Purchased = false;
   var currentTheme = '';
   var settings = document.getElementById('settings');
   var confirmationDialog = document.getElementById('confirmationDialog');
@@ -82,9 +85,17 @@ cookie.addEventListener('click', function () {
 
   // Charger le score et les autoclickers sauvegardés
   function loadFromCookies() {
+    const secretKey = '@ender1469';
     const cookies = document.cookie.split('; ').reduce((acc, cookie) => {
-        const [key, value] = cookie.split('=');
-        acc[key] = value;
+        const [key, encryptedValue] = cookie.split('=');
+        try {
+            const decryptedValue = CryptoJS.AES.decrypt(encryptedValue, secretKey).toString(CryptoJS.enc.Utf8);
+            if (decryptedValue) { // Vérifiez si la valeur décryptée est non vide
+                acc[key] = decryptedValue;
+            }
+        } catch (e) {
+            console.error('Erreur de décryptage pour la clé:', key, 'avec erreur:', e.message);
+        }
         return acc;
     }, {});
 
@@ -96,6 +107,9 @@ cookie.addEventListener('click', function () {
     theme1Purchased = cookies.theme1Purchased === 'true';
     theme2Purchased = cookies.theme2Purchased === 'true';
     theme3Purchased = cookies.theme3Purchased === 'true';
+    theme4Purchased = cookies.theme4Purchased === 'true';
+    theme5Purchased = cookies.theme5Purchased === 'true';
+    theme6Purchased = cookies.theme6Purchased === 'true';
 
     display.textContent = count.toLocaleString('fr-FR');
     autoclickerDisplay.textContent = autoclickers;
@@ -107,14 +121,18 @@ cookie.addEventListener('click', function () {
   loadFromCookies();
 
   function saveToCookies() {
-    document.cookie = `score=${count};path=/;max-age=31536000`;
-    document.cookie = `autoclickers=${autoclickers};path=/;max-age=31536000`;
-    document.cookie = `powerfulAutoclickers=${powerfulAutoclickers};path=/;max-age=31536000`;
-    document.cookie = `superPowerfulAutoclickers=${superPowerfulAutoclickers};path=/;max-age=31536000`;
-    document.cookie = `ultraPowerfulAutoclickers=${ultraPowerfulAutoclickers};path=/;max-age=31536000`;
-    document.cookie = `theme1Purchased=${theme1Purchased};path=/;max-age=31536000`;
-    document.cookie = `theme2Purchased=${theme2Purchased};path=/;max-age=31536000`;
-    document.cookie = `theme3Purchased=${theme3Purchased};path=/;max-age=31536000`;
+    const secretKey = '@ender1469'; // Utilisez une clé secrète robuste
+    document.cookie = `score=${CryptoJS.AES.encrypt(count.toString(), secretKey)};path=/;max-age=2147483647;secure`;
+    document.cookie = `autoclickers=${CryptoJS.AES.encrypt(autoclickers.toString(), secretKey)};path=/;max-age=2147483647;secure`;
+    document.cookie = `powerfulAutoclickers=${CryptoJS.AES.encrypt(powerfulAutoclickers.toString(), secretKey)};path=/;max-age=2147483647;secure`;
+    document.cookie = `superPowerfulAutoclickers=${CryptoJS.AES.encrypt(superPowerfulAutoclickers.toString(), secretKey)};path=/;max-age=2147483647;secure`;
+    document.cookie = `ultraPowerfulAutoclickers=${CryptoJS.AES.encrypt(ultraPowerfulAutoclickers.toString(), secretKey)};path=/;max-age=2147483647;secure`;
+    document.cookie = `theme1Purchased=${CryptoJS.AES.encrypt(theme1Purchased.toString(), secretKey)};path=/;max-age=2147483647;secure`;
+    document.cookie = `theme2Purchased=${CryptoJS.AES.encrypt(theme2Purchased.toString(), secretKey)};path=/;max-age=2147483647;secure`;
+    document.cookie = `theme3Purchased=${CryptoJS.AES.encrypt(theme3Purchased.toString(), secretKey)};path=/;max-age=2147483647;secure`;
+    document.cookie = `theme4Purchased=${CryptoJS.AES.encrypt(theme4Purchased.toString(), secretKey)};path=/;max-age=2147483647;secure`;
+    document.cookie = `theme5Purchased=${CryptoJS.AES.encrypt(theme5Purchased.toString(), secretKey)};path=/;max-age=2147483647;secure`;
+    document.cookie = `theme6Purchased=${CryptoJS.AES.encrypt(theme6Purchased.toString(), secretKey)};path=/;max-age=2147483647;secure`;
     console.log('Game Saved | Data saved in cookies');
     console.log(document.cookie);
   }
@@ -160,8 +178,8 @@ cookie.addEventListener('click', function () {
   });
 
   buyUltraPowerful.addEventListener('click', function () {
-    if(count >= 1750) {
-      count -= 1750;
+    if(count >= 1700) {
+      count -= 1700;
       ultraPowerfulAutoclickers++;
       display.textContent = count.toLocaleString('fr-FR');
       ultraPowerfulAutoclickerDisplay.textContent = ultraPowerfulAutoclickers;
@@ -228,6 +246,60 @@ cookie.addEventListener('click', function () {
     }
   });
 
+  buytheme4.addEventListener('click', function () {
+    if(count >= 120000 && !theme4Purchased) {
+      count -= 120000;
+      theme4Purchased = true;
+      display.textContent = count.toLocaleString('fr-FR');
+  
+      // Changer le texte du bouton
+      buytheme4.textContent = "Theme 3 (0)";
+  
+      saveToCookies();
+    } else if (theme4Purchased) {
+      // Si le thème 4 a déjà été acheté, l'utilisateur peut toujours l'équiper
+      document.querySelector('.container').style.backgroundImage = "url('./pictures/background_4.gif')";
+      document.querySelector('.container').style.backgroundSize = "cover";
+      currentTheme = 'theme4'; // Ajoutez cette ligne
+    }
+  });
+
+  buytheme5.addEventListener('click', function () {
+    if(count >= 670000 && !theme5Purchased) {
+      count -= 670000;
+      theme5Purchased = true;
+      display.textContent = count.toLocaleString('fr-FR');
+  
+      // Changer le texte du bouton
+      buytheme5.textContent = "Theme 4 (0)";
+  
+      saveToCookies();
+    } else if (theme5Purchased) {
+      // Si le thème 5 a déjà été acheté, l'utilisateur peut toujours l'équiper
+      document.querySelector('.container').style.backgroundImage = "url('./pictures/background_5.gif')";
+      document.querySelector('.container').style.backgroundSize = "cover";
+      currentTheme = 'theme5'; // Ajoutez cette ligne
+    }
+  });
+
+  buytheme6.addEventListener('click', function () {
+    if(count >= 1300000 && !theme6Purchased) {
+      count -= 1300000;
+      theme6Purchased = true;
+      display.textContent = count.toLocaleString('fr-FR');
+  
+      // Changer le texte du bouton
+      buytheme6.textContent = "Theme 5 (0)";
+  
+      saveToCookies();
+    } else if (theme6Purchased) {
+      // Si le thème 6 a déjà été acheté, l'utilisateur peut toujours l'équiper
+      document.querySelector('.container').style.backgroundImage = "url('./pictures/background_6.gif')";
+      document.querySelector('.container').style.backgroundSize = "cover";
+      currentTheme = 'theme6'; // Ajoutez cette ligne
+    }
+  });
+
   reset.addEventListener('click', function () {
     confirmationDialog.style.display = 'block';
   });
@@ -248,6 +320,9 @@ cookie.addEventListener('click', function () {
     theme1Purchased = false;
     theme2Purchased = false;
     theme3Purchased = false;
+    theme4Purchased = false;
+    theme5Purchased = false;
+    theme6Purchased = false;
     document.querySelector('.container').style.backgroundImage = ""; // Réinitialiser le fond d'écran
 
     saveToCookies();
@@ -276,7 +351,11 @@ cookie.addEventListener('click', function () {
         saveToCookies(); // Sauvegarde la nouvelle valeur dans les cookies
     }
 });
-});
+
+  // Désactiver le clic droit sur toute la page
+  document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+  });
 
 //Google Analytics
 window.dataLayer = window.dataLayer || [];
@@ -284,3 +363,4 @@ window.dataLayer = window.dataLayer || [];
   gtag('js', new Date());
   src="googletagmanager.com/gtag/js?id=G-WFEWHP2MJX"
   gtag('config', 'G-WFEWHP2MJX');
+});
