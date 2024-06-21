@@ -1,7 +1,9 @@
 # Cyber-Cookie
 OFFICIAL "Cyber Cookie" REPOSITORY
 
-https://chromewebstore.google.com/detail/cyber-cookie/kbjidhhmcehbnejmdpgfhnaipenoinjb?hl=en
+OFFICIAL RELASE : https://chromewebstore.google.com/detail/cyber-cookie/kbjidhhmcehbnejmdpgfhnaipenoinjb?hl=en
+
+BETA PROGRAM : https://endermythex.github.io/Cyber-Cookie/index.html#top
 
 -----------------------------------------------------------------------------------------------
 
