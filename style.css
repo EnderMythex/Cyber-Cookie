@@ -40,6 +40,7 @@ div {
     position: relative;
     box-shadow: 0 0 8px #ffffffc5; /* Ombre autour de l'image */
     -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.3)); /* Effet de réflexion */
+    z-index: 0;
 }
 
 /*
@@ -136,10 +137,21 @@ div {
 
    -------------------------------------------------------------------------- */
 
-   .settings {
+.settings {
     float: right;
     margin-right: 10px;
- }
+}
+
+/* --------------------------------------------------------------------------
+
+                            FullScreen button
+
+   -------------------------------------------------------------------------- */
+
+.extension {
+    float: left;
+    margin-left: 10px;
+}
 
 /* --------------------------------------------------------------------------
 

@@ -29,6 +29,17 @@ document.addEventListener('DOMContentLoaded', function () {
   var confirmYes = document.getElementById('confirmYes');
   var confirmNo = document.getElementById('confirmNo');
 
+  var autoclickerCost = 15;
+  var powerfulAutoclickerCost = 70;
+  var superPowerfulAutoclickerCost = 350;
+  var ultraPowerfulAutoclickerCost = 1700;
+
+/* --------------------------------------------------------------------------
+
+                              Generate mini cookies 
+
+   -------------------------------------------------------------------------- */
+
   function generateMiniCookie() {
     var miniCookie = document.createElement('div');
     miniCookie.className = 'mini-cookie';
@@ -46,6 +57,12 @@ cookie.addEventListener('click', function () {
     generateMiniCookie();
 });
 
+/* --------------------------------------------------------------------------
+
+                                Shop Affichage 
+
+   -------------------------------------------------------------------------- */
+
   shop.addEventListener('click', function () {
     if (shopOptions.style.display === "none") {
       shopOptions.style.display = "block";
@@ -53,6 +70,7 @@ cookie.addEventListener('click', function () {
       reset.style.display = 'none'; 
       discord.style.display = 'none';
       settings.style.display = 'none';
+      extension.style.display = 'none';
       theme.style.display = 'none';
     } else {
       shopOptions.style.display = "none";
@@ -60,9 +78,16 @@ cookie.addEventListener('click', function () {
       reset.style.display = 'block'; 
       discord.style.display = 'block';
       settings.style.display = 'block';
+      extension.style.display = 'block';
       theme.style.display = 'block';
     }
   });
+
+/* --------------------------------------------------------------------------
+
+                                Theme Affichage 
+
+   -------------------------------------------------------------------------- */
 
   theme.addEventListener('click', function () {
     if (themeOptions.style.display === "none") {
@@ -72,6 +97,7 @@ cookie.addEventListener('click', function () {
       reset.style.display = 'none'; 
       discord.style.display = 'none';
       settings.style.display = 'none';
+      extension.style.display = 'none';
       shop.style.display = 'none';
     } else {
       themeOptions.style.display = "none";
@@ -79,11 +105,17 @@ cookie.addEventListener('click', function () {
       reset.style.display = 'block'; 
       discord.style.display = 'block';
       settings.style.display = 'block';
+      extension.style.display = 'block';
       shop.style.display = 'block';
     }
   });
 
-  // Charger le score et les autoclickers sauvegardés
+/* --------------------------------------------------------------------------
+
+                                Load an crypts cookies 
+
+   -------------------------------------------------------------------------- */
+
   function loadFromCookies() {
     const secretKey = '@ender1469';
     const cookies = document.cookie.split('; ').reduce((acc, cookie) => {
@@ -120,6 +152,12 @@ cookie.addEventListener('click', function () {
 
   loadFromCookies();
 
+/* --------------------------------------------------------------------------
+
+                                Save in Cookies 
+
+   -------------------------------------------------------------------------- */
+
   function saveToCookies() {
     const secretKey = '@ender1469'; // Utilisez une clé secrète robuste
     document.cookie = `score=${CryptoJS.AES.encrypt(count.toString(), secretKey)};path=/;max-age=2147483647;secure`;
@@ -133,9 +171,44 @@ cookie.addEventListener('click', function () {
     document.cookie = `theme4Purchased=${CryptoJS.AES.encrypt(theme4Purchased.toString(), secretKey)};path=/;max-age=2147483647;secure`;
     document.cookie = `theme5Purchased=${CryptoJS.AES.encrypt(theme5Purchased.toString(), secretKey)};path=/;max-age=2147483647;secure`;
     document.cookie = `theme6Purchased=${CryptoJS.AES.encrypt(theme6Purchased.toString(), secretKey)};path=/;max-age=2147483647;secure`;
+    document.cookie = `autoclickerCost=${CryptoJS.AES.encrypt(autoclickerCost.toString(), secretKey)};path=/;max-age=2147483647;secure`; // Ajouté
+    document.cookie = `powerfulAutoclickerCost=${CryptoJS.AES.encrypt(powerfulAutoclickerCost.toString(), secretKey)};path=/;max-age=2147483647;secure`; // Ajouté
+    document.cookie = `superPowerfulAutoclickerCost=${CryptoJS.AES.encrypt(superPowerfulAutoclickerCost.toString(), secretKey)};path=/;max-age=2147483647;secure`; // Ajouté
+    document.cookie = `ultraPowerfulAutoclickerCost=${CryptoJS.AES.encrypt(ultraPowerfulAutoclickerCost.toString(), secretKey)};path=/;max-age=2147483647;secure`; // Ajouté
     console.log('Game Saved | Data saved in cookies');
     console.log(document.cookie);
-  }
+}
+
+/* --------------------------------------------------------------------------
+
+                              1K / 1M / 1B Simple 
+
+   -------------------------------------------------------------------------- */
+
+  function formatCost(cost) {
+    if (cost >= 1000000000) {
+      return (cost / 1000000000).toFixed(1) + 'B';
+    } else if (cost >= 1000000) {
+        return (cost / 1000000).toFixed(1) + 'M';
+    } else if (cost >= 1000) {
+        return (cost / 1000).toFixed(1) + 'K';
+    } else {
+        return cost;
+    }
+}
+
+function updateAutoclickerCosts() {
+    document.getElementById('buy').textContent = `Autoclicks Lv1 (${formatCost(autoclickerCost)})`;
+    document.getElementById('buyPowerful').textContent = `Autoclicks Lv2 (${formatCost(powerfulAutoclickerCost)})`;
+    document.getElementById('buySuperPowerful').textContent = `Autoclicks Lv3 (${formatCost(superPowerfulAutoclickerCost)})`;
+    document.getElementById('buyUltraPowerful').textContent = `Autoclicks Lv4 (${formatCost(ultraPowerfulAutoclickerCost)})`;
+}
+
+/* --------------------------------------------------------------------------
+
+                                Main cookie click 
+
+   -------------------------------------------------------------------------- */
 
   cookie.addEventListener('click', function () {
     count++;
@@ -144,49 +217,83 @@ cookie.addEventListener('click', function () {
     saveToCookies();
   });
 
-  buy.addEventListener('click', function () {
-    if(count >= 15) {
-      count -= 15;
-      autoclickers++;
-      display.textContent = count.toLocaleString('fr-FR');
-      autoclickerDisplay.textContent = autoclickers;
+/* --------------------------------------------------------------------------
 
-      saveToCookies();
+                                Autoclicker 1 
+
+   -------------------------------------------------------------------------- */
+
+  buy.addEventListener('click', function () {
+    if(count >= autoclickerCost) {
+        count -= autoclickerCost;
+        autoclickers++;
+        autoclickerCost *= 2; // Multiplie le coût par 2
+        display.textContent = count.toLocaleString('fr-FR');
+        autoclickerDisplay.textContent = autoclickers;
+        updateAutoclickerCosts(); // Met à jour le texte du bouton
+        saveToCookies(); // Ajouté pour sauvegarder les coûts mis à jour
     }
 });
 
-  buyPowerful.addEventListener('click', function () {
-    if(count >= 70) {
-      count -= 70;
-      powerfulAutoclickers++;
-      display.textContent = count.toLocaleString('fr-FR');
-      powerfulAutoclickerDisplay.textContent = powerfulAutoclickers;
+/* --------------------------------------------------------------------------
 
-      saveToCookies();
+                                Autoclicker 2 
+
+   -------------------------------------------------------------------------- */
+
+buyPowerful.addEventListener('click', function () {
+    if(count >= powerfulAutoclickerCost) {
+        count -= powerfulAutoclickerCost;
+        powerfulAutoclickers++;
+        powerfulAutoclickerCost *= 2; // Multiplie le coût par 2
+        display.textContent = count.toLocaleString('fr-FR');
+        powerfulAutoclickerDisplay.textContent = powerfulAutoclickers;
+        updateAutoclickerCosts(); // Met à jour le texte du bouton
+        saveToCookies(); // Ajouté pour sauvegarder les coûts mis à jour
     }
-  });
+});
 
-  buySuperPowerful.addEventListener('click', function () {
-    if(count >= 350) {
-      count -= 350;
-      superPowerfulAutoclickers++;
-      display.textContent = count.toLocaleString('fr-FR');
-      superPowerfulAutoclickerDisplay.textContent = superPowerfulAutoclickers;
+/* --------------------------------------------------------------------------
 
-      saveToCookies();
+                                Autoclicker 3 
+
+   -------------------------------------------------------------------------- */
+
+buySuperPowerful.addEventListener('click', function () {
+    if(count >= superPowerfulAutoclickerCost) {
+        count -= superPowerfulAutoclickerCost;
+        superPowerfulAutoclickers++;
+        superPowerfulAutoclickerCost *= 2; // Multiplie le coût par 2
+        display.textContent = count.toLocaleString('fr-FR');
+        superPowerfulAutoclickerDisplay.textContent = superPowerfulAutoclickers;
+        updateAutoclickerCosts(); // Met à jour le texte du bouton
+        saveToCookies(); // Ajouté pour sauvegarder les coûts mis à jour
     }
-  });
+});
 
-  buyUltraPowerful.addEventListener('click', function () {
-    if(count >= 1700) {
-      count -= 1700;
-      ultraPowerfulAutoclickers++;
-      display.textContent = count.toLocaleString('fr-FR');
-      ultraPowerfulAutoclickerDisplay.textContent = ultraPowerfulAutoclickers;
+/* --------------------------------------------------------------------------
 
-      saveToCookies();
+                                Autoclicker 4 
+
+   -------------------------------------------------------------------------- */
+
+buyUltraPowerful.addEventListener('click', function () {
+    if(count >= ultraPowerfulAutoclickerCost) {
+        count -= ultraPowerfulAutoclickerCost;
+        ultraPowerfulAutoclickers++;
+        ultraPowerfulAutoclickerCost *= 2; // Multiplie le coût par 2
+        display.textContent = count.toLocaleString('fr-FR');
+        ultraPowerfulAutoclickerDisplay.textContent = ultraPowerfulAutoclickers;
+        updateAutoclickerCosts(); // Met à jour le texte du bouton
+        saveToCookies(); // Ajouté pour sauvegarder les coûts mis à jour
     }
-  });
+});
+
+/* --------------------------------------------------------------------------
+
+                                Theme 0 
+
+   -------------------------------------------------------------------------- */
 
   buytheme1.addEventListener('click', function () {
     if(count >= 0.5 && !theme1Purchased) {
@@ -210,6 +317,12 @@ cookie.addEventListener('click', function () {
     }
   });
   
+/* --------------------------------------------------------------------------
+
+                                Theme 1 
+
+   -------------------------------------------------------------------------- */
+
   buytheme2.addEventListener('click', function () {
     if(count >= 7000 && !theme2Purchased) {
       count -= 7000;
@@ -227,6 +340,12 @@ cookie.addEventListener('click', function () {
       currentTheme = 'theme2'; // Ajoutez cette ligne
     }
   });
+
+/* --------------------------------------------------------------------------
+
+                                Theme 2 
+
+   -------------------------------------------------------------------------- */
 
   buytheme3.addEventListener('click', function () {
     if(count >= 16000 && !theme3Purchased) {
@@ -246,6 +365,12 @@ cookie.addEventListener('click', function () {
     }
   });
 
+/* --------------------------------------------------------------------------
+
+                                Theme 3 
+
+   -------------------------------------------------------------------------- */
+
   buytheme4.addEventListener('click', function () {
     if(count >= 120000 && !theme4Purchased) {
       count -= 120000;
@@ -263,6 +388,12 @@ cookie.addEventListener('click', function () {
       currentTheme = 'theme4'; // Ajoutez cette ligne
     }
   });
+
+/* --------------------------------------------------------------------------
+
+                                Theme 4 
+
+   -------------------------------------------------------------------------- */
 
   buytheme5.addEventListener('click', function () {
     if(count >= 670000 && !theme5Purchased) {
@@ -282,6 +413,12 @@ cookie.addEventListener('click', function () {
     }
   });
 
+/* --------------------------------------------------------------------------
+
+                                Theme 5 
+
+   -------------------------------------------------------------------------- */
+
   buytheme6.addEventListener('click', function () {
     if(count >= 1300000 && !theme6Purchased) {
       count -= 1300000;
@@ -299,6 +436,12 @@ cookie.addEventListener('click', function () {
       currentTheme = 'theme6'; // Ajoutez cette ligne
     }
   });
+
+/* --------------------------------------------------------------------------
+
+                                Reset confirmations 
+
+   -------------------------------------------------------------------------- */
 
   reset.addEventListener('click', function () {
     confirmationDialog.style.display = 'block';
@@ -334,33 +477,73 @@ cookie.addEventListener('click', function () {
     confirmationDialog.style.display = 'none';
   });
 
-  // Autoclicker
+/* --------------------------------------------------------------------------
+
+                                Autoclicker give 
+
+   -------------------------------------------------------------------------- */
+
   setInterval(function() {
     if(autoclickers > 0 || powerfulAutoclickers > 0 || powerfulAutoclickers > 0 || superPowerfulAutoclickers > 0 || ultraPowerfulAutoclickers > 0) {
-      count += (0.5 * autoclickers) + (2.7 * powerfulAutoclickers) + (10 * superPowerfulAutoclickers) + (50 * ultraPowerfulAutoclickers);
+      count += (0.5 * autoclickers) + (10 * powerfulAutoclickers) + (70 * superPowerfulAutoclickers) + (500 * ultraPowerfulAutoclickers);
       display.textContent = count.toLocaleString('fr-FR');
 
       saveToCookies();
     }
   }, 2000);
 
+/* --------------------------------------------------------------------------
+
+                                Admin Cookies give
+
+   -------------------------------------------------------------------------- */
+
   document.addEventListener('keydown', function(event) {
     if (event.ctrlKey && event.shiftKey && event.key === '+') {
-        count += 1000000; // Ajoute 1 million au compteur de cookies
+        count += 1000000000; // Ajoute 1 million au compteur de cookies
         display.textContent = count.toLocaleString('fr-FR'); // Met à jour l'affichage
         saveToCookies(); // Sauvegarde la nouvelle valeur dans les cookies
     }
 });
 
-  // Désactiver le clic droit sur toute la page
+/* --------------------------------------------------------------------------
+
+                                Disable Click droit
+
+   -------------------------------------------------------------------------- */
+
   document.addEventListener('contextmenu', function(event) {
     event.preventDefault();
   });
 
-//Google Analytics
+/* --------------------------------------------------------------------------
+
+                              Disable dev console
+
+   -------------------------------------------------------------------------- */
+
+   document.onkeydown = function(e) {
+    const forbiddenKeys = ['c', 'a', 'v', 'u', 'i', 's', 'x'];
+    if ((e.ctrlKey && forbiddenKeys.includes(e.key.toLowerCase())) || e.code === 'F12') {
+        alert("Don't cheat!");
+        return false;
+    } else {
+        return true;
+    }
+  };
+
+/* --------------------------------------------------------------------------
+
+                                Google Analytics
+
+   -------------------------------------------------------------------------- */
+
 window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   src="googletagmanager.com/gtag/js?id=G-WFEWHP2MJX"
   gtag('config', 'G-WFEWHP2MJX');
+
+  // Initialiser les coûts des autoclickers dans le HTML
+  updateAutoclickerCosts();
 });
