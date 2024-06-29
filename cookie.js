@@ -227,7 +227,7 @@ function updateAutoclickerCosts() {
     if(count >= autoclickerCost) {
         count -= autoclickerCost;
         autoclickers++;
-        autoclickerCost *= 2; // Multiplie le coût par 2
+        autoclickerCost *= 1.5; // Multiplie le coût par 2
         display.textContent = count.toLocaleString('fr-FR');
         autoclickerDisplay.textContent = autoclickers;
         updateAutoclickerCosts(); // Met à jour le texte du bouton
@@ -245,7 +245,7 @@ buyPowerful.addEventListener('click', function () {
     if(count >= powerfulAutoclickerCost) {
         count -= powerfulAutoclickerCost;
         powerfulAutoclickers++;
-        powerfulAutoclickerCost *= 2; // Multiplie le coût par 2
+        powerfulAutoclickerCost *= 1.5; // Multiplie le coût par 2
         display.textContent = count.toLocaleString('fr-FR');
         powerfulAutoclickerDisplay.textContent = powerfulAutoclickers;
         updateAutoclickerCosts(); // Met à jour le texte du bouton
@@ -263,7 +263,7 @@ buySuperPowerful.addEventListener('click', function () {
     if(count >= superPowerfulAutoclickerCost) {
         count -= superPowerfulAutoclickerCost;
         superPowerfulAutoclickers++;
-        superPowerfulAutoclickerCost *= 2; // Multiplie le coût par 2
+        superPowerfulAutoclickerCost *= 1.5; // Multiplie le coût par 2
         display.textContent = count.toLocaleString('fr-FR');
         superPowerfulAutoclickerDisplay.textContent = superPowerfulAutoclickers;
         updateAutoclickerCosts(); // Met à jour le texte du bouton
@@ -281,7 +281,7 @@ buyUltraPowerful.addEventListener('click', function () {
     if(count >= ultraPowerfulAutoclickerCost) {
         count -= ultraPowerfulAutoclickerCost;
         ultraPowerfulAutoclickers++;
-        ultraPowerfulAutoclickerCost *= 2; // Multiplie le coût par 2
+        ultraPowerfulAutoclickerCost *= 1.5; // Multiplie le coût par 2
         display.textContent = count.toLocaleString('fr-FR');
         ultraPowerfulAutoclickerDisplay.textContent = ultraPowerfulAutoclickers;
         updateAutoclickerCosts(); // Met à jour le texte du bouton
