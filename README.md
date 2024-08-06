@@ -1,13 +1,21 @@
 # Cyber-Cookie
 OFFICIAL "Cyber Cookie" REPOSITORY
 
-OFFICIAL RELASE : https://chromewebstore.google.com/detail/cyber-cookie/kbjidhhmcehbnejmdpgfhnaipenoinjb?hl=en
+CHROME WEBSTORE APP : https://chromewebstore.google.com/detail/cyber-cookie/kbjidhhmcehbnejmdpgfhnaipenoinjb?hl=en
 
-BETA PROGRAM : https://endermythex.github.io/Cyber-Cookie/index.html#top
+WEBSITE VERSION : https://endermythex.github.io/Cyber-Cookie/index.html
+
+TELEGRAM APP : http://t.me/cyber_cookiebot 
 
 -----------------------------------------------------------------------------------------------
 
-Last Update (V1.5.0) :
+Lasted Update (V1.5.2) :
+- JS obfuscate (Anti cheat protections)
+- Telegram app added for phone and pc
+
+-----------------------------------------------------------------------------------------------
+
+Update (V1.5.0) :
 - CSS reworked and fully improved
 - HTML reworked and fully improved
 - JS reworked and fully improved
