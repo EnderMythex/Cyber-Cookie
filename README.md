@@ -20,7 +20,7 @@
 
 > [!TIP]
 > You can suggest modifications or additions on the discord :
-> [Discord Server](https://discord.gg/uwvEcewCeD).
+> [Discord Server](https://discord.cybercookie.party/).
 
 > [!NOTE]
 > Cyber Cookie Wiki : https://github.com/EnderMythex/Cyber-Cookie/wiki.
@@ -30,7 +30,7 @@
 <h1 align="center">Links</h1>
 
 - Web
-  - [Website Version](https://endermythex.github.io/Cyber-Cookie)
+  - [Website Version](https://cybercookie.party/)
   - [Telegram App](http://t.me/cyber_cookiebot)
     
 - Download
