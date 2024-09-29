@@ -1,0 +1,140 @@
+/* --------------------------------------------------------------------------
+
+                                Main (Global)
+
+   -------------------------------------------------------------------------- */
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+  align-items: center;
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently not supported by any browser */
+}
+
+div {
+  color: white;
+  font-family: "clockDigital";
+}
+
+/* --------------------------------------------------------------------------
+
+                            Google login button
+
+   -------------------------------------------------------------------------- */
+
+.auth-provider {
+  font-family: system-ui, roboto, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 40px;
+  transition: transform 0.5s cubic-bezier(0.2, 3, 0.4, 1) 0s;
+  padding: 0 21px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: block;
+  /* Ajouté pour empiler les boutons */
+  width: 100%;
+  /* Optionnel : pour que les boutons prennent toute la largeur */
+  text-decoration: none;
+  margin-bottom: 16px;
+  box-shadow: 0 0 8px #ffffffc5;
+  /* Ombre autour de l'image */
+  -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.3));
+  /* Effet de réflexion */
+  box-sizing: border-box;
+  border: 1px solid #d6d9dc;
+  text-align: center;
+  background: #FFF;
+  color: #535a60
+}
+
+.auth-provider:hover {
+  transform: scale(1.05);
+}
+
+.svg-icon {
+  vertical-align: middle;
+  padding-bottom: 4px;
+}
+
+/* --------------------------------------------------------------------------
+
+                            Loading screen 
+
+   -------------------------------------------------------------------------- */
+
+#loadinganim {
+  transition: opacity 1s ease;
+  /* Ajout de la transition */
+  opacity: 1;
+  /* Opacité initiale */
+}
+
+#loadinganim.hidden {
+  opacity: 0;
+  /* Opacité à 0 pour la disparition */
+}
+
+.loadinganim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  position: fixed;
+  z-index: 9999;
+  transition-duration: 1s;
+}
+
+.loader {
+  width: 10vh;
+  aspect-ratio: 1;
+  border: 1vh solid #000;
+  box-sizing: border-box;
+  background:
+    radial-gradient(farthest-side, #fff 98%, #0000) top,
+    radial-gradient(farthest-side, #fff 98%, #0000) top,
+    radial-gradient(farthest-side, #fff 98%, #0000) left,
+    radial-gradient(farthest-side, #fff 98%, #0000) right,
+    radial-gradient(farthest-side, #fff 98%, #0000) bottom,
+    #000;
+  background-size: 2vh 2vh; /* Réduit la taille des points */
+  background-repeat: no-repeat;
+  filter: blur(4px) contrast(10);
+  animation: l19 2s infinite;
+}
+
+@keyframes l19 {
+  0% {
+    background-position: top, top, left, right, bottom
+  }
+
+  25% {
+    background-position: right, top, left, right, bottom
+  }
+
+  50% {
+    background-position: bottom, top, left, right, bottom
+  }
+
+  75% {
+    background-position: left, top, left, right, bottom
+  }
+
+  100% {
+    background-position: top, top, left, right, bottom
+  }
+}
