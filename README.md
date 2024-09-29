@@ -1,5 +1,5 @@
 
-<p align="center"><img src="https://cybercookie.party/pictures/cookie.png" alt="MAS Logo" width="80" height="80"></p>
+<p align="center"><img src="https://github.com/user-attachments/assets/0b9057e2-54dc-4a9b-b0fe-73428fec8af6" alt="MAS Logo" width="80" height="80"></p>
 
 <h1 align="center">Cyber-Cookie</h1>
 <h6 align="center">OFFICIAL "Cyber Cookie" REPOSITORY an extension & Web Game reinventing Cookie Clicker. Made With 💗 by Endermythex</h6>
