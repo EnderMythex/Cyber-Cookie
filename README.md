@@ -23,7 +23,7 @@
 > [Discord Server](https://discord.cybercookie.party/).
 
 > [!NOTE]
-> Cyber Cookie Wiki : https://github.com/EnderMythex/Cyber-Cookie/wiki.
+> Cyber Cookie support phone platforms (Optimizations is coming soon).
 
 <hr>
 
