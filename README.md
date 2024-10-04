@@ -30,11 +30,11 @@
 <h1 align="center">Links</h1>
 
 - Web
-  - [Website Version](https://cybercookie.party/)
-  - [Telegram App](http://t.me/cyber_cookiebot)
+  - [BETA 1.6.0] [Website Version](https://cybercookie.party/)
+  - [BETA 1.6.0] [Telegram App](http://t.me/cyber_cookiebot)
     
 - Download
-  - [OLD] [Chrome Webstore App](https://chromewebstore.google.com/detail/cyber-cookie/kbjidhhmcehbnejmdpgfhnaipenoinjb?hl)
+  - [V1.5.9] [Chrome Webstore App](https://chromewebstore.google.com/detail/cyber-cookie/kbjidhhmcehbnejmdpgfhnaipenoinjb?hl)
 
 <hr>
 
