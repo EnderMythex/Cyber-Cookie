@@ -33,7 +33,7 @@
   - [BETA 1.6.0] [Website Version](https://cybercookie.party/)
   - [BETA 1.6.0] [Telegram App](http://t.me/cyber_cookiebot)
     
-- Download
+- Extensions
   - [V1.5.9] [Chrome Webstore App](https://chromewebstore.google.com/detail/cyber-cookie/kbjidhhmcehbnejmdpgfhnaipenoinjb?hl)
 
 <hr>
