@@ -9,9 +9,13 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden; /* Empêche le débordement */
     display: flex;
     justify-content: center;
     background-image: url('./pictures/main_background.jpg');
+    background-size: cover;
     align-items: center;
     -webkit-user-select: none;
     /* Chrome/Safari/Opera */
@@ -79,16 +83,19 @@ div {
 
    -------------------------------------------------------------------------- */
 
-.mini-cookie {
+   .mini-cookie {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     background-image: url('./pictures/cookie.png');
     background-size: cover;
     animation-name: fall;
     animation-duration: 2s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    z-index: 10;
+    opacity: 0.5;
+    pointer-events: none; /* Permet de cliquer à travers l'image */
 }
 
 @keyframes fall {
