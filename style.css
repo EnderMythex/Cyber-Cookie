@@ -11,7 +11,7 @@ html {
     height: 100%;
     display: flex;
     justify-content: center;
-    background-color: #000;
+    background-image: url('./pictures/main_background.jpg');
     align-items: center;
     -webkit-user-select: none;
     /* Chrome/Safari/Opera */
