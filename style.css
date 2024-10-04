@@ -157,7 +157,7 @@ div {
 
 /* --------------------------------------------------------------------------
 
-                            FullScreen button
+                                    Rank
 
    -------------------------------------------------------------------------- */
 
@@ -431,4 +431,31 @@ button:after {
     position: fixed;
     z-index: 9999;
     transition-duration: 1s;
+}
+
+/* --------------------------------------------------------------------------
+
+                        Autoclicker Count Container 
+
+   -------------------------------------------------------------------------- */
+
+.autoclicker-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrer horizontalement */
+    margin-bottom: 10px;
+}
+
+.autoclicker-count {
+    width: 45px;
+    height: 45px;
+    background-color: #424244;
+    color: white;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center; /* Centrer le texte horizontalement */
+    align-items: center; /* Centrer le texte verticalement */
+    margin-right: 10px;
+    font-family: "clockDigital";
+    text-align: center;
 }
