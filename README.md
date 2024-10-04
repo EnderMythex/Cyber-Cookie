@@ -16,7 +16,7 @@
 
 > [!WARNING]\
 > This project can be detected as malware by BitDefender, as it detects obfuscating script that acts as an anti-cheat.
-> To view the unobfuscated script, please visit realease.
+> To view the unobfuscated script, please contact : support@cybercookie.party
 
 > [!TIP]
 > You can suggest modifications or additions on the discord :
