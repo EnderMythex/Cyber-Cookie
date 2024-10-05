@@ -25,18 +25,6 @@
     <img id="profile">
     <script src="./oneko.js"></script>
     <div class="loadinganim" id="loadinganim"></div>
-    <script>
-        setTimeout(() => {
-            const loadingAnim = document.getElementById("loadinganim");
-            loadingAnim.classList.add("hidden");
-            setTimeout(() => {
-                loadingAnim.style.display = "none";
-            }, 1000);
-        }, 500);
-    
-        document.addEventListener('DOMContentLoaded', function () {
-        });
-    </script>
     <div class="container">
         <center>
             <a href="https://discord.cybercookie.party/" target="_blank">
@@ -79,7 +67,7 @@
             <!-- Confirmation Dialog -->
             <dialog id="confirmationDialog" class="dialog" style="display: none;">
                 <p>Confirm Reset ?</p>
-                <button class="button" id="confirmYes" onclick="resetPage()">Yes</button>
+                <button class="button" id="confirmYes">Yes</button>
                 <center> <button class="button" id="confirmNo">No</button> </center>
             </dialog>
             <button class="button" id="reset">Reset</button>
@@ -91,11 +79,5 @@
                 height="30"></a>
     </div>
 </body>
-
-<script>
-    function resetPage() {
-        window.location.reload();
-    }
-</script>
 
 </html>
