@@ -35,6 +35,8 @@
     
 - Extensions
   - [V1.5.9] [Chrome Webstore App](https://chromewebstore.google.com/detail/cyber-cookie/kbjidhhmcehbnejmdpgfhnaipenoinjb?hl)
+  - [V1.5.9] [Microsoft Edge Addons](https://microsoftedge.microsoft.com/addons/detail/cyber-cookie/bnemlfjjhljainjpopobgpmondlckejj)
+  - [V1.5.9] [Firefox Addons : Coming soon...]
 
 <hr>
 
