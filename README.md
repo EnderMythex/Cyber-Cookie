@@ -15,7 +15,7 @@
 <hr>
 
 > [!WARNING]\
-> This project can be detected as malware by BitDefender, as it detects obfuscating script that acts as an anti-cheat.
+> This project contains obfuscated scripts that act as anti-cheats.
 > To view the unobfuscated script, please contact : support@cybercookie.party
 
 > [!TIP]
