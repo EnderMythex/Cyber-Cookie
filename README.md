@@ -34,7 +34,7 @@
   - [BETA 1.6.0] [Telegram App](http://t.me/cyber_cookiebot)
     
 - Extensions
-  - [V1.5.9] [Chrome Webstore App](https://chromewebstore.google.com/detail/cyber-cookie/kbjidhhmcehbnejmdpgfhnaipenoinjb?hl)
+  - [V1.6.0 BETA] [Chrome Webstore App](https://chromewebstore.google.com/detail/cyber-cookie/kbjidhhmcehbnejmdpgfhnaipenoinjb?hl)
   - [V1.5.9] [Microsoft Edge Addons](https://microsoftedge.microsoft.com/addons/detail/cyber-cookie/bnemlfjjhljainjpopobgpmondlckejj)
   - [V1.5.9] [Firefox Addons](https://addons.mozilla.org/fr/firefox/addon/cyber-cookie/)
   - [V1.5.9] [Opera Add-ons : Coming soon...]
