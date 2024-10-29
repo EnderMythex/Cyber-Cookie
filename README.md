@@ -23,7 +23,7 @@
 > [Discord Server](https://discord.cybercookie.party/).
 
 > [!NOTE]
-> CyberCookie Wiki : [Click Here](https://ender-corporations.gitbook.io/cybercookie-wiki)
+> CyberCookie Wiki & Technical details : [Click Here](https://ender-corporations.gitbook.io/cybercookie-wiki)
 
 <hr>
 
