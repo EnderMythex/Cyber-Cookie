@@ -23,7 +23,7 @@
 > [Discord Server](https://discord.cybercookie.party/).
 
 > [!NOTE]
-> Cyber Cookie support phone platforms (Optimizations is coming soon).
+> CyberCookie Wiki : [Click Here](https://ender-corporations.gitbook.io/cybercookie-wiki)
 
 <hr>
 
