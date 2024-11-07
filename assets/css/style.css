@@ -391,15 +391,11 @@
        border-radius: 10px;
    }
    
-   
-   
    .dialog p {
        color: white;
        margin-bottom: 20px;
        font-family: 'Courier New', Courier, monospace;
    }
-   
-   
    
    .dialog .button {
        float: center;
@@ -431,3 +427,29 @@
        font-family: "clockDigital";
        text-align: center;
    }
+
+      /* --------------------------------------------------------------------------
+   
+                                Settings Infos Container 
+   
+      -------------------------------------------------------------------------- */
+   
+      .settingsinfos-container {
+        display: flex;
+        justify-content: center; /* Centrer horizontalement */
+        margin-bottom: 20px;
+    }
+    
+    .settingsinfos-txt {
+        width: 235px;
+        padding-top: 10px;
+        margin-top: 235px;
+        height: 65px;
+        background-color: #424244;
+        color: white;
+        border-radius: 10%;
+        justify-content: center; /* Centrer le texte horizontalement */
+        align-items: center; /* Centrer le texte verticalement */
+        font-family: "clockDigital";
+        text-align: center
+    }
