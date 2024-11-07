@@ -24,7 +24,6 @@
     <h2 id="username"></h2>
     <img id="profile">
     <script src="./assets/js/oneko.js"></script>
-    <div class="loadinganim" id="loadinganim"></div>
     <div class="container">
         <center>
             <a href="https://discord.cybercookie.party/" target="_blank">
@@ -64,19 +63,20 @@
                 <button class="button" id="buytheme5">Theme 4 (670K)</button>
                 <button class="button" id="buytheme6">Theme 5 (1.3M)</button>
             </div>
-            <!-- Confirmation Dialog -->
-            <dialog id="confirmationDialog" class="dialog" style="display: none;">
-                <p>Confirm Reset ?</p>
-                <button class="button" id="confirmYes">Yes</button>
-                <center> <button class="button" id="confirmNo">No</button> </center>
-            </dialog>
-            <button class="button" id="reset">Reset</button>
+            <button class="button" id="settings">Options</button>
+            <div id="settingsOptions" style="display: none;">
+                <dialog id="confirmationDialog" class="dialog" style="display: none;">
+                    <p>Confirm Reset ?</p>
+                    <button class="button" id="confirmYes">Yes</button>
+                    <center> <button class="button" id="confirmNo">No</button> </center>
+                </dialog>
+                <button class="button" id="reset">Reset</button>
+                <div id="firestoreId" style="margin-top: 20px;">ID Firestore : <span id="userId"></span></div>
+            </div>
         </center>
         <div id="extension" class="extension">
             Rank : <span id="rankIndicator"></span>
         </div>
-        <a href="./settings.html"><img class="settings" id="settings" src="./assets/others/settings.png" width="30"
-                height="30"></a>
     </div>
 </body>
 
