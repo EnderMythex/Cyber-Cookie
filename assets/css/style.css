@@ -442,6 +442,7 @@
     
     .settingsinfos-txt {
         width: 235px;
+        user-select: text;
         padding-top: 10px;
         margin-top: 235px;
         height: 65px;
