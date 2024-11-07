@@ -386,14 +386,9 @@
       -------------------------------------------------------------------------- */
    
    .dialog {
-       position: fixed;
-       top: 50%;
-       left: 50%;
-       transform: translate(-50%, -50%);
+       z-index: 100;
        background-color: rgba(0, 0, 0, 0.788);
-       padding: 20px;
        border-radius: 10px;
-       text-align: center;
    }
    
    
@@ -408,36 +403,6 @@
    
    .dialog .button {
        float: center;
-   }
-   
-   /* --------------------------------------------------------------------------
-   
-                               Loading screen 
-   
-      -------------------------------------------------------------------------- */
-   
-   #loadinganim {
-       transition: opacity 1s ease;
-       /* Ajout de la transition */
-       opacity: 1;
-       /* Opacité initiale */
-   }
-   
-   #loadinganim.hidden {
-       opacity: 0;
-       /* Opacité à 0 pour la disparition */
-   }
-   
-   .loadinganim {
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       height: 100%;
-       width: 100%;
-       background-color: #000;
-       position: fixed;
-       z-index: 9999;
-       transition-duration: 1s;
    }
    
    /* --------------------------------------------------------------------------
