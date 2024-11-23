@@ -1,31 +1,31 @@
 {
     "name": "CyberCookie",
     "short_name": "App",
-    "start_url": "/index.html",
+    "start_url": "./index.html",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#000000",
     "icons": [
         {
-            "src": "./64x64cookie.png",
+            "src": "/assets/icons/64x64cookie.png",
             "sizes": "64x64",
             "type": "image/png"
         },
         {
-            "src": "./512x512cookie.png",
+            "src": "./assets/icons/512x512cookie.png",
             "sizes": "512x512",
             "type": "image/png"
         }
     ],
     "screenshots": [
         {
-            "src": "Lvl1.png",
+            "src": "./assets/pictures/Lvl1.png",
             "sizes": "1645x803",
             "type": "image/png",
             "form_factor": "wide"
         },
         {
-            "src": "Lvl2.png",
+            "src": "./assets/pictures/Lvl2.png",
             "sizes": "1666x824",
             "type": "image/png",
             "form_factor": "narrow"
