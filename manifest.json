@@ -4,7 +4,7 @@
     "start_url": "./index.html",
     "display": "standalone",
     "background_color": "#ffffff",
-    "description": "Une application de cookies numérique pour gérer vos favoris.",
+    "description": "CyberCookie, an extension reinventing Cookie Clicker. Made With 💗 by Endermythex",
     "lang": "en",
     "prefer_related_applications": false,
     "theme_color": "#000000",
