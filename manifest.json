@@ -4,7 +4,11 @@
     "start_url": "./index.html",
     "display": "standalone",
     "background_color": "#ffffff",
+    "description": "Une application de cookies numérique pour gérer vos favoris.",
+    "lang": "en",
+    "prefer_related_applications": false,
     "theme_color": "#000000",
+    "orientation": "portrait",
     "icons": [
         {
             "src": "/assets/icons/64x64cookie.png",
