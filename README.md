@@ -47,4 +47,10 @@ Cookie Clicker is an addictive online game where the player has to click on a co
 
 <h6 align="center">Games currently in beta and more features to come!</h6>
 
------------------------------------------------------------------------------------------------
+<hr>
+
+<h1 align="center">Crédits</h1>
+
+Oneko cat : https://github.com/adryd325/oneko.js/
+
+<hr>
