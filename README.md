@@ -53,15 +53,15 @@ Cookie Clicker is an addictive online game where the player has to click on a co
 
 Oneko cat : https://github.com/adryd325/oneko.js/
 
-Background 1 : https://waneella.tumblr.com/image/171900349162
+Background 1 : https://waneella.tumblr.com/post/171900349162/patreon
 
 Background 2 : https://waneella.tumblr.com/post/733367042314567680/streetlight-artbook-patreon-youtube
 
 Background 3 : https://waneella.tumblr.com/post/731273170378752000/3568742851397270813-patreon-youtube
 
-Background 4 : https://waneella.tumblr.com/image/157839477262
+Background 4 : https://waneella.tumblr.com/post/157839477262
 
-Background 5 : https://waneella.tumblr.com/image/174085187202
+Background 5 : https://waneella.tumblr.com/post/174085187202/patreon
 
 Background 6 : https://fr.pinterest.com/pin/56717276545568844/
 
