@@ -53,6 +53,8 @@ Cookie Clicker is an addictive online game where the player has to click on a co
 
 Oneko cat : https://github.com/adryd325/oneko.js/
 
-Background 1 : https://fr.pinterest.com/rimafalvey/
+Background 1 : https://fr.pinterest.com/pin/646688827721772806/
+
+Background 2 : https://waneella.tumblr.com/post/733367042314567680/streetlight-artbook-patreon-youtube
 
 <hr>
