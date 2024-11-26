@@ -51,6 +51,8 @@ Cookie Clicker is an addictive online game where the player has to click on a co
 
 <h1 align="center">Crédits</h1>
 
+Main Cookie icon : <a href="https://www.flaticon.com/free-icons/cookie" title="cookie icons">Cookie icons created by Freepik - Flaticon</a>
+
 Oneko cat : https://github.com/adryd325/oneko.js/
 
 Background 1 : https://waneella.tumblr.com/post/171900349162/patreon
