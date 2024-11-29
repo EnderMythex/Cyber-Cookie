@@ -51,6 +51,22 @@
        -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.3));
        /* Effet de réflexion */
        z-index: 0;
+       border: 1px solid rgba(255, 255, 255, 0.15);
+       animation: borderGlow 6s infinite; /* Animation ralentie */
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       padding: 10px;
+       min-height: 500px; /* Assure une hauteur minimale */
+       overflow: hidden; /* Empêche le débordement */
+       overflow-y: auto; /* Permet le défilement si nécessaire */
+       scrollbar-width: none; /* Pour Firefox */
+       -ms-overflow-style: none; /* Pour Internet Explorer et Edge */
+   }
+   
+   /* Cache la barre de défilement pour Chrome, Safari et Opera */
+   .container::-webkit-scrollbar {
+       display: none;
    }
    
    /*
@@ -180,69 +196,160 @@
       -------------------------------------------------------------------------- */
    
    .button {
-       display: block;
        position: relative;
-       margin: 0.8em 0;
-       padding: 0.8em 2.2em;
-       color: rgb(156, 156, 156);
+       padding: 12px 24px;
+       margin: 10px 0;
+       background: linear-gradient(
+           135deg, 
+           rgba(28, 37, 65, 0.8),
+           rgba(35, 45, 75, 0.8)
+       );
+       border: 1px solid rgba(0, 195, 255, 0.1);
+       border-radius: 4px;
+       color: #a8c6ff;
+       font-family: 'clockDigital', sans-serif;
+       font-size: 18px;
+       letter-spacing: 2px;
        cursor: pointer;
-       background: #424242;
-       border: none;
-       border-radius: 0.4em;
+       overflow: hidden;
+       transition: all 0.3s ease;
+       backdrop-filter: blur(8px);
        text-transform: uppercase;
-       font-size: 16px;
-       font-weight: 500;
-       letter-spacing: 0.04em;
-       transform-style: preserve-3d;
-       transition: transform 0.5s cubic-bezier(0.2, 3, 0.4, 1) 0s;
+       width: 220px;
+       height: 55px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
    }
    
-   .button:before,
-   button:after {
-       --z: 0px;
+   /* Effet de lueur interne */
+   .button::before {
+       content: '';
        position: absolute;
        top: 0;
-       left: 0;
-       display: block;
-       content: "";
+       left: -100%;
        width: 100%;
        height: 100%;
-       opacity: 0;
-       mix-blend-mode: color-dodge;
-       border-radius: inherit;
-       transform-style: preserve-3d;
-       transform: translate3d(calc(var(--z) * 0px), calc(var(--z) * 0px), calc(var(--z) * 0px));
+       background: linear-gradient(
+           90deg,
+           transparent,
+           rgba(81, 185, 255, 0.2),
+           transparent
+       );
+       transition: 0.5s;
    }
    
-   .button span {
-       mix-blend-mode: none;
-       display: block;
+   /* Bordure néon */
+   .button::after {
+       content: '';
+       position: absolute;
+       inset: 0;
+       border-radius: 4px;
+       padding: 1px;
+       background: linear-gradient(
+           135deg,
+           rgba(0, 195, 255, 0.2),
+           rgba(0, 89, 255, 0.1)
+       );
+       -webkit-mask: 
+           linear-gradient(#fff 0 0) content-box, 
+           linear-gradient(#fff 0 0);
+       -webkit-mask-composite: xor;
+       mask-composite: exclude;
+       pointer-events: none;
    }
    
-   .button:after {
-       background-color: #8e5bf5;
-   }
-   
-   .button:before {
-       background-color: #6249a7d7;
-   }
-   
+   /* Animation au survol */
    .button:hover {
-       background-color: #1931bbd3;
-       transition: background 0.3s 0.1s;
-       transform: scale(1.05);
+       transform: translateY(-2px) scale(1.02);
+       background: linear-gradient(
+           135deg,
+           rgba(35, 45, 75, 0.9),
+           rgba(45, 55, 95, 0.9)
+       );
+       color: #ffffff;
+       box-shadow: 
+           0 0 15px rgba(0, 195, 255, 0.3),
+           0 0 30px rgba(0, 89, 255, 0.2);
+       text-shadow: 0 0 8px rgba(0, 195, 255, 0.5);
    }
    
-   .button:hover:before {
-       --z: 0.04;
-       -webkit-animation: translateWobble 2.2s ease forwards;
-       animation: translateWobble 2.2s ease forwards;
+   .button:hover::before {
+       left: 100%;
    }
    
-   .button:hover:after {
-       --z: -0.06;
-       -webkit-animation: translateWobble 2.2s ease forwards;
-       animation: translateWobble 2.2s ease forwards;
+   /* Animation au clic */
+   .button:active {
+       transform: translateY(1px);
+       box-shadow: 
+           0 0 10px rgba(0, 195, 255, 0.2),
+           0 0 20px rgba(0, 89, 255, 0.1);
+   }
+   
+   /* Style spécifique pour les boutons de shop */
+   #shopOptions .button {
+       background: linear-gradient(
+           135deg,
+           rgba(25, 32, 58, 0.9),
+           rgba(32, 40, 70, 0.9)
+       );
+       width: 180px;
+       height: 50px;
+       margin: 5px auto;
+   }
+   
+   /* Style pour les boutons désactivés */
+   .button:disabled {
+       opacity: 0.5;
+       cursor: not-allowed;
+       background: linear-gradient(
+           135deg,
+           rgba(20, 25, 45, 0.9),
+           rgba(25, 30, 55, 0.9)
+       );
+   }
+   
+   /* Animation de pulsation pour les boutons importants */
+   @keyframes neonPulse {
+       0% {
+           box-shadow: 
+               0 0 15px rgba(0, 195, 255, 0.2),
+               0 0 30px rgba(0, 89, 255, 0.1);
+       }
+       50% {
+           box-shadow: 
+               0 0 20px rgba(0, 195, 255, 0.3),
+               0 0 40px rgba(0, 89, 255, 0.2);
+       }
+       100% {
+           box-shadow: 
+               0 0 15px rgba(0, 195, 255, 0.2),
+               0 0 30px rgba(0, 89, 255, 0.1);
+       }
+   }
+   
+   /* Style pour les boutons d'action principale */
+   .button.primary {
+       background: linear-gradient(
+           135deg,
+           rgba(35, 45, 75, 0.9),
+           rgba(45, 55, 95, 0.9)
+       );
+       animation: neonPulse 2s infinite;
+   }
+   
+   /* Adaptation pour les petits écrans */
+   @media (max-width: 768px) {
+       .button {
+           width: 200px;
+           height: 50px;
+           font-size: 16px;
+       }
+       
+       #shopOptions .button {
+           width: 160px;
+           height: 45px;
+       }
    }
    
    /* --------------------------------------------------------------------------
@@ -251,36 +358,9 @@
    
       -------------------------------------------------------------------------- */
    
-   @-webkit-keyframes rotateAngle {
-       0% {
-           transform: rotateY(0deg) rotateX(10deg);
-           -webkit-animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
-           animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
-       }
-   
-       25% {
-           transform: rotateY(20deg) rotateX(10deg);
-       }
-   
-       50% {
-           transform: rotateY(0deg) rotateX(10deg);
-           -webkit-animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
-           animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
-       }
-   
-       75% {
-           transform: rotateY(-20deg) rotateX(10deg);
-       }
-   
-       100% {
-           transform: rotateY(0deg) rotateX(10deg);
-       }
-   }
-   
    @keyframes rotateAngle {
        0% {
            transform: rotateY(0deg) rotateX(10deg);
-           -webkit-animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
            animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
        }
    
@@ -290,7 +370,6 @@
    
        50% {
            transform: rotateY(0deg) rotateX(10deg);
-           -webkit-animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
            animation-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
        }
    
@@ -300,82 +379,76 @@
    
        100% {
            transform: rotateY(0deg) rotateX(10deg);
-       }
-   }
-   
-   @-webkit-keyframes translateWobble {
-       0% {
-           opacity: 0;
-           transform: translate3d(calc(var(--z) * 0px), calc(var(--z) * 0px), calc(var(--z) * 0px));
-       }
-   
-       16% {
-           transform: translate3d(calc(var(--z) * 160px), calc(var(--z) * 160px), calc(var(--z) * 160px));
-       }
-   
-       28% {
-           opacity: 1;
-           transform: translate3d(calc(var(--z) * 70px), calc(var(--z) * 70px), calc(var(--z) * 70px));
-       }
-   
-       44% {
-           transform: translate3d(calc(var(--z) * 130px), calc(var(--z) * 130px), calc(var(--z) * 130px));
-       }
-   
-       59% {
-           transform: translate3d(calc(var(--z) * 85px), calc(var(--z) * 85px), calc(var(--z) * 85px));
-       }
-   
-       73% {
-           transform: translate3d(calc(var(--z) * 110px), calc(var(--z) * 110px), calc(var(--z) * 110px));
-       }
-   
-       88% {
-           opacity: 1;
-           transform: translate3d(calc(var(--z) * 90px), calc(var(--z) * 90px), calc(var(--z) * 90px));
-       }
-   
-       100% {
-           opacity: 1;
-           transform: translate3d(calc(var(--z) * 100px), calc(var(--z) * 100px), calc(var(--z) * 100px));
        }
    }
    
    @keyframes translateWobble {
        0% {
            opacity: 0;
-           transform: translate3d(calc(var(--z) * 0px), calc(var(--z) * 0px), calc(var(--z) * 0px));
+           transform: translate3d(
+               calc(var(--z) * 0px),
+               calc(var(--z) * 0px),
+               calc(var(--z) * 0px)
+           );
        }
    
        16% {
-           transform: translate3d(calc(var(--z) * 160px), calc(var(--z) * 160px), calc(var(--z) * 160px));
+           transform: translate3d(
+               calc(var(--z) * 160px),
+               calc(var(--z) * 160px),
+               calc(var(--z) * 160px)
+           );
        }
    
        28% {
            opacity: 1;
-           transform: translate3d(calc(var(--z) * 70px), calc(var(--z) * 70px), calc(var(--z) * 70px));
+           transform: translate3d(
+               calc(var(--z) * 70px),
+               calc(var(--z) * 70px),
+               calc(var(--z) * 70px)
+           );
        }
    
        44% {
-           transform: translate3d(calc(var(--z) * 130px), calc(var(--z) * 130px), calc(var(--z) * 130px));
+           transform: translate3d(
+               calc(var(--z) * 130px),
+               calc(var(--z) * 130px),
+               calc(var(--z) * 130px)
+           );
        }
    
        59% {
-           transform: translate3d(calc(var(--z) * 85px), calc(var(--z) * 85px), calc(var(--z) * 85px));
+           transform: translate3d(
+               calc(var(--z) * 85px),
+               calc(var(--z) * 85px),
+               calc(var(--z) * 85px)
+           );
        }
    
        73% {
-           transform: translate3d(calc(var(--z) * 110px), calc(var(--z) * 110px), calc(var(--z) * 110px));
+           transform: translate3d(
+               calc(var(--z) * 110px),
+               calc(var(--z) * 110px),
+               calc(var(--z) * 110px)
+           );
        }
    
        88% {
            opacity: 1;
-           transform: translate3d(calc(var(--z) * 90px), calc(var(--z) * 90px), calc(var(--z) * 90px));
+           transform: translate3d(
+               calc(var(--z) * 90px),
+               calc(var(--z) * 90px),
+               calc(var(--z) * 90px)
+           );
        }
    
        100% {
            opacity: 1;
-           transform: translate3d(calc(var(--z) * 100px), calc(var(--z) * 100px), calc(var(--z) * 100px));
+           transform: translate3d(
+               calc(var(--z) * 100px),
+               calc(var(--z) * 100px),
+               calc(var(--z) * 100px)
+           );
        }
    }
    
@@ -410,47 +483,340 @@
    .autoclicker-container {
        display: flex;
        align-items: center;
-       justify-content: center; /* Centrer horizontalement */
-       margin-bottom: 5px;
+       justify-content: center;
+       margin-bottom: 8px;
+       width: 100%;
+       padding: 0 10px; /* Réduit le padding */
    }
    
    .autoclicker-count {
-       width: 45px;
-       height: 45px;
-       background-color: #424244;
-       color: white;
-       border-radius: 10%;
+       width: 50px;
+       height: 50px;
+       min-width: 50px;
+       margin-right: 8px; /* Réduit la marge */
+       background: linear-gradient(
+           135deg,
+           rgba(28, 37, 65, 0.9),
+           rgba(35, 45, 75, 0.9)
+       );
+       color: #a8c6ff;
+       border-radius: 4px;
        display: flex;
-       justify-content: center; /* Centrer le texte horizontalement */
-       align-items: center; /* Centrer le texte verticalement */
-       margin-right: 10px;
+       justify-content: center;
+       align-items: center;
        font-family: "clockDigital";
-       text-align: center;
+       font-size: 1.4em;
+       border: 1px solid rgba(0, 195, 255, 0.1);
+       box-shadow: 
+           0 0 10px rgba(0, 89, 255, 0.1),
+           inset 0 0 15px rgba(0, 89, 255, 0.05);
+       backdrop-filter: blur(8px);
+       text-shadow: 0 0 5px rgba(0, 195, 255, 0.5);
+       position: relative;
+       overflow: hidden;
    }
-
-      /* --------------------------------------------------------------------------
+   
+   /* Effet de lueur sur les bords */
+   .autoclicker-count::after {
+       content: '';
+       position: absolute;
+       inset: 0;
+       border-radius: 4px;
+       padding: 1px;
+       background: linear-gradient(
+           135deg,
+           rgba(0, 195, 255, 0.2),
+           rgba(0, 89, 255, 0.1)
+       );
+       -webkit-mask: 
+           linear-gradient(#fff 0 0) content-box, 
+           linear-gradient(#fff 0 0);
+       -webkit-mask-composite: xor;
+       mask-composite: exclude;
+       pointer-events: none;
+   }
+   
+   /* Animation de pulsation subtile */
+   @keyframes countPulse {
+       0% {
+           box-shadow: 
+               0 0 10px rgba(0, 89, 255, 0.1),
+               inset 0 0 15px rgba(0, 89, 255, 0.05);
+       }
+       50% {
+           box-shadow: 
+               0 0 15px rgba(0, 195, 255, 0.2),
+               inset 0 0 20px rgba(0, 195, 255, 0.1);
+       }
+       100% {
+           box-shadow: 
+               0 0 10px rgba(0, 89, 255, 0.1),
+               inset 0 0 15px rgba(0, 89, 255, 0.05);
+       }
+   }
+   
+   /* Application de l'animation quand la valeur change */
+   .autoclicker-count.updated {
+       animation: countPulse 0.5s ease-out;
+   }
+   
+   /* --------------------------------------------------------------------------
    
                                 Settings Infos Container 
    
       -------------------------------------------------------------------------- */
    
       .settingsinfos-container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
         display: flex;
-        justify-content: center; /* Centrer horizontalement */
-        margin-bottom: 20px;
+        justify-content: center;
+        width: 100%;
+        padding: 0 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
     }
     
     .settingsinfos-txt {
-        width: 235px;
+        width: 300px;
+        height: 55px;
         user-select: text;
-        padding-top: 10px;
-        margin-top: 180px;
-        height: 65px;
-        background-color: #424244;
-        color: white;
-        border-radius: 10%;
-        justify-content: center; /* Centrer le texte horizontalement */
-        align-items: center; /* Centrer le texte verticalement */
-        font-family: "clockDigital";
-        text-align: center
+        background: linear-gradient(
+            135deg,
+            rgba(28, 37, 65, 0.8),
+            rgba(35, 45, 75, 0.8)
+        );
+        border: 1px solid rgba(0, 195, 255, 0.1);
+        border-radius: 4px;
+        color: #a8c6ff;
+        font-family: 'clockDigital', sans-serif;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(8px);
+        box-shadow: 
+            0 0 10px rgba(0, 89, 255, 0.1),
+            inset 0 0 15px rgba(0, 89, 255, 0.05);
+        text-shadow: 0 0 5px rgba(0, 195, 255, 0.5);
+        position: relative;
+        overflow: hidden;
+        margin-top: 0;
     }
+    
+    /* Effet de bordure néon comme les boutons */
+    .settingsinfos-txt::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 4px;
+        padding: 1px;
+        background: linear-gradient(
+            135deg,
+            rgba(0, 195, 255, 0.2),
+            rgba(0, 89, 255, 0.1)
+        );
+        -webkit-mask: 
+            linear-gradient(#fff 0 0) content-box, 
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+    }
+    
+    /* Animation de pulsation subtile */
+    @keyframes infoPulse {
+        0% {
+            box-shadow: 
+                0 0 10px rgba(0, 89, 255, 0.1),
+                inset 0 0 15px rgba(0, 89, 255, 0.05);
+        }
+        50% {
+            box-shadow: 
+                0 0 15px rgba(0, 195, 255, 0.2),
+                inset 0 0 20px rgba(0, 195, 255, 0.1);
+        }
+        100% {
+            box-shadow: 
+                0 0 10px rgba(0, 89, 255, 0.1),
+                inset 0 0 15px rgba(0, 89, 255, 0.05);
+        }
+    }
+    
+    .settingsinfos-txt {
+        animation: infoPulse 4s infinite;
+    }
+   
+   /* Ajout du style pour la grille de thèmes */
+   .theme-grid {
+       display: grid;
+       grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+       gap: 8px; /* Espace entre les boutons */
+       width: 100%;
+       padding: 5px;
+   }
+   
+   .theme-grid .button {
+       width: 120px; /* Boutons plus petits pour tenir dans la grille */
+       height: 45px;
+       font-size: 14px;
+       margin: 0; /* Retire la marge par défaut des boutons */
+       padding: 8px 12px;
+   }
+   
+   /* Ajustement pour les petits écrans */
+   @media (max-width: 768px) {
+       .theme-grid .button {
+           width: 110px;
+           height: 40px;
+           font-size: 12px;
+       }
+   }
+   
+   /* Style spécifique pour le thème 2 */
+   .theme2-active .button {
+       background: linear-gradient(
+           135deg, 
+           rgba(88, 24, 69, 0.7),    /* Violet foncé */
+           rgba(144, 12, 63, 0.7)     /* Rouge foncé */
+       );
+       border: 1px solid rgba(255, 255, 255, 0.1);
+       color: #ffccd5;
+       text-shadow: 0 0 8px rgba(255, 182, 193, 0.5);
+       backdrop-filter: blur(8px);
+   }
+   
+   .theme2-active .button:hover {
+       background: linear-gradient(
+           135deg,
+           rgba(144, 12, 63, 0.8),
+           rgba(88, 24, 69, 0.8)
+       );
+       color: #ffffff;
+       box-shadow: 
+           0 0 15px rgba(144, 12, 63, 0.2),
+           0 0 30px rgba(88, 24, 69, 0.15);
+   }
+   
+   .theme2-active .button::after {
+       background: linear-gradient(
+           135deg,
+           rgba(255, 255, 255, 0.1),
+           rgba(144, 12, 63, 0.1)
+       );
+   }
+   
+   /* Ajustement pour les compteurs d'autoclicker dans le thème 2 */
+   .theme2-active .autoclicker-count {
+       background: linear-gradient(
+           135deg,
+           rgba(88, 24, 69, 0.7),
+           rgba(144, 12, 63, 0.7)
+       );
+       color: #ffccd5;
+       border: 1px solid rgba(255, 255, 255, 0.1);
+       backdrop-filter: blur(8px);
+   }
+   
+   /* Animation de pulsation spécifique au thème 2 */
+   @keyframes theme2Pulse {
+       0% {
+           box-shadow: 
+               0 0 10px rgba(144, 12, 63, 0.1),
+               inset 0 0 15px rgba(88, 24, 69, 0.05);
+       }
+       50% {
+           box-shadow: 
+               0 0 15px rgba(144, 12, 63, 0.2),
+               inset 0 0 20px rgba(88, 24, 69, 0.1);
+       }
+       100% {
+           box-shadow: 
+               0 0 10px rgba(144, 12, 63, 0.1),
+               inset 0 0 15px rgba(88, 24, 69, 0.05);
+       }
+   }
+   
+   .theme2-active .button.primary {
+       animation: theme2Pulse 2s infinite;
+   }
+   
+   /* Style spécifique pour les boutons de shop dans le thème 2 */
+   .theme2-active #shopOptions .button {
+       background: linear-gradient(
+           135deg,
+           rgba(88, 24, 69, 0.85),    /* Violet foncé légèrement plus opaque */
+           rgba(144, 12, 63, 0.85)     /* Rouge foncé légèrement plus opaque */
+       );
+       width: 180px;
+       height: 50px;
+       margin: 5px auto;
+   }
+   
+   .theme2-active #shopOptions .button:hover {
+       background: linear-gradient(
+           135deg,
+           rgba(144, 12, 63, 0.9),
+           rgba(88, 24, 69, 0.9)
+       );
+   }
+   
+   /* Style pour les boutons désactivés dans le thème 2 */
+   .theme2-active .button:disabled {
+       opacity: 0.5;
+       cursor: not-allowed;
+       background: linear-gradient(
+           135deg,
+           rgba(88, 24, 69, 0.5),
+           rgba(144, 12, 63, 0.5)
+       );
+   }
+   
+   /* Style pour le conteneur d'informations dans le thème 2 */
+   .theme2-active .settingsinfos-txt {
+       background: linear-gradient(
+           135deg,
+           rgba(88, 24, 69, 0.7),
+           rgba(144, 12, 63, 0.7)
+       );
+       border: 1px solid rgba(255, 255, 255, 0.1);
+       color: #ffccd5;
+       text-shadow: 0 0 8px rgba(255, 182, 193, 0.5);
+       backdrop-filter: blur(8px);
+       box-shadow: 
+           0 0 10px rgba(144, 12, 63, 0.1),
+           inset 0 0 15px rgba(88, 24, 69, 0.05);
+   }
+   
+   .theme2-active .settingsinfos-txt::after {
+       background: linear-gradient(
+           135deg,
+           rgba(255, 255, 255, 0.1),
+           rgba(144, 12, 63, 0.1)
+       );
+   }
+   
+   /* Animation de pulsation pour le conteneur d'informations dans le thème 2 */
+   @keyframes theme2InfoPulse {
+       0% {
+           box-shadow: 
+               0 0 10px rgba(144, 12, 63, 0.1),
+               inset 0 0 15px rgba(88, 24, 69, 0.05);
+       }
+       50% {
+           box-shadow: 
+               0 0 15px rgba(144, 12, 63, 0.2),
+               inset 0 0 20px rgba(88, 24, 69, 0.1);
+       }
+       100% {
+           box-shadow: 
+               0 0 10px rgba(144, 12, 63, 0.1),
+               inset 0 0 15px rgba(88, 24, 69, 0.05);
+       }
+   }
+   
+   .theme2-active .settingsinfos-txt {
+       animation: theme2InfoPulse 4s infinite;
+   }
