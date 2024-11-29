@@ -1,5 +1,6 @@
 (function oneko() {
     const nekoEl = document.createElement("div");
+    nekoEl.className = "oneko";
     let nekoPosX = 32;
     let nekoPosY = 32;
     let mousePosX = 0;
@@ -127,6 +128,12 @@
     }
 
     function frame() {
+        if (!window.onekoEnabled) {
+            nekoEl.style.display = 'none';
+            return;
+        }
+        nekoEl.style.display = 'block';
+
         frameCount += 1;
         const diffX = nekoPosX - mousePosX;
         const diffY = nekoPosY - mousePosY;
@@ -161,5 +168,16 @@
         nekoEl.style.top = `${nekoPosY - 16}px`;
     }
 
+    if (typeof window.onekoEnabled === 'undefined') {
+        window.onekoEnabled = true;
+    }
+
     create();
 })();
+
+window.onekoEnabled = true;
+
+function updateNeko() {
+    if (!window.onekoEnabled) return;
+    // ... reste du code oneko existant ...
+}
