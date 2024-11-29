@@ -679,32 +679,32 @@
    .theme2-active .button {
        background: linear-gradient(
            135deg, 
-           rgba(88, 24, 69, 0.7),    /* Violet foncé */
-           rgba(144, 12, 63, 0.7)     /* Rouge foncé */
+           rgba(255, 255, 255, 0.4),    /* Blanc transparent */
+           rgba(255, 140, 0, 0.4)       /* Orange transparent */
        );
-       border: 1px solid rgba(255, 255, 255, 0.1);
-       color: #ffccd5;
-       text-shadow: 0 0 8px rgba(255, 182, 193, 0.5);
+       border: 1px solid rgba(255, 255, 255, 0.15);
+       color: #fff;
+       text-shadow: 0 0 8px rgba(255, 140, 0, 0.4);
        backdrop-filter: blur(8px);
    }
    
    .theme2-active .button:hover {
        background: linear-gradient(
            135deg,
-           rgba(144, 12, 63, 0.8),
-           rgba(88, 24, 69, 0.8)
+           rgba(255, 140, 0, 0.5),
+           rgba(255, 255, 255, 0.5)
        );
        color: #ffffff;
        box-shadow: 
-           0 0 15px rgba(144, 12, 63, 0.2),
-           0 0 30px rgba(88, 24, 69, 0.15);
+           0 0 15px rgba(255, 140, 0, 0.2),
+           0 0 30px rgba(255, 255, 255, 0.15);
    }
    
    .theme2-active .button::after {
        background: linear-gradient(
            135deg,
-           rgba(255, 255, 255, 0.1),
-           rgba(144, 12, 63, 0.1)
+           rgba(255, 255, 255, 0.15),
+           rgba(255, 140, 0, 0.1)
        );
    }
    
@@ -712,43 +712,36 @@
    .theme2-active .autoclicker-count {
        background: linear-gradient(
            135deg,
-           rgba(88, 24, 69, 0.7),
-           rgba(144, 12, 63, 0.7)
+           rgba(255, 255, 255, 0.4),
+           rgba(255, 140, 0, 0.4)
        );
-       color: #ffccd5;
-       border: 1px solid rgba(255, 255, 255, 0.1);
+       color: #fff;
+       border: 1px solid rgba(255, 255, 255, 0.15);
        backdrop-filter: blur(8px);
    }
    
-   /* Animation de pulsation spécifique au thème 2 */
-   @keyframes theme2Pulse {
-       0% {
-           box-shadow: 
-               0 0 10px rgba(144, 12, 63, 0.1),
-               inset 0 0 15px rgba(88, 24, 69, 0.05);
-       }
-       50% {
-           box-shadow: 
-               0 0 15px rgba(144, 12, 63, 0.2),
-               inset 0 0 20px rgba(88, 24, 69, 0.1);
-       }
-       100% {
-           box-shadow: 
-               0 0 10px rgba(144, 12, 63, 0.1),
-               inset 0 0 15px rgba(88, 24, 69, 0.05);
-       }
-   }
-   
-   .theme2-active .button.primary {
-       animation: theme2Pulse 2s infinite;
+   /* Style pour le conteneur d'informations dans le thème 2 */
+   .theme2-active .settingsinfos-txt {
+       background: linear-gradient(
+           135deg,
+           rgba(255, 255, 255, 0.4),
+           rgba(255, 140, 0, 0.4)
+       );
+       border: 1px solid rgba(255, 255, 255, 0.15);
+       color: #fff;
+       text-shadow: 0 0 8px rgba(255, 140, 0, 0.4);
+       backdrop-filter: blur(8px);
+       box-shadow: 
+           0 0 10px rgba(255, 140, 0, 0.1),
+           inset 0 0 15px rgba(255, 255, 255, 0.05);
    }
    
    /* Style spécifique pour les boutons de shop dans le thème 2 */
    .theme2-active #shopOptions .button {
        background: linear-gradient(
            135deg,
-           rgba(88, 24, 69, 0.85),    /* Violet foncé légèrement plus opaque */
-           rgba(144, 12, 63, 0.85)     /* Rouge foncé légèrement plus opaque */
+           rgba(255, 255, 255, 0.5),
+           rgba(255, 140, 0, 0.5)
        );
        width: 180px;
        height: 50px;
@@ -758,65 +751,969 @@
    .theme2-active #shopOptions .button:hover {
        background: linear-gradient(
            135deg,
-           rgba(144, 12, 63, 0.9),
-           rgba(88, 24, 69, 0.9)
+           rgba(255, 140, 0, 0.6),
+           rgba(255, 255, 255, 0.6)
        );
    }
    
    /* Style pour les boutons désactivés dans le thème 2 */
    .theme2-active .button:disabled {
-       opacity: 0.5;
-       cursor: not-allowed;
+       opacity: 0.4;
        background: linear-gradient(
            135deg,
-           rgba(88, 24, 69, 0.5),
-           rgba(144, 12, 63, 0.5)
+           rgba(255, 255, 255, 0.3),
+           rgba(255, 140, 0, 0.3)
        );
    }
    
-   /* Style pour le conteneur d'informations dans le thème 2 */
-   .theme2-active .settingsinfos-txt {
-       background: linear-gradient(
-           135deg,
-           rgba(88, 24, 69, 0.7),
-           rgba(144, 12, 63, 0.7)
-       );
-       border: 1px solid rgba(255, 255, 255, 0.1);
-       color: #ffccd5;
-       text-shadow: 0 0 8px rgba(255, 182, 193, 0.5);
-       backdrop-filter: blur(8px);
-       box-shadow: 
-           0 0 10px rgba(144, 12, 63, 0.1),
-           inset 0 0 15px rgba(88, 24, 69, 0.05);
-   }
-   
-   .theme2-active .settingsinfos-txt::after {
-       background: linear-gradient(
-           135deg,
-           rgba(255, 255, 255, 0.1),
-           rgba(144, 12, 63, 0.1)
-       );
-   }
-   
-   /* Animation de pulsation pour le conteneur d'informations dans le thème 2 */
-   @keyframes theme2InfoPulse {
+   /* Animation de pulsation pour le thème 2 */
+   @keyframes theme2Pulse {
        0% {
            box-shadow: 
-               0 0 10px rgba(144, 12, 63, 0.1),
-               inset 0 0 15px rgba(88, 24, 69, 0.05);
+               0 0 10px rgba(255, 140, 0, 0.1),
+               inset 0 0 15px rgba(255, 255, 255, 0.05);
        }
        50% {
            box-shadow: 
-               0 0 15px rgba(144, 12, 63, 0.2),
-               inset 0 0 20px rgba(88, 24, 69, 0.1);
+               0 0 15px rgba(255, 140, 0, 0.2),
+               inset 0 0 20px rgba(255, 255, 255, 0.1);
        }
        100% {
            box-shadow: 
-               0 0 10px rgba(144, 12, 63, 0.1),
-               inset 0 0 15px rgba(88, 24, 69, 0.05);
+               0 0 10px rgba(255, 140, 0, 0.1),
+               inset 0 0 15px rgba(255, 255, 255, 0.05);
        }
    }
    
-   .theme2-active .settingsinfos-txt {
-       animation: theme2InfoPulse 4s infinite;
+   .theme2-active .button.primary {
+       animation: theme2Pulse 2s infinite;
+   }
+   
+   /* Style spécifique pour le thème 10 */
+   .theme10-active .button {
+       background: linear-gradient(
+           135deg, 
+           rgba(255, 111, 0, 0.5),    /* Orange vif plus transparent */
+           rgba(255, 69, 0, 0.5)      /* Rouge-orange plus transparent */
+       );
+       border: 1px solid rgba(255, 255, 255, 0.08);
+       color: #ffe6cc;
+       text-shadow: 0 0 8px rgba(255, 140, 0, 0.4);
+       backdrop-filter: blur(8px);
+   }
+   
+   .theme10-active .button:hover {
+       background: linear-gradient(
+           135deg,
+           rgba(255, 69, 0, 0.6),
+           rgba(255, 111, 0, 0.6)
+       );
+       color: #ffffff;
+       box-shadow: 
+           0 0 15px rgba(255, 111, 0, 0.15),
+           0 0 30px rgba(255, 69, 0, 0.1);
+   }
+   
+   .theme10-active .button::after {
+       background: linear-gradient(
+           135deg,
+           rgba(255, 255, 255, 0.1),
+           rgba(255, 111, 0, 0.1)
+       );
+   }
+   
+   /* Ajustement pour les compteurs d'autoclicker dans le thème 10 */
+   .theme10-active .autoclicker-count {
+       background: linear-gradient(
+           135deg,
+           rgba(255, 111, 0, 0.5),
+           rgba(255, 69, 0, 0.5)
+       );
+       color: #ffe6cc;
+       border: 1px solid rgba(255, 255, 255, 0.08);
+       backdrop-filter: blur(8px);
+   }
+   
+   /* Style pour le conteneur d'informations dans le thème 10 */
+   .theme10-active .settingsinfos-txt {
+       background: linear-gradient(
+           135deg,
+           rgba(255, 111, 0, 0.5),
+           rgba(255, 69, 0, 0.5)
+       );
+       border: 1px solid rgba(255, 255, 255, 0.08);
+       color: #ffe6cc;
+       text-shadow: 0 0 8px rgba(255, 140, 0, 0.4);
+       backdrop-filter: blur(8px);
+       box-shadow: 
+           0 0 10px rgba(255, 111, 0, 0.08),
+           inset 0 0 15px rgba(255, 69, 0, 0.04);
+   }
+   
+   .theme10-active .settingsinfos-txt::after {
+       background: linear-gradient(
+           135deg,
+           rgba(255, 255, 255, 0.1),
+           rgba(255, 111, 0, 0.1)
+       );
+   }
+   
+   /* Style spécifique pour les boutons de shop dans le thème 10 */
+   .theme10-active #shopOptions .button {
+       background: linear-gradient(
+           135deg,
+           rgba(255, 111, 0, 0.6),
+           rgba(255, 69, 0, 0.6)
+       );
+       width: 180px;
+       height: 50px;
+       margin: 5px auto;
+   }
+   
+   .theme10-active #shopOptions .button:hover {
+       background: linear-gradient(
+           135deg,
+           rgba(255, 69, 0, 0.7),
+           rgba(255, 111, 0, 0.7)
+       );
+   }
+   
+   /* Style pour les boutons désactivés dans le thème 10 */
+   .theme10-active .button:disabled {
+       opacity: 0.4;
+       background: linear-gradient(
+           135deg,
+           rgba(255, 111, 0, 0.3),
+           rgba(255, 69, 0, 0.3)
+       );
+   }
+   
+   /* Animation de pulsation pour le thème 10 */
+   @keyframes theme10Pulse {
+       0% {
+           box-shadow: 
+               0 0 10px rgba(255, 111, 0, 0.1),
+               inset 0 0 15px rgba(255, 69, 0, 0.05);
+       }
+       50% {
+           box-shadow: 
+               0 0 15px rgba(255, 111, 0, 0.2),
+               inset 0 0 20px rgba(255, 69, 0, 0.1);
+       }
+       100% {
+           box-shadow: 
+               0 0 10px rgba(255, 111, 0, 0.1),
+               inset 0 0 15px rgba(255, 69, 0, 0.05);
+       }
+   }
+   
+   .theme10-active .button.primary {
+       animation: theme10Pulse 2s infinite;
+   }
+   
+   /* Style spécifique pour le thème 7 */
+   .theme7-active .button {
+       background: linear-gradient(
+           135deg, 
+           rgba(144, 238, 144, 0.4),    /* Vert clair transparent */
+           rgba(255, 255, 255, 0.4)      /* Blanc transparent */
+       );
+       border: 1px solid rgba(255, 255, 255, 0.15);
+       color: #fff;
+       text-shadow: 0 0 8px rgba(144, 238, 144, 0.4);
+       backdrop-filter: blur(8px);
+   }
+   
+   .theme7-active .button:hover {
+       background: linear-gradient(
+           135deg,
+           rgba(255, 255, 255, 0.5),
+           rgba(144, 238, 144, 0.5)
+       );
+       color: #ffffff;
+       box-shadow: 
+           0 0 15px rgba(144, 238, 144, 0.2),
+           0 0 30px rgba(255, 255, 255, 0.15);
+   }
+   
+   .theme7-active .button::after {
+       background: linear-gradient(
+           135deg,
+           rgba(255, 255, 255, 0.15),
+           rgba(144, 238, 144, 0.1)
+       );
+   }
+   
+   /* Ajustement pour les compteurs d'autoclicker dans le thème 7 */
+   .theme7-active .autoclicker-count {
+       background: linear-gradient(
+           135deg,
+           rgba(144, 238, 144, 0.4),
+           rgba(255, 255, 255, 0.4)
+       );
+       color: #fff;
+       border: 1px solid rgba(255, 255, 255, 0.15);
+       backdrop-filter: blur(8px);
+   }
+   
+   /* Style pour le conteneur d'informations dans le thème 7 */
+   .theme7-active .settingsinfos-txt {
+       background: linear-gradient(
+           135deg,
+           rgba(144, 238, 144, 0.4),
+           rgba(255, 255, 255, 0.4)
+       );
+       border: 1px solid rgba(255, 255, 255, 0.15);
+       color: #fff;
+       text-shadow: 0 0 8px rgba(144, 238, 144, 0.4);
+       backdrop-filter: blur(8px);
+       box-shadow: 
+           0 0 10px rgba(144, 238, 144, 0.1),
+           inset 0 0 15px rgba(255, 255, 255, 0.05);
+   }
+   
+   /* Style spécifique pour les boutons de shop dans le thème 7 */
+   .theme7-active #shopOptions .button {
+       background: linear-gradient(
+           135deg,
+           rgba(144, 238, 144, 0.5),
+           rgba(255, 255, 255, 0.5)
+       );
+       width: 180px;
+       height: 50px;
+       margin: 5px auto;
+   }
+   
+   .theme7-active #shopOptions .button:hover {
+       background: linear-gradient(
+           135deg,
+           rgba(255, 255, 255, 0.6),
+           rgba(144, 238, 144, 0.6)
+       );
+   }
+   
+   /* Style pour les boutons désactivés dans le thème 7 */
+   .theme7-active .button:disabled {
+       opacity: 0.4;
+       background: linear-gradient(
+           135deg,
+           rgba(144, 238, 144, 0.3),
+           rgba(255, 255, 255, 0.3)
+       );
+   }
+   
+   /* Animation de pulsation pour le thème 7 */
+   @keyframes theme7Pulse {
+       0% {
+           box-shadow: 
+               0 0 10px rgba(144, 238, 144, 0.1),
+               inset 0 0 15px rgba(255, 255, 255, 0.05);
+       }
+       50% {
+           box-shadow: 
+               0 0 15px rgba(144, 238, 144, 0.2),
+               inset 0 0 20px rgba(255, 255, 255, 0.1);
+       }
+       100% {
+           box-shadow: 
+               0 0 10px rgba(144, 238, 144, 0.1),
+               inset 0 0 15px rgba(255, 255, 255, 0.05);
+       }
+   }
+   
+   .theme7-active .button.primary {
+       animation: theme7Pulse 2s infinite;
+   }
+   
+   /* Style spécifique pour le thème 9 */
+   .theme9-active .button {
+       background: linear-gradient(
+           135deg, 
+           rgba(255, 255, 255, 0.4),    /* Blanc transparent */
+           rgba(240, 240, 240, 0.4)     /* Blanc légèrement plus foncé transparent */
+       );
+       border: 1px solid rgba(255, 255, 255, 0.15);
+       color: #fff;
+       text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+       backdrop-filter: blur(8px);
+   }
+   
+   .theme9-active .button:hover {
+       background: linear-gradient(
+           135deg,
+           rgba(240, 240, 240, 0.5),
+           rgba(255, 255, 255, 0.5)
+       );
+       color: #ffffff;
+       box-shadow: 
+           0 0 15px rgba(255, 255, 255, 0.2),
+           0 0 30px rgba(240, 240, 240, 0.15);
+   }
+   
+   .theme9-active .button::after {
+       background: linear-gradient(
+           135deg,
+           rgba(255, 255, 255, 0.15),
+           rgba(240, 240, 240, 0.1)
+       );
+   }
+   
+   /* Ajustement pour les compteurs d'autoclicker dans le thème 9 */
+   .theme9-active .autoclicker-count {
+       background: linear-gradient(
+           135deg,
+           rgba(255, 255, 255, 0.4),
+           rgba(240, 240, 240, 0.4)
+       );
+       color: #fff;
+       border: 1px solid rgba(255, 255, 255, 0.15);
+       backdrop-filter: blur(8px);
+   }
+   
+   /* Style pour le conteneur d'informations dans le thème 9 */
+   .theme9-active .settingsinfos-txt {
+       background: linear-gradient(
+           135deg,
+           rgba(255, 255, 255, 0.4),
+           rgba(240, 240, 240, 0.4)
+       );
+       border: 1px solid rgba(255, 255, 255, 0.15);
+       color: #fff;
+       text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+       backdrop-filter: blur(8px);
+       box-shadow: 
+           0 0 10px rgba(255, 255, 255, 0.1),
+           inset 0 0 15px rgba(240, 240, 240, 0.05);
+   }
+   
+   /* Style spécifique pour les boutons de shop dans le thème 9 */
+   .theme9-active #shopOptions .button {
+       background: linear-gradient(
+           135deg,
+           rgba(255, 255, 255, 0.5),
+           rgba(240, 240, 240, 0.5)
+       );
+       width: 180px;
+       height: 50px;
+       margin: 5px auto;
+   }
+   
+   .theme9-active #shopOptions .button:hover {
+       background: linear-gradient(
+           135deg,
+           rgba(240, 240, 240, 0.6),
+           rgba(255, 255, 255, 0.6)
+       );
+   }
+   
+   /* Style pour les boutons désactivés dans le thème 9 */
+   .theme9-active .button:disabled {
+       opacity: 0.4;
+       background: linear-gradient(
+           135deg,
+           rgba(255, 255, 255, 0.3),
+           rgba(240, 240, 240, 0.3)
+       );
+   }
+   
+   /* Animation de pulsation pour le thème 9 */
+   @keyframes theme9Pulse {
+       0% {
+           box-shadow: 
+               0 0 10px rgba(255, 255, 255, 0.1),
+               inset 0 0 15px rgba(240, 240, 240, 0.05);
+       }
+       50% {
+           box-shadow: 
+               0 0 15px rgba(255, 255, 255, 0.2),
+               inset 0 0 20px rgba(240, 240, 240, 0.1);
+       }
+       100% {
+           box-shadow: 
+               0 0 10px rgba(255, 255, 255, 0.1),
+               inset 0 0 15px rgba(240, 240, 240, 0.05);
+       }
+   }
+   
+   .theme9-active .button.primary {
+       animation: theme9Pulse 2s infinite;
+   }
+   
+   /* Style spécifique pour le thème 12 */
+   .theme12-active .button {
+       background: linear-gradient(
+           135deg, 
+           rgba(255, 182, 193, 0.4),    /* Rose clair transparent */
+           rgba(173, 216, 230, 0.4)     /* Bleu clair transparent */
+       );
+       border: 1px solid rgba(255, 255, 255, 0.15);
+       color: #fff;
+       text-shadow: 0 0 8px rgba(255, 182, 193, 0.4);
+       backdrop-filter: blur(8px);
+   }
+   
+   .theme12-active .button:hover {
+       background: linear-gradient(
+           135deg,
+           rgba(173, 216, 230, 0.5),
+           rgba(255, 182, 193, 0.5)
+       );
+       color: #ffffff;
+       box-shadow: 
+           0 0 15px rgba(255, 182, 193, 0.2),
+           0 0 30px rgba(173, 216, 230, 0.15);
+   }
+   
+   .theme12-active .button::after {
+       background: linear-gradient(
+           135deg,
+           rgba(255, 255, 255, 0.15),
+           rgba(255, 182, 193, 0.1)
+       );
+   }
+   
+   /* Ajustement pour les compteurs d'autoclicker dans le thème 12 */
+   .theme12-active .autoclicker-count {
+       background: linear-gradient(
+           135deg,
+           rgba(255, 182, 193, 0.4),
+           rgba(173, 216, 230, 0.4)
+       );
+       color: #fff;
+       border: 1px solid rgba(255, 255, 255, 0.15);
+       backdrop-filter: blur(8px);
+   }
+   
+   /* Style pour le conteneur d'informations dans le thème 12 */
+   .theme12-active .settingsinfos-txt {
+       background: linear-gradient(
+           135deg,
+           rgba(255, 182, 193, 0.4),
+           rgba(173, 216, 230, 0.4)
+       );
+       border: 1px solid rgba(255, 255, 255, 0.15);
+       color: #fff;
+       text-shadow: 0 0 8px rgba(255, 182, 193, 0.4);
+       backdrop-filter: blur(8px);
+       box-shadow: 
+           0 0 10px rgba(255, 182, 193, 0.1),
+           inset 0 0 15px rgba(173, 216, 230, 0.05);
+   }
+   
+   /* Style spécifique pour les boutons de shop dans le thème 12 */
+   .theme12-active #shopOptions .button {
+       background: linear-gradient(
+           135deg,
+           rgba(255, 182, 193, 0.5),
+           rgba(173, 216, 230, 0.5)
+       );
+       width: 180px;
+       height: 50px;
+       margin: 5px auto;
+   }
+   
+   .theme12-active #shopOptions .button:hover {
+       background: linear-gradient(
+           135deg,
+           rgba(173, 216, 230, 0.6),
+           rgba(255, 182, 193, 0.6)
+       );
+   }
+   
+   /* Style pour les boutons désactivés dans le thème 12 */
+   .theme12-active .button:disabled {
+       opacity: 0.4;
+       background: linear-gradient(
+           135deg,
+           rgba(255, 182, 193, 0.3),
+           rgba(173, 216, 230, 0.3)
+       );
+   }
+   
+   /* Animation de pulsation pour le thème 12 */
+   @keyframes theme12Pulse {
+       0% {
+           box-shadow: 
+               0 0 10px rgba(255, 182, 193, 0.1),
+               inset 0 0 15px rgba(173, 216, 230, 0.05);
+       }
+       50% {
+           box-shadow: 
+               0 0 15px rgba(255, 182, 193, 0.2),
+               inset 0 0 20px rgba(173, 216, 230, 0.1);
+       }
+       100% {
+           box-shadow: 
+               0 0 10px rgba(255, 182, 193, 0.1),
+               inset 0 0 15px rgba(173, 216, 230, 0.05);
+       }
+   }
+   
+   .theme12-active .button.primary {
+       animation: theme12Pulse 2s infinite;
+   }
+   
+   /* Style spécifique pour le thème 5 */
+   .theme5-active .button {
+       background: linear-gradient(
+           135deg, 
+           rgba(139, 0, 0, 0.5),    /* Rouge foncé transparent */
+           rgba(0, 0, 0, 0.5)       /* Noir transparent */
+       );
+       border: 1px solid rgba(255, 0, 0, 0.15);
+       color: #ffcccc;
+       text-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+       backdrop-filter: blur(8px);
+   }
+   
+   .theme5-active .button:hover {
+       background: linear-gradient(
+           135deg,
+           rgba(0, 0, 0, 0.6),
+           rgba(139, 0, 0, 0.6)
+       );
+       color: #ffffff;
+       box-shadow: 
+           0 0 15px rgba(139, 0, 0, 0.2),
+           0 0 30px rgba(0, 0, 0, 0.15);
+   }
+   
+   .theme5-active .button::after {
+       background: linear-gradient(
+           135deg,
+           rgba(255, 0, 0, 0.15),
+           rgba(0, 0, 0, 0.1)
+       );
+   }
+   
+   /* Ajustement pour les compteurs d'autoclicker dans le thème 5 */
+   .theme5-active .autoclicker-count {
+       background: linear-gradient(
+           135deg,
+           rgba(139, 0, 0, 0.5),
+           rgba(0, 0, 0, 0.5)
+       );
+       color: #ffcccc;
+       border: 1px solid rgba(255, 0, 0, 0.15);
+       backdrop-filter: blur(8px);
+   }
+   
+   /* Style pour le conteneur d'informations dans le thème 5 */
+   .theme5-active .settingsinfos-txt {
+       background: linear-gradient(
+           135deg,
+           rgba(139, 0, 0, 0.5),
+           rgba(0, 0, 0, 0.5)
+       );
+       border: 1px solid rgba(255, 0, 0, 0.15);
+       color: #ffcccc;
+       text-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+       backdrop-filter: blur(8px);
+       box-shadow: 
+           0 0 10px rgba(139, 0, 0, 0.1),
+           inset 0 0 15px rgba(0, 0, 0, 0.05);
+   }
+   
+   /* Style spécifique pour les boutons de shop dans le thème 5 */
+   .theme5-active #shopOptions .button {
+       background: linear-gradient(
+           135deg,
+           rgba(139, 0, 0, 0.6),
+           rgba(0, 0, 0, 0.6)
+       );
+       width: 180px;
+       height: 50px;
+       margin: 5px auto;
+   }
+   
+   .theme5-active #shopOptions .button:hover {
+       background: linear-gradient(
+           135deg,
+           rgba(0, 0, 0, 0.7),
+           rgba(139, 0, 0, 0.7)
+       );
+   }
+   
+   /* Style pour les boutons désactivés dans le thème 5 */
+   .theme5-active .button:disabled {
+       opacity: 0.4;
+       background: linear-gradient(
+           135deg,
+           rgba(139, 0, 0, 0.3),
+           rgba(0, 0, 0, 0.3)
+       );
+   }
+   
+   /* Animation de pulsation pour le thème 5 */
+   @keyframes theme5Pulse {
+       0% {
+           box-shadow: 
+               0 0 10px rgba(139, 0, 0, 0.1),
+               inset 0 0 15px rgba(0, 0, 0, 0.05);
+       }
+       50% {
+           box-shadow: 
+               0 0 15px rgba(139, 0, 0, 0.2),
+               inset 0 0 20px rgba(0, 0, 0, 0.1);
+       }
+       100% {
+           box-shadow: 
+               0 0 10px rgba(139, 0, 0, 0.1),
+               inset 0 0 15px rgba(0, 0, 0, 0.05);
+       }
+   }
+   
+   .theme5-active .button.primary {
+       animation: theme5Pulse 2s infinite;
+   }
+   
+   /* Style spécifique pour le thème 4 */
+   .theme4-active .button {
+       background: linear-gradient(
+           135deg, 
+           rgba(0, 0, 139, 0.5),    /* Bleu foncé transparent */
+           rgba(0, 0, 0, 0.5)       /* Noir transparent */
+       );
+       border: 1px solid rgba(0, 191, 255, 0.15);
+       color: #add8e6;
+       text-shadow: 0 0 8px rgba(0, 191, 255, 0.4);
+       backdrop-filter: blur(8px);
+   }
+   
+   .theme4-active .button:hover {
+       background: linear-gradient(
+           135deg,
+           rgba(0, 0, 0, 0.6),
+           rgba(0, 0, 139, 0.6)
+       );
+       color: #ffffff;
+       box-shadow: 
+           0 0 15px rgba(0, 0, 139, 0.2),
+           0 0 30px rgba(0, 0, 0, 0.15);
+   }
+   
+   .theme4-active .button::after {
+       background: linear-gradient(
+           135deg,
+           rgba(0, 191, 255, 0.15),
+           rgba(0, 0, 0, 0.1)
+       );
+   }
+   
+   /* Ajustement pour les compteurs d'autoclicker dans le thème 4 */
+   .theme4-active .autoclicker-count {
+       background: linear-gradient(
+           135deg,
+           rgba(0, 0, 139, 0.5),
+           rgba(0, 0, 0, 0.5)
+       );
+       color: #add8e6;
+       border: 1px solid rgba(0, 191, 255, 0.15);
+       backdrop-filter: blur(8px);
+   }
+   
+   /* Style pour le conteneur d'informations dans le thème 4 */
+   .theme4-active .settingsinfos-txt {
+       background: linear-gradient(
+           135deg,
+           rgba(0, 0, 139, 0.5),
+           rgba(0, 0, 0, 0.5)
+       );
+       border: 1px solid rgba(0, 191, 255, 0.15);
+       color: #add8e6;
+       text-shadow: 0 0 8px rgba(0, 191, 255, 0.4);
+       backdrop-filter: blur(8px);
+       box-shadow: 
+           0 0 10px rgba(0, 0, 139, 0.1),
+           inset 0 0 15px rgba(0, 0, 0, 0.05);
+   }
+   
+   /* Style spécifique pour les boutons de shop dans le thème 4 */
+   .theme4-active #shopOptions .button {
+       background: linear-gradient(
+           135deg,
+           rgba(0, 0, 139, 0.6),
+           rgba(0, 0, 0, 0.6)
+       );
+       width: 180px;
+       height: 50px;
+       margin: 5px auto;
+   }
+   
+   .theme4-active #shopOptions .button:hover {
+       background: linear-gradient(
+           135deg,
+           rgba(0, 0, 0, 0.7),
+           rgba(0, 0, 139, 0.7)
+       );
+   }
+   
+   /* Style pour les boutons désactivés dans le thème 4 */
+   .theme4-active .button:disabled {
+       opacity: 0.4;
+       background: linear-gradient(
+           135deg,
+           rgba(0, 0, 139, 0.3),
+           rgba(0, 0, 0, 0.3)
+       );
+   }
+   
+   /* Animation de pulsation pour le thème 4 */
+   @keyframes theme4Pulse {
+       0% {
+           box-shadow: 
+               0 0 10px rgba(0, 0, 139, 0.1),
+               inset 0 0 15px rgba(0, 0, 0, 0.05);
+       }
+       50% {
+           box-shadow: 
+               0 0 15px rgba(0, 0, 139, 0.2),
+               inset 0 0 20px rgba(0, 0, 0, 0.1);
+       }
+       100% {
+           box-shadow: 
+               0 0 10px rgba(0, 0, 139, 0.1),
+               inset 0 0 15px rgba(0, 0, 0, 0.05);
+       }
+   }
+   
+   .theme4-active .button.primary {
+       animation: theme4Pulse 2s infinite;
+   }
+   
+   /* Style spécifique pour le thème 3 */
+   .theme3-active .button {
+       background: linear-gradient(
+           135deg, 
+           rgba(169, 169, 169, 0.5),    /* Gris transparent */
+           rgba(135, 206, 235, 0.5)      /* Bleu ciel transparent */
+       );
+       border: 1px solid rgba(255, 255, 255, 0.15);
+       color: #e6f3ff;
+       text-shadow: 0 0 8px rgba(135, 206, 235, 0.4);
+       backdrop-filter: blur(8px);
+   }
+   
+   .theme3-active .button:hover {
+       background: linear-gradient(
+           135deg,
+           rgba(135, 206, 235, 0.6),
+           rgba(169, 169, 169, 0.6)
+       );
+       color: #ffffff;
+       box-shadow: 
+           0 0 15px rgba(135, 206, 235, 0.2),
+           0 0 30px rgba(169, 169, 169, 0.15);
+   }
+   
+   .theme3-active .button::after {
+       background: linear-gradient(
+           135deg,
+           rgba(255, 255, 255, 0.15),
+           rgba(135, 206, 235, 0.1)
+       );
+   }
+   
+   /* Ajustement pour les compteurs d'autoclicker dans le thème 3 */
+   .theme3-active .autoclicker-count {
+       background: linear-gradient(
+           135deg,
+           rgba(169, 169, 169, 0.5),
+           rgba(135, 206, 235, 0.5)
+       );
+       color: #e6f3ff;
+       border: 1px solid rgba(255, 255, 255, 0.15);
+       backdrop-filter: blur(8px);
+   }
+   
+   /* Style pour le conteneur d'informations dans le thème 3 */
+   .theme3-active .settingsinfos-txt {
+       background: linear-gradient(
+           135deg,
+           rgba(169, 169, 169, 0.5),
+           rgba(135, 206, 235, 0.5)
+       );
+       border: 1px solid rgba(255, 255, 255, 0.15);
+       color: #e6f3ff;
+       text-shadow: 0 0 8px rgba(135, 206, 235, 0.4);
+       backdrop-filter: blur(8px);
+       box-shadow: 
+           0 0 10px rgba(169, 169, 169, 0.1),
+           inset 0 0 15px rgba(135, 206, 235, 0.05);
+   }
+   
+   /* Style spécifique pour les boutons de shop dans le thème 3 */
+   .theme3-active #shopOptions .button {
+       background: linear-gradient(
+           135deg,
+           rgba(169, 169, 169, 0.6),
+           rgba(135, 206, 235, 0.6)
+       );
+       width: 180px;
+       height: 50px;
+       margin: 5px auto;
+   }
+   
+   .theme3-active #shopOptions .button:hover {
+       background: linear-gradient(
+           135deg,
+           rgba(135, 206, 235, 0.7),
+           rgba(169, 169, 169, 0.7)
+       );
+   }
+   
+   /* Style pour les boutons désactivés dans le thème 3 */
+   .theme3-active .button:disabled {
+       opacity: 0.4;
+       background: linear-gradient(
+           135deg,
+           rgba(169, 169, 169, 0.3),
+           rgba(135, 206, 235, 0.3)
+       );
+   }
+   
+   /* Animation de pulsation pour le thème 3 */
+   @keyframes theme3Pulse {
+       0% {
+           box-shadow: 
+               0 0 10px rgba(169, 169, 169, 0.1),
+               inset 0 0 15px rgba(135, 206, 235, 0.05);
+       }
+       50% {
+           box-shadow: 
+               0 0 15px rgba(169, 169, 169, 0.2),
+               inset 0 0 20px rgba(135, 206, 235, 0.1);
+       }
+       100% {
+           box-shadow: 
+               0 0 10px rgba(169, 169, 169, 0.1),
+               inset 0 0 15px rgba(135, 206, 235, 0.05);
+       }
+   }
+   
+   .theme3-active .button.primary {
+       animation: theme3Pulse 2s infinite;
+   }
+   
+   /* Style spécifique pour le thème 8 */
+   .theme8-active .button {
+       background: linear-gradient(
+           135deg, 
+           rgba(255, 182, 193, 0.3),    /* Rose clair plus transparent */
+           rgba(255, 160, 122, 0.3),    /* Orange clair plus transparent */
+           rgba(0, 0, 0, 0.3),          /* Noir plus transparent */
+           rgba(173, 216, 230, 0.3)     /* Bleu clair plus transparent */
+       );
+       border: 1px solid rgba(255, 255, 255, 0.1);
+       color: #ffe6f2;
+       text-shadow: 0 0 8px rgba(255, 182, 193, 0.3);
+       backdrop-filter: blur(8px);
+   }
+   
+   .theme8-active .button:hover {
+       background: linear-gradient(
+           135deg,
+           rgba(173, 216, 230, 0.4),
+           rgba(0, 0, 0, 0.4),
+           rgba(255, 160, 122, 0.4),
+           rgba(255, 182, 193, 0.4)
+       );
+       color: #ffffff;
+       box-shadow: 
+           0 0 15px rgba(255, 182, 193, 0.15),
+           0 0 30px rgba(173, 216, 230, 0.1);
+   }
+   
+   .theme8-active .button::after {
+       background: linear-gradient(
+           135deg,
+           rgba(255, 255, 255, 0.15),
+           rgba(255, 182, 193, 0.1)
+       );
+   }
+   
+   /* Ajustement pour les compteurs d'autoclicker dans le thème 8 */
+   .theme8-active .autoclicker-count {
+       background: linear-gradient(
+           135deg,
+           rgba(255, 182, 193, 0.3),
+           rgba(255, 160, 122, 0.3),
+           rgba(0, 0, 0, 0.3),
+           rgba(173, 216, 230, 0.3)
+       );
+       color: #ffe6f2;
+       border: 1px solid rgba(255, 255, 255, 0.1);
+   }
+   
+   /* Style pour le conteneur d'informations dans le thème 8 */
+   .theme8-active .settingsinfos-txt {
+       background: linear-gradient(
+           135deg,
+           rgba(255, 182, 193, 0.3),
+           rgba(255, 160, 122, 0.3),
+           rgba(0, 0, 0, 0.3),
+           rgba(173, 216, 230, 0.3)
+       );
+       border: 1px solid rgba(255, 255, 255, 0.1);
+       color: #ffe6f2;
+       text-shadow: 0 0 8px rgba(255, 182, 193, 0.3);
+       box-shadow: 
+           0 0 10px rgba(255, 182, 193, 0.08),
+           inset 0 0 15px rgba(173, 216, 230, 0.04);
+   }
+   
+   /* Style spécifique pour les boutons de shop dans le thème 8 */
+   .theme8-active #shopOptions .button {
+       background: linear-gradient(
+           135deg,
+           rgba(255, 182, 193, 0.4),
+           rgba(255, 160, 122, 0.4),
+           rgba(0, 0, 0, 0.4),
+           rgba(173, 216, 230, 0.4)
+       );
+   }
+   
+   .theme8-active #shopOptions .button:hover {
+       background: linear-gradient(
+           135deg,
+           rgba(173, 216, 230, 0.5),
+           rgba(0, 0, 0, 0.5),
+           rgba(255, 160, 122, 0.5),
+           rgba(255, 182, 193, 0.5)
+       );
+   }
+   
+   /* Style pour les boutons désactivés dans le thème 8 */
+   .theme8-active .button:disabled {
+       opacity: 0.3;
+       background: linear-gradient(
+           135deg,
+           rgba(255, 182, 193, 0.2),
+           rgba(255, 160, 122, 0.2),
+           rgba(0, 0, 0, 0.2),
+           rgba(173, 216, 230, 0.2)
+       );
+   }
+   
+   /* Animation de pulsation pour le thème 8 */
+   @keyframes theme8Pulse {
+       0% {
+           box-shadow: 
+               0 0 10px rgba(255, 182, 193, 0.1),
+               inset 0 0 15px rgba(173, 216, 230, 0.05);
+       }
+       50% {
+           box-shadow: 
+               0 0 15px rgba(255, 182, 193, 0.2),
+               inset 0 0 20px rgba(173, 216, 230, 0.1);
+       }
+       100% {
+           box-shadow: 
+               0 0 10px rgba(255, 182, 193, 0.1),
+               inset 0 0 15px rgba(173, 216, 230, 0.05);
+       }
+   }
+   
+   .theme8-active .button.primary {
+       animation: theme8Pulse 2s infinite;
    }
