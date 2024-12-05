@@ -1,5 +1,5 @@
-# Simple workflow for deploying static content to GitHub Pages with Maintenance Mode
-name: Deploy static content to Pages with Maintenance Mode
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -11,42 +11,25 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
-
-
-# Allow only one concurrent deployment
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  maintenance-on:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
-    - name: Configure Git
-      run: |
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git config --global user.name "GitHub Actions Bot"
-    - name: Enable Maintenance Mode
-      run: |
-        echo "<meta http-equiv='refresh' content='0; url=/maintenance.html'>" > index.html
-        git add index.html
-        git commit -m "Enable maintenance mode"
-        git push
-
+  # Single deploy job since we're just deploying
   deploy:
-    needs: maintenance-on
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -58,19 +41,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-  maintenance-off:
-  needs: deploy
-  runs-on: ubuntu-latest
-  steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
-    - name: Configure Git
-      run: |
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git config --global user.name "GitHub Actions Bot"
-    - name: Disable Maintenance Mode
-      run: |
-        git rm index.html
-        git commit -m "Disable maintenance mode"
-        git push
