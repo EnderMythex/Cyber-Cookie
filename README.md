@@ -55,15 +55,7 @@ Main Cookie icon : <a href="https://www.flaticon.com/free-icons/cookie" title="c
 
 Oneko cat : https://github.com/adryd325/oneko.js/
 
-Background 1 : https://waneella.tumblr.com/post/171900349162/patreon
-
-Background 2 : https://waneella.tumblr.com/post/733367042314567680/streetlight-artbook-patreon-youtube
-
-Background 3 : https://waneella.tumblr.com/post/731273170378752000/3568742851397270813-patreon-youtube
-
-Background 4 : https://waneella.tumblr.com/post/157839477262
-
-Background 5 : https://waneella.tumblr.com/post/174085187202/patreon
+Background 1, 2, 3, 4, 5, 7, 8, 9, 10, 11 & 12 : https://waneella.tumblr.com/
 
 Background 6 : https://fr.pinterest.com/pin/56717276545568844/
 
