@@ -15,11 +15,11 @@
 <hr>
 
 > [!WARNING]\
-> This project contains obfuscated scripts that act as anti-cheats.
+> This project contains obfuscated scripts that act as anti-cheats and data security.
 > To view the unobfuscated script, please contact : support@cybercookie.party
 
 > [!TIP]
-> You can suggest modifications or additions on the discord :
+> You can suggest modifications or additions and report bugs on the discord :
 > [Discord Server](https://discord.cybercookie.party/).
 
 > [!NOTE]
@@ -51,7 +51,7 @@ Cookie Clicker is an addictive online game where the player has to click on a co
 
 <h1 align="center">Crédits</h1>
 
-Main Cookie icon : <a href="https://www.flaticon.com/free-icons/cookie" title="cookie icons">Cookie icons created by Freepik - Flaticon</a>
+Cookie icon : <a href="https://www.flaticon.com/free-icons/cookie" title="cookie icons">Cookie icons created by Freepik - Flaticon</a>
 
 Oneko cat : https://github.com/adryd325/oneko.js/
 
