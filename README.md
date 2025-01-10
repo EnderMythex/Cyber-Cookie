@@ -1,62 +1,91 @@
-
-<p align="center"><img src="https://github.com/user-attachments/assets/0b9057e2-54dc-4a9b-b0fe-73428fec8af6" alt="MAS Logo" width="80" height="80"></p>
-
-<h1 align="center">Cyber-Cookie</h1>
-<h6 align="center">OFFICIAL "Cyber Cookie" REPOSITORY an extension & Web Game reinventing Cookie Clicker. Made With 💗 by Endermythex</h6>
-
 <p align="center">
-  <img alt="Uptime Robot status" src="https://img.shields.io/uptimerobot/status/m797585685-426f198606d5c126a01cc7f5">
-  <img alt="GitHub deployments" src="https://img.shields.io/github/deployments/EnderMythex/Cyber-Cookie/github-pages">
-  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/EnderMythex/Cyber-Cookie">
-  <img alt="Chrome Web Store Users" src="https://img.shields.io/chrome-web-store/users/kbjidhhmcehbnejmdpgfhnaipenoinjb">
-  <img alt="Chrome Web Store Stars" src="https://img.shields.io/chrome-web-store/stars/kbjidhhmcehbnejmdpgfhnaipenoinjb">
+  <img src="https://github.com/user-attachments/assets/0b9057e2-54dc-4a9b-b0fe-73428fec8af6" alt="Cyber-Cookie Logo" width="120" height="120">
 </p>
 
-<hr>
+<h1 align="center">🍪 Cyber-Cookie</h1>
 
-> [!WARNING]\
-> This project contains obfuscated scripts that act as anti-cheats and data security.
-> To view the unobfuscated script, please contact : support@cybercookie.party
+<p align="center">
+  A modern, cyberpunk reinvention of Cookie Clicker available as a browser extension and web game.
+  <br>
+  <strong>Made with 💗 by Endermythex</strong>
+</p>
+
+<p align="center">
+  <a href="https://uptimerobot.com/dashboard"><img alt="Uptime Status" src="https://img.shields.io/uptimerobot/status/m797585685-426f198606d5c126a01cc7f5"></a>
+  <a href="https://github.com/EnderMythex/Cyber-Cookie/deployments"><img alt="GitHub Deployments" src="https://img.shields.io/github/deployments/EnderMythex/Cyber-Cookie/github-pages"></a>
+  <a href="https://github.com/EnderMythex/Cyber-Cookie"><img alt="Repo Size" src="https://img.shields.io/github/repo-size/EnderMythex/Cyber-Cookie"></a>
+  <a href="https://chromewebstore.google.com/detail/cyber-cookie/kbjidhhmcehbnejmdpgfhnaipenoinjb"><img alt="Chrome Users" src="https://img.shields.io/chrome-web-store/users/kbjidhhmcehbnejmdpgfhnaipenoinjb"></a>
+  <a href="https://chromewebstore.google.com/detail/cyber-cookie/kbjidhhmcehbnejmdpgfhnaipenoinjb"><img alt="Chrome Ratings" src="https://img.shields.io/chrome-web-store/stars/kbjidhhmcehbnejmdpgfhnaipenoinjb"></a>
+</p>
+
+## 🎮 About the Game
+
+Cyber-Cookie is a futuristic reinterpretation of the classic Cookie Clicker. Set in a captivating cyberpunk universe, click to collect cookies and grow your automated production empire. Featuring neon-styled graphics and innovative gameplay mechanics, Cyber-Cookie offers a unique experience that will keep you engaged for hours.
+
+### ✨ Key Features
+
+- 🌐 Futuristic cyberpunk interface
+- 🔄 Reimagined progression system
+- 🛠️ Numerous upgrades and bonuses
+- 🏆 Achievement system
+- 💾 Automatic save feature
+- 📱 Multi-platform compatibility
+
+## 📥 Download
+
+### Web Version
+- 🌐 [Official Website](https://cybercookie.party/) - BETA 1.6.0
+- 📱 [Telegram Bot](http://t.me/cyber_cookiebot) - BETA 1.6.0
+
+### Extensions
+- [<img src="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/chrome.svg" width="16" height="16"> Chrome](https://chromewebstore.google.com/detail/cyber-cookie/kbjidhhmcehbnejmdpgfhnaipenoinjb) - V1.6.0 BETA
+- [<img src="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/edge.svg" width="16" height="16"> Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/cyber-cookie/bnemlfjjhljainjpopobgpmondlckejj) - V1.5.9
+- [<img src="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/firefox.svg" width="16" height="16"> Firefox](https://addons.mozilla.org/en/firefox/addon/cyber-cookie/) - V1.5.9
+- [<img src="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/opera.svg" width="16" height="16"> Opera](/) - V1.5.9 (Coming Soon)
+
+## ⚠️ Important
+
+> [!WARNING]
+> This project includes obfuscated scripts for anti-cheat and data security purposes.
+> To access unobfuscated scripts, contact: support@cybercookie.party
 
 > [!TIP]
-> You can suggest modifications or additions and report bugs on the discord :
-> [Discord Server](https://discord.cybercookie.party/).
+> To suggest changes, additions, or report bugs, join our [Discord server](https://discord.cybercookie.party/).
 
 > [!NOTE]
-> CyberCookie Wiki & Technical details : [Click Here](https://ender-corporations.gitbook.io/cybercookie-wiki)
+> For more technical details, visit the [CyberCookie Wiki](https://ender-corporations.gitbook.io/cybercookie-wiki).
 
-<hr>
+## 📚 Documentation
 
-<h1 align="center">Links</h1>
+For full documentation on features, gameplay strategies, and updates, visit our [Wiki](https://ender-corporations.gitbook.io/cybercookie-wiki).
 
-- Web
-  - [BETA 1.6.0] [Website Version](https://cybercookie.party/)
-  - [BETA 1.6.0] [Telegram App](http://t.me/cyber_cookiebot)
-    
-- Extensions
-  - [V1.6.0 BETA] [Chrome Webstore App](https://chromewebstore.google.com/detail/cyber-cookie/kbjidhhmcehbnejmdpgfhnaipenoinjb?hl)
-  - [V1.5.9] [Microsoft Edge Addons](https://microsoftedge.microsoft.com/addons/detail/cyber-cookie/bnemlfjjhljainjpopobgpmondlckejj)
-  - [V1.5.9] [Firefox Addons](https://addons.mozilla.org/fr/firefox/addon/cyber-cookie/)
-  - [V1.5.9] [Opera Add-ons : Coming soon...]
+## 🎨 Credits
 
-<hr>
+- Cookie icon: [Freepik - Flaticon](https://www.flaticon.com/free-icons/cookie)
+- Oneko cat: [adryd325/oneko.js](https://github.com/adryd325/oneko.js/)
+- Backgrounds 1-5, 7-12: [Waneella](https://waneella.tumblr.com/)
+- Background 6: [Pinterest](https://www.pinterest.com/pin/56717276545568844/)
 
-<h1 align="center">Descriptions</h1>
+## 📋 Project Status
 
-Cookie Clicker is an addictive online game where the player has to click on a cookie to collect points. The aim of the game is to collect as many cookies as possible by clicking on the main cookie and using the points accumulated to buy upgrades and bonuses that increase cookie production. The more the player clicks on the cookie, the more points they earn, and the more upgrades they can buy to increase their cookie production. The game is simple but highly addictive, as it encourages players to keep clicking to get more and more cookies.
+<table>
+  <tr>
+    <td><strong>Status:</strong></td>
+    <td>Beta 1.6.0</td>
+  </tr>
+  <tr>
+    <td><strong>Last Update:</strong></td>
+    <td>January 2024</td>
+  </tr>
+  <tr>
+    <td><strong>License:</strong></td>
+    <td>All Rights Reserved</td>
+  </tr>
+</table>
 
-<h6 align="center">Games currently in beta and more features to come!</h6>
+---
+<p align="center">
+  <i>Join the Cyber-Cookie adventure and start building your cookie empire today! 🍪✨</i>
+</p>
 
-<hr>
-
-<h1 align="center">Crédits</h1>
-
-Cookie icon : <a href="https://www.flaticon.com/free-icons/cookie" title="cookie icons">Cookie icons created by Freepik - Flaticon</a>
-
-Oneko cat : https://github.com/adryd325/oneko.js/
-
-Background 1, 2, 3, 4, 5, 7, 8, 9, 10, 11 & 12 : https://waneella.tumblr.com/
-
-Background 6 : https://fr.pinterest.com/pin/56717276545568844/
-
-<hr>
+<h6 align="center">This game currently in beta and more features is coming!</h6>
