@@ -16,14 +16,12 @@
   <a href="https://github.com/EnderMythex/Cyber-Cookie"><img alt="Repo Size" src="https://img.shields.io/github/repo-size/EnderMythex/Cyber-Cookie"></a>
   <a href="https://chromewebstore.google.com/detail/cyber-cookie/kbjidhhmcehbnejmdpgfhnaipenoinjb"><img alt="Chrome Users" src="https://img.shields.io/chrome-web-store/users/kbjidhhmcehbnejmdpgfhnaipenoinjb"></a>
   <a href="https://chromewebstore.google.com/detail/cyber-cookie/kbjidhhmcehbnejmdpgfhnaipenoinjb"><img alt="Chrome Ratings" src="https://img.shields.io/chrome-web-store/stars/kbjidhhmcehbnejmdpgfhnaipenoinjb"></a>
+  <img alt="Version Status" src="https://img.shields.io/badge/BETA-1.6.0-blue">
+  <img alt="License" src="https://img.shields.io/badge/License-All%20Rights%20Reserved-red"> </a>
 </p>
 
 <p align="center"> 
-  <img alt="Version Status" src="https://img.shields.io/badge/BETA-1.6.0-blue">
-  <img alt="Last Deployment" src="https://badgen.net/github/last-commit/EnderMythex/Cyber-Cookie"> </a>
-  <img alt="License" src="https://img.shields.io/badge/License-All%20Rights%20Reserved-red"> </a>
-  <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/EnderMythex/Cyber-Cookie?color=green"> </a>
-  <img alt="GitHub Issues" src="https://img.shields.io/github/issues/EnderMythex/Cyber-Cookie?color=yellow"> </a> 
+  
 </p>
  
  
