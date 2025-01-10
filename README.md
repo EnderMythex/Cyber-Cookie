@@ -7,7 +7,7 @@
 <p align="center">
   A modern, cyberpunk reinvention of Cookie Clicker available as a browser extension and web game.
   <br>
-  <strong>Made with 💗 by Endermythex</strong>
+  <strong>Made with ❤️ by Endermythex</strong>
 </p>
 
 <p align="center">
