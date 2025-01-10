@@ -18,6 +18,15 @@
   <a href="https://chromewebstore.google.com/detail/cyber-cookie/kbjidhhmcehbnejmdpgfhnaipenoinjb"><img alt="Chrome Ratings" src="https://img.shields.io/chrome-web-store/stars/kbjidhhmcehbnejmdpgfhnaipenoinjb"></a>
 </p>
 
+<p align="center"> 
+  <img alt="Version Status" src="https://img.shields.io/badge/BETA-1.6.0-blue">
+  <img alt="Last Deployment" src="https://badgen.net/github/last-commit/EnderMythex/Cyber-Cookie"> </a>
+  <img alt="License" src="https://img.shields.io/badge/License-All%20Rights%20Reserved-red"> </a>
+  <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/EnderMythex/Cyber-Cookie?color=green"> </a>
+  <img alt="GitHub Issues" src="https://img.shields.io/github/issues/EnderMythex/Cyber-Cookie?color=yellow"> </a> 
+</p>
+ 
+ 
 ## 🎮 About the Game
 
 Cyber-Cookie is a futuristic reinterpretation of the classic Cookie Clicker. Set in a captivating cyberpunk universe, click to collect cookies and grow your automated production empire. Featuring neon-styled graphics and innovative gameplay mechanics, Cyber-Cookie offers a unique experience that will keep you engaged for hours.
@@ -30,7 +39,8 @@ Cyber-Cookie is a futuristic reinterpretation of the classic Cookie Clicker. Set
 - 🏆 Achievement system
 - 💾 Automatic save feature
 - 📱 Multi-platform compatibility
-
+ 
+ 
 ## 📥 Download / Play
 
 ### Web Version
@@ -42,7 +52,8 @@ Cyber-Cookie is a futuristic reinterpretation of the classic Cookie Clicker. Set
 - [<img src="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/edge.svg" width="16" height="16"> Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/cyber-cookie/bnemlfjjhljainjpopobgpmondlckejj) - V1.5.9
 - [<img src="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/firefox.svg" width="16" height="16"> Firefox](https://addons.mozilla.org/en/firefox/addon/cyber-cookie/) - V1.5.9
 - [<img src="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/opera.svg" width="16" height="16"> Opera](/) - V1.5.9 (Coming Soon)
-
+ 
+ 
 ## ⚠️ Important
 
 > [!WARNING]
@@ -54,11 +65,13 @@ Cyber-Cookie is a futuristic reinterpretation of the classic Cookie Clicker. Set
 
 > [!NOTE]
 > For more technical details, visit the [CyberCookie Wiki](https://ender-corporations.gitbook.io/cybercookie-wiki).
-
+ 
+ 
 ## 📚 Documentation
 
 For full documentation on features, gameplay strategies, and updates, visit our [Wiki](https://ender-corporations.gitbook.io/cybercookie-wiki).
-
+ 
+ 
 ## 🎨 Credits
 
 - Cookie icon: [Freepik - Flaticon](https://www.flaticon.com/free-icons/cookie)
@@ -66,23 +79,7 @@ For full documentation on features, gameplay strategies, and updates, visit our 
 - Backgrounds 1-5, 7-12: [Waneella](https://waneella.tumblr.com/)
 - Background 6: [Pinterest](https://www.pinterest.com/pin/56717276545568844/)
 
-## 📋 Project Status
-
-<table>
-  <tr>
-    <td><strong>Status:</strong></td>
-    <td>Beta 1.6.0</td>
-  </tr>
-  <tr>
-    <td><strong>Last Update:</strong></td>
-    <td> **Last Update:** LAST_UPDATE_PLACEHOLDER </td>
-  </tr>
-  <tr>
-    <td><strong>License:</strong></td>
-    <td>All Rights Reserved</td>
-  </tr>
-</table>
-
+ 
 ---
 <p align="center">
   <i>Join the Cyber-Cookie adventure and start building your cookie empire today! 🍪✨</i>
