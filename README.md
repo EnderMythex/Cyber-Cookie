@@ -75,7 +75,7 @@ For full documentation on features, gameplay strategies, and updates, visit our 
   </tr>
   <tr>
     <td><strong>Last Update:</strong></td>
-    <td>January 2024</td>
+    <td> **Last Update:** LAST_UPDATE_PLACEHOLDER </td>
   </tr>
   <tr>
     <td><strong>License:</strong></td>
