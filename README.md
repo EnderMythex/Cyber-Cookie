@@ -31,7 +31,7 @@ Cyber-Cookie is a futuristic reinterpretation of the classic Cookie Clicker. Set
 - 💾 Automatic save feature
 - 📱 Multi-platform compatibility
 
-## 📥 Download
+## 📥 Download / Play
 
 ### Web Version
 - 🌐 [Official Website](https://cybercookie.party/) - BETA 1.6.0
