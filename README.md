@@ -62,12 +62,12 @@ Cyber-Cookie is a futuristic reinterpretation of the classic Cookie Clicker. Set
 > To suggest changes, additions, or report bugs, join our [Discord server](https://discord.cybercookie.party/).
 
 > [!NOTE]
-> For more technical details, visit the [CyberCookie Wiki](https://ender-corporations.gitbook.io/cybercookie-wiki).
+> For more technical details, visit the [CyberCookie Wiki](https://wiki.cybercookie.party/).
  
  
 ## 📚 Documentation
 
-For full documentation on features, gameplay strategies, and updates, visit our [Wiki](https://ender-corporations.gitbook.io/cybercookie-wiki).
+For full documentation on features, gameplay strategies, and updates, visit our [Wiki](https://wiki.cybercookie.party/).
  
  
 ## 🎨 Credits
