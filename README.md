@@ -29,7 +29,7 @@
 
 Cyber-Cookie is a futuristic reinterpretation of the classic Cookie Clicker. Set in a captivating cyberpunk universe, click to collect cookies and grow your automated production empire. Featuring neon-styled graphics and innovative gameplay mechanics, Cyber-Cookie offers a unique experience that will keep you engaged for hours.
 
-### ✨ Key Features
+### ✨ Key Features (coming soon)
 
 - 🌐 Futuristic cyberpunk interface
 - 🔄 Reimagined progression system
