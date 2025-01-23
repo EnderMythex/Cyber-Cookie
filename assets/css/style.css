@@ -99,7 +99,7 @@
    
       -------------------------------------------------------------------------- */
    
-      .mini-cookie {
+   /* .mini-cookie {
        position: absolute;
        width: 100px;
        height: 100px;
@@ -111,7 +111,7 @@
        animation-iteration-count: infinite;
        z-index: 10;
        opacity: 0.5;
-       pointer-events: none; /* Permet de cliquer à travers l'image */
+       pointer-events: none;
    }
    
    @keyframes fall {
@@ -122,9 +122,7 @@
        100% {
            top: calc(100% - 50px);
        }
-   
-       /* Ajustement pour que le cookie s'arrête au bas de la fenêtre */
-   }
+   } */
    
    /* --------------------------------------------------------------------------
    
