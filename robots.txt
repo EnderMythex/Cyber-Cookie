@@ -1,0 +1,11 @@
+# Blocage des répertoires sensibles
+User-agent: *
+Disallow: /admin/
+Disallow: /test/
+Disallow: /private/
+
+# Autorisation explicite pour le reste du site
+Allow: /
+
+# Indiquer l'emplacement de votre sitemap
+Sitemap: https://cybercookie.party/sitemap.xml
