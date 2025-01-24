@@ -1,0 +1,38 @@
+.container {
+    width: 282px;
+    height: 500px;
+    background-image: url('/assets/backgrounds/background_1.gif');
+    background-size: cover;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 0 8px #ffffffc5;
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.3));
+    z-index: 0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    animation: borderGlow 6s infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    min-height: 500px;
+    overflow: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+.discord-info {
+    border-radius: 15px;
+    margin-top: 30px;
+    float: center;
+    transition: transform 0.5s cubic-bezier(0.2, 3, 0.4, 1) 0s;
+}
+
+.discord-info:hover {
+    transform: scale(1.05);
+} 

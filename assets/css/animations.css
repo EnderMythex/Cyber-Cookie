@@ -1,0 +1,65 @@
+@keyframes borderGlow {
+    0% { box-shadow: 0 0 8px #ffffffc5; }
+    50% { box-shadow: 0 0 15px #ffffff; }
+    100% { box-shadow: 0 0 8px #ffffffc5; }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+/* Animation de pulsation néon */
+@keyframes neonPulse {
+    0% {
+        box-shadow: 
+            0 0 15px rgba(0, 195, 255, 0.2),
+            0 0 30px rgba(0, 89, 255, 0.1);
+    }
+    50% {
+        box-shadow: 
+            0 0 20px rgba(0, 195, 255, 0.3),
+            0 0 40px rgba(0, 89, 255, 0.2);
+    }
+    100% {
+        box-shadow: 
+            0 0 15px rgba(0, 195, 255, 0.2),
+            0 0 30px rgba(0, 89, 255, 0.1);
+    }
+}
+
+/* Animation pour le loader */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animation pour le login */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ... Autres animations ... */ 

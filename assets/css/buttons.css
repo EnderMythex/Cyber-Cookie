@@ -1,0 +1,157 @@
+/* Styles de base des boutons */
+.button {
+    position: relative;
+    padding: 12px 24px;
+    margin: 10px 0;
+    background: linear-gradient(
+        135deg, 
+        rgba(28, 37, 65, 0.8),
+        rgba(35, 45, 75, 0.8)
+    );
+    border: 1px solid rgba(0, 195, 255, 0.1);
+    border-radius: 4px;
+    color: #a8c6ff;
+    font-family: 'clockDigital', sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+    text-transform: uppercase;
+    width: 220px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Effet de lueur interne */
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(81, 185, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+/* Bordure néon */
+.button::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    padding: 1px;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 195, 255, 0.2),
+        rgba(0, 89, 255, 0.1)
+    );
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+/* Animation au survol */
+.button:hover {
+    transform: translateY(-2px) scale(1.02);
+    background: linear-gradient(
+        135deg,
+        rgba(35, 45, 75, 0.9),
+        rgba(45, 55, 95, 0.9)
+    );
+    color: #ffffff;
+    box-shadow: 
+        0 0 15px rgba(0, 195, 255, 0.3),
+        0 0 30px rgba(0, 89, 255, 0.2);
+    text-shadow: 0 0 8px rgba(0, 195, 255, 0.5);
+}
+
+.button:hover::before {
+    left: 100%;
+}
+
+/* Animation au clic */
+.button:active {
+    transform: translateY(1px);
+    box-shadow: 
+        0 0 10px rgba(0, 195, 255, 0.2),
+        0 0 20px rgba(0, 89, 255, 0.1);
+}
+
+/* Style spécifique pour les boutons de shop */
+#shopOptions .button {
+    background: linear-gradient(
+        135deg,
+        rgba(25, 32, 58, 0.9),
+        rgba(32, 40, 70, 0.9)
+    );
+    width: 180px;
+    height: 50px;
+    margin: 5px auto;
+}
+
+/* Style pour les boutons désactivés */
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: linear-gradient(
+        135deg,
+        rgba(20, 25, 45, 0.9),
+        rgba(25, 30, 55, 0.9)
+    );
+}
+
+/* Style pour les boutons d'action principale */
+.button.primary {
+    background: linear-gradient(
+        135deg,
+        rgba(35, 45, 75, 0.9),
+        rgba(45, 55, 95, 0.9)
+    );
+    animation: neonPulse 2s infinite;
+}
+
+/* Adaptation pour les petits écrans */
+@media (max-width: 768px) {
+    .button {
+        width: 200px;
+        height: 50px;
+        font-size: 16px;
+    }
+    
+    #shopOptions .button {
+        width: 160px;
+        height: 45px;
+    }
+}
+
+/* Cookie button spécifique */
+.cookie-button {
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+    border-radius: 15px;
+    animation: multicolor 5s infinite;
+    transition: transform 0.5s cubic-bezier(0.2, 3, 0.4, 1) 0s;
+}
+
+.cookie-button:hover {
+    transform: scale(1.05);
+}
+
+/* ... Reste des styles de boutons ... */ 

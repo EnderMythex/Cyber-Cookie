@@ -1,0 +1,545 @@
+/* Theme 2 - Orange */
+.theme2-active .button {
+    background: linear-gradient(
+        135deg, 
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 140, 0, 0.4)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255, 140, 0, 0.4);
+}
+
+.theme2-active .button:hover {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 140, 0, 0.5),
+        rgba(255, 255, 255, 0.5)
+    );
+    color: #ffffff;
+    box-shadow: 
+        0 0 15px rgba(255, 140, 0, 0.2),
+        0 0 30px rgba(255, 255, 255, 0.15);
+}
+
+.theme2-active .button::after {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.15),
+        rgba(255, 140, 0, 0.1)
+    );
+}
+
+.theme2-active .autoclicker-count {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 140, 0, 0.4)
+    );
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.theme2-active .settingsinfos-txt {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 140, 0, 0.4)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255, 140, 0, 0.4);
+    box-shadow: 
+        0 0 10px rgba(255, 140, 0, 0.1),
+        inset 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.theme2-active #shopOptions .button {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 140, 0, 0.6),
+        rgba(255, 255, 255, 0.6)
+    );
+    width: 180px;
+    height: 50px;
+    margin: 5px auto;
+}
+
+.theme2-active #shopOptions .button:hover {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 140, 0, 0.7)
+    );
+}
+
+.theme2-active #settingsOptions .button {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 140, 0, 0.6),
+        rgba(255, 255, 255, 0.6)
+    );
+}
+
+/* Theme 3 - Sky Blue */
+.theme3-active .button {
+    background: linear-gradient(
+        135deg, 
+        rgba(169, 169, 169, 0.5),
+        rgba(135, 206, 235, 0.5)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #e6f3ff;
+    text-shadow: 0 0 8px rgba(135, 206, 235, 0.4);
+}
+
+.theme3-active .button:hover {
+    background: linear-gradient(
+        135deg,
+        rgba(135, 206, 235, 0.6),
+        rgba(169, 169, 169, 0.6)
+    );
+    color: #ffffff;
+    box-shadow: 
+        0 0 15px rgba(135, 206, 235, 0.2),
+        0 0 30px rgba(169, 169, 169, 0.15);
+}
+
+.theme3-active .autoclicker-count {
+    background: linear-gradient(
+        135deg,
+        rgba(169, 169, 169, 0.5),
+        rgba(135, 206, 235, 0.5)
+    );
+    color: #e6f3ff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.theme3-active .settingsinfos-txt {
+    background: linear-gradient(
+        135deg,
+        rgba(169, 169, 169, 0.5),
+        rgba(135, 206, 235, 0.5)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #e6f3ff;
+    text-shadow: 0 0 8px rgba(135, 206, 235, 0.4);
+}
+
+.theme3-active #shopOptions .button {
+    background: linear-gradient(
+        135deg,
+        rgba(169, 169, 169, 0.6),
+        rgba(135, 206, 235, 0.6)
+    );
+    width: 180px;
+    height: 50px;
+    margin: 5px auto;
+}
+
+.theme3-active #settingsOptions .button {
+    background: linear-gradient(
+        135deg,
+        rgba(169, 169, 169, 0.6),
+        rgba(135, 206, 235, 0.6)
+    );
+}
+
+/* Theme 4 - Dark Blue */
+.theme4-active .button {
+    background: linear-gradient(
+        135deg, 
+        rgba(0, 0, 139, 0.5),
+        rgba(0, 0, 0, 0.5)
+    );
+    border: 1px solid rgba(0, 191, 255, 0.15);
+    color: #add8e6;
+    text-shadow: 0 0 8px rgba(0, 191, 255, 0.4);
+}
+
+.theme4-active .autoclicker-count {
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 139, 0.5),
+        rgba(0, 0, 0, 0.5)
+    );
+    color: #add8e6;
+    border: 1px solid rgba(0, 191, 255, 0.15);
+}
+
+.theme4-active .settingsinfos-txt {
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 139, 0.5),
+        rgba(0, 0, 0, 0.5)
+    );
+    border: 1px solid rgba(0, 191, 255, 0.15);
+    color: #add8e6;
+    text-shadow: 0 0 8px rgba(0, 191, 255, 0.4);
+}
+
+.theme4-active #shopOptions .button {
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 139, 0.6),
+        rgba(0, 0, 0, 0.6)
+    );
+}
+
+.theme4-active #settingsOptions .button {
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 139, 0.6),
+        rgba(0, 0, 0, 0.6)
+    );
+}
+
+/* Theme 5 - Dark Red */
+.theme5-active .button {
+    background: linear-gradient(
+        135deg, 
+        rgba(139, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    );
+    border: 1px solid rgba(255, 0, 0, 0.15);
+    color: #ffcccc;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+}
+
+.theme5-active .autoclicker-count {
+    background: linear-gradient(
+        135deg,
+        rgba(139, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    );
+    color: #ffcccc;
+    border: 1px solid rgba(255, 0, 0, 0.15);
+}
+
+.theme5-active .settingsinfos-txt {
+    background: linear-gradient(
+        135deg,
+        rgba(139, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    );
+    border: 1px solid rgba(255, 0, 0, 0.15);
+    color: #ffcccc;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+}
+
+.theme5-active #shopOptions .button {
+    background: linear-gradient(
+        135deg,
+        rgba(139, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6)
+    );
+}
+
+.theme5-active #settingsOptions .button {
+    background: linear-gradient(
+        135deg,
+        rgba(139, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6)
+    );
+}
+
+/* Theme 7 - Nature Green */
+.theme7-active .button {
+    background: linear-gradient(
+        135deg, 
+        rgba(144, 238, 144, 0.4),
+        rgba(255, 255, 255, 0.4)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    text-shadow: 0 0 8px rgba(144, 238, 144, 0.4);
+}
+
+.theme7-active .autoclicker-count {
+    background: linear-gradient(
+        135deg,
+        rgba(144, 238, 144, 0.4),
+        rgba(255, 255, 255, 0.4)
+    );
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.theme7-active .settingsinfos-txt {
+    background: linear-gradient(
+        135deg,
+        rgba(144, 238, 144, 0.4),
+        rgba(255, 255, 255, 0.4)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    text-shadow: 0 0 8px rgba(144, 238, 144, 0.4);
+}
+
+.theme7-active #shopOptions .button {
+    background: linear-gradient(
+        135deg,
+        rgba(144, 238, 144, 0.5),
+        rgba(255, 255, 255, 0.5)
+    );
+}
+
+.theme7-active #settingsOptions .button {
+    background: linear-gradient(
+        135deg,
+        rgba(144, 238, 144, 0.5),
+        rgba(255, 255, 255, 0.5)
+    );
+}
+
+/* Theme 8 - Multi Color */
+.theme8-active .button {
+    background: linear-gradient(
+        135deg, 
+        rgba(255, 182, 193, 0.3),
+        rgba(255, 160, 122, 0.3),
+        rgba(0, 0, 0, 0.3),
+        rgba(173, 216, 230, 0.3)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffe6f2;
+    text-shadow: 0 0 8px rgba(255, 182, 193, 0.3);
+}
+
+.theme8-active .autoclicker-count {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 182, 193, 0.3),
+        rgba(255, 160, 122, 0.3),
+        rgba(0, 0, 0, 0.3),
+        rgba(173, 216, 230, 0.3)
+    );
+    color: #ffe6f2;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.theme8-active .settingsinfos-txt {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 182, 193, 0.3),
+        rgba(255, 160, 122, 0.3),
+        rgba(0, 0, 0, 0.3),
+        rgba(173, 216, 230, 0.3)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffe6f2;
+    text-shadow: 0 0 8px rgba(255, 182, 193, 0.3);
+}
+
+.theme8-active #shopOptions .button {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 182, 193, 0.4),
+        rgba(255, 160, 122, 0.4),
+        rgba(0, 0, 0, 0.4),
+        rgba(173, 216, 230, 0.4)
+    );
+}
+
+.theme8-active #settingsOptions .button {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 182, 193, 0.4),
+        rgba(255, 160, 122, 0.4),
+        rgba(0, 0, 0, 0.4),
+        rgba(173, 216, 230, 0.4)
+    );
+}
+
+/* Theme 9 - White */
+.theme9-active .button {
+    background: linear-gradient(
+        135deg, 
+        rgba(255, 255, 255, 0.4),
+        rgba(240, 240, 240, 0.4)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.theme9-active .autoclicker-count {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.4),
+        rgba(240, 240, 240, 0.4)
+    );
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.theme9-active .settingsinfos-txt {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.4),
+        rgba(240, 240, 240, 0.4)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.theme9-active #shopOptions .button {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.5),
+        rgba(240, 240, 240, 0.5)
+    );
+}
+
+.theme9-active #settingsOptions .button {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.5),
+        rgba(240, 240, 240, 0.5)
+    );
+}
+
+/* Theme 10 - Fire Orange */
+.theme10-active .button {
+    background: linear-gradient(
+        135deg, 
+        rgba(255, 111, 0, 0.5),
+        rgba(255, 69, 0, 0.5)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #ffe6cc;
+    text-shadow: 0 0 8px rgba(255, 140, 0, 0.4);
+}
+
+.theme10-active .autoclicker-count {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 111, 0, 0.5),
+        rgba(255, 69, 0, 0.5)
+    );
+    color: #ffe6cc;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.theme10-active .settingsinfos-txt {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 111, 0, 0.5),
+        rgba(255, 69, 0, 0.5)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #ffe6cc;
+    text-shadow: 0 0 8px rgba(255, 140, 0, 0.4);
+}
+
+.theme10-active #shopOptions .button {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 111, 0, 0.6),
+        rgba(255, 69, 0, 0.6)
+    );
+}
+
+.theme10-active #settingsOptions .button {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 111, 0, 0.6),
+        rgba(255, 69, 0, 0.6)
+    );
+}
+
+/* Theme 12 - Pastel */
+.theme12-active .button {
+    background: linear-gradient(
+        135deg, 
+        rgba(255, 182, 193, 0.4),
+        rgba(173, 216, 230, 0.4)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255, 182, 193, 0.4);
+}
+
+.theme12-active .autoclicker-count {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 182, 193, 0.4),
+        rgba(173, 216, 230, 0.4)
+    );
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.theme12-active .settingsinfos-txt {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 182, 193, 0.4),
+        rgba(173, 216, 230, 0.4)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255, 182, 193, 0.4);
+}
+
+.theme12-active #shopOptions .button {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 182, 193, 0.5),
+        rgba(173, 216, 230, 0.5)
+    );
+}
+
+.theme12-active #settingsOptions .button {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 182, 193, 0.5),
+        rgba(173, 216, 230, 0.5)
+    );
+}
+
+/* Animations spécifiques aux thèmes */
+@keyframes theme2Pulse {
+    0%, 100% { box-shadow: 0 0 10px rgba(255, 140, 0, 0.1); }
+    50% { box-shadow: 0 0 20px rgba(255, 140, 0, 0.3); }
+}
+
+@keyframes theme3Pulse {
+    0%, 100% { box-shadow: 0 0 10px rgba(135, 206, 235, 0.1); }
+    50% { box-shadow: 0 0 20px rgba(135, 206, 235, 0.3); }
+}
+
+@keyframes theme4Pulse {
+    0%, 100% { box-shadow: 0 0 10px rgba(0, 0, 139, 0.1); }
+    50% { box-shadow: 0 0 20px rgba(0, 0, 139, 0.3); }
+}
+
+@keyframes theme5Pulse {
+    0%, 100% { box-shadow: 0 0 10px rgba(139, 0, 0, 0.1); }
+    50% { box-shadow: 0 0 20px rgba(139, 0, 0, 0.3); }
+}
+
+@keyframes theme7Pulse {
+    0%, 100% { box-shadow: 0 0 10px rgba(144, 238, 144, 0.1); }
+    50% { box-shadow: 0 0 20px rgba(144, 238, 144, 0.3); }
+}
+
+@keyframes theme8Pulse {
+    0%, 100% { box-shadow: 0 0 10px rgba(255, 182, 193, 0.1); }
+    50% { box-shadow: 0 0 20px rgba(255, 182, 193, 0.3); }
+}
+
+@keyframes theme9Pulse {
+    0%, 100% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); }
+    50% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); }
+}
+
+@keyframes theme10Pulse {
+    0%, 100% { box-shadow: 0 0 10px rgba(255, 111, 0, 0.1); }
+    50% { box-shadow: 0 0 20px rgba(255, 111, 0, 0.3); }
+}
+
+@keyframes theme12Pulse {
+    0%, 100% { box-shadow: 0 0 10px rgba(255, 182, 193, 0.1); }
+    50% { box-shadow: 0 0 20px rgba(255, 182, 193, 0.3); }
+} 

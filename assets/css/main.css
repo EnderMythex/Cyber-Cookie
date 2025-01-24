@@ -1,0 +1,40 @@
+/* Import des autres fichiers CSS */
+@import 'container.css';
+@import 'buttons.css';
+@import 'themes.css';
+@import 'login.css';
+@import 'animations.css';
+@import 'components.css';
+@import 'loader.css';
+
+/* Styles globaux */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-image: url('/assets/backgrounds/main_background.jpg');
+    background-size: cover;
+    align-items: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div {
+    color: white;
+    font-family: "clockDigital";
+}
+
+/*Custom Font Import*/
+@font-face {
+    font-family: "clockDigital";
+    src: url("/assets/fonts/digital-7.woff2") format("woff2"),
+        url("/assets/fonts/digital-7.woff") format("woff");
+} 

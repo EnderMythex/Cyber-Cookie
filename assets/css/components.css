@@ -1,0 +1,131 @@
+/* Autoclicker container */
+.autoclicker-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.autoclicker-count {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    margin-right: 8px;
+    background: linear-gradient(
+        135deg,
+        rgba(28, 37, 65, 0.9),
+        rgba(35, 45, 75, 0.9)
+    );
+    color: #a8c6ff;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "clockDigital";
+    font-size: 1.4em;
+    border: 1px solid rgba(0, 195, 255, 0.1);
+    box-shadow: 
+        0 0 10px rgba(0, 89, 255, 0.1),
+        inset 0 0 15px rgba(0, 89, 255, 0.05);
+    backdrop-filter: blur(8px);
+    text-shadow: 0 0 5px rgba(0, 195, 255, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Settings container */
+.settingsinfos-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.settingsinfos-txt {
+    width: 300px;
+    height: 55px;
+    user-select: text;
+    background: linear-gradient(
+        135deg,
+        rgba(28, 37, 65, 0.8),
+        rgba(35, 45, 75, 0.8)
+    );
+    border: 1px solid rgba(0, 195, 255, 0.1);
+    border-radius: 4px;
+    color: #a8c6ff;
+    font-family: 'clockDigital', sans-serif;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    box-shadow: 
+        0 0 10px rgba(0, 89, 255, 0.1),
+        inset 0 0 15px rgba(0, 89, 255, 0.05);
+    text-shadow: 0 0 5px rgba(0, 195, 255, 0.5);
+    position: relative;
+    overflow: hidden;
+    margin-top: 0;
+}
+
+/* Counter styles */
+#count {
+    color: rgb(255, 255, 255);
+    font-size: 2.2em;
+    font-family: "clockDigital";
+    margin-top: 10px;
+    font-size: 300%;
+    text-shadow: #424242;
+}
+
+/* Dialog styles */
+.dialog {
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.788);
+    border-radius: 10px;
+}
+
+.dialog p {
+    color: white;
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.dialog .button {
+    float: center;
+}
+
+/* Theme grid styles */
+.theme-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    width: 100%;
+    padding: 5px;
+}
+
+.theme-grid .button {
+    width: 120px;
+    height: 45px;
+    font-size: 14px;
+    margin: 0;
+    padding: 8px 12px;
+}
+
+@media (max-width: 768px) {
+    .theme-grid .button {
+        width: 110px;
+        height: 40px;
+        font-size: 12px;
+    }
+}
+
+/* ... Autres composants ... */ 
