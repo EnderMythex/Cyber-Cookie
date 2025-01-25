@@ -3,6 +3,8 @@ import { themeState } from './themeFunctions.js';
 import { otherState, updateInterval } from './otherFunctions.js';
 import { saveToFirestore } from './googleFunctions.js';
 import { SECRET_KEY, SAVE_INTERVAL } from './config.js';
+import { db } from './firebaseConfig.js';
+import { updateLeaderboard } from './LeadboardFonction.js';
 
 /* --------------------------------------------------------------------------
  
@@ -80,8 +82,10 @@ export function saveToCookies() {
 
     // Vérifie si c'est un utilisateur Google
     if (localStorage.getItem('isGoogleUser')) {
-        // Pour les utilisateurs Google, sauvegarde uniquement dans Firestore
+        // Pour les utilisateurs Google, sauvegarde dans Firestore
         const userId = document.getElementById('userId')?.textContent;
+        const username = document.getElementById('username')?.textContent || 'Anonymous';
+        
         if (userId && userId !== 'User not connected') {
             const data = {
                 shop: {
@@ -126,12 +130,20 @@ export function saveToCookies() {
                 },
                 lastUpdate: new Date()
             };
+            
+            // Sauvegarde les données du jeu
             saveToFirestore(userId, data);
+            
+            // Mise à jour du leaderboard
+            updateLeaderboard(userId, username, shopState.count);
         }
         return;
     }
 
-    // Pour les utilisateurs invités, sauvegarde dans les cookies
+    // Pour les utilisateurs invités, sauvegarde dans les cookies et le leaderboard
+    const anonymousId = 'anonymous_' + Math.random().toString(36).substr(2, 9);
+    updateLeaderboard(anonymousId, 'Anonymous', shopState.count);
+
     document.cookie = `score=${encrypt(shopState.count)};path=/;max-age=2147483647;secure`;
     document.cookie = `autoclickers=${encrypt(shopState.autoclickers)};path=/;max-age=2147483647;secure`;
     document.cookie = `powerfulAutoclickers=${encrypt(shopState.powerfulAutoclickers)};path=/;max-age=2147483647;secure`;
