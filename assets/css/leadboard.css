@@ -1,0 +1,86 @@
+.leaderboard-list {
+    max-width: 600px;
+    margin: 20px auto;
+    background: rgba(28, 37, 65, 0.8);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.leaderboard-entry {
+    display: grid;
+    grid-template-columns: 50px 1fr 100px;
+    padding: 10px;
+    margin: 5px 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    align-items: center;
+}
+
+.leaderboard-entry:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.rank {
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.username {
+    color: #ffffff;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.score {
+    color: #ffffff;
+    text-align: right;
+    font-family: monospace;
+}
+
+.leaderboard-empty {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+    font-style: italic;
+}
+
+.leaderboard-error {
+    text-align: center;
+    padding: 20px;
+    color: #ff6b6b;
+    font-style: italic;
+}
+
+/* Ajout du style pour le conteneur des boutons */
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+    margin: 10px auto;
+    width: auto;
+}
+
+.button-container .button {
+    width: 120px;
+    height: 45px;
+    font-size: 14px;
+    margin: 0;
+    padding: 8px 12px;
+    float: none; /* Annule le float */
+    flex: 0 0 auto; /* Empêche le redimensionnement flex */
+}
+
+.leaderboard-entry.updated {
+    animation: highlight 0.5s ease-out;
+}
+
+@keyframes highlight {
+    0% {
+        background-color: rgba(255, 255, 0, 0.2);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
