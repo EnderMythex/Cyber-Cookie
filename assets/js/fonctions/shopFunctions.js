@@ -186,6 +186,7 @@ export function initializeShopButton(playSound) {
             reset.style.display = 'none';
             discord.style.display = 'none';
             settings.style.display = 'none';
+            leaderboardBtn.style.display = 'none';
             extension.style.display = 'none';
             theme.style.display = 'none';
         } else {
@@ -195,6 +196,7 @@ export function initializeShopButton(playSound) {
             reset.style.display = 'block';
             discord.style.display = 'block';
             settings.style.display = 'block';
+            leaderboardBtn.style.display = 'block';
             extension.style.display = 'block';
             theme.style.display = 'block';
         }
