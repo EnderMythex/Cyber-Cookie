@@ -498,6 +498,124 @@
     );
 }
 
+/* Styles du leaderboard pour chaque thème */
+.theme2-active .leaderboard-list {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 140, 0, 0.4),
+        rgba(255, 255, 255, 0.4)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.theme3-active .leaderboard-list {
+    background: linear-gradient(
+        135deg,
+        rgba(169, 169, 169, 0.5),
+        rgba(135, 206, 235, 0.5)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.theme4-active .leaderboard-list {
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 139, 0.5),
+        rgba(0, 0, 0, 0.5)
+    );
+    border: 1px solid rgba(0, 191, 255, 0.15);
+}
+
+.theme5-active .leaderboard-list {
+    background: linear-gradient(
+        135deg,
+        rgba(139, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    );
+    border: 1px solid rgba(255, 0, 0, 0.15);
+}
+
+.theme7-active .leaderboard-list {
+    background: linear-gradient(
+        135deg,
+        rgba(144, 238, 144, 0.4),
+        rgba(255, 255, 255, 0.4)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.theme8-active .leaderboard-list {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 182, 193, 0.3),
+        rgba(255, 160, 122, 0.3),
+        rgba(0, 0, 0, 0.3),
+        rgba(173, 216, 230, 0.3)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.theme9-active .leaderboard-list {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.4),
+        rgba(240, 240, 240, 0.4)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.theme10-active .leaderboard-list {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 111, 0, 0.5),
+        rgba(255, 69, 0, 0.5)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.theme12-active .leaderboard-list {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 182, 193, 0.4),
+        rgba(173, 216, 230, 0.4)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Styles des entrées pour chaque thème */
+.theme2-active .leaderboard-entry,
+.theme3-active .leaderboard-entry,
+.theme4-active .leaderboard-entry,
+.theme5-active .leaderboard-entry,
+.theme7-active .leaderboard-entry,
+.theme8-active .leaderboard-entry,
+.theme9-active .leaderboard-entry,
+.theme10-active .leaderboard-entry,
+.theme12-active .leaderboard-entry {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.theme2-active .leaderboard-entry:hover,
+.theme3-active .leaderboard-entry:hover,
+.theme4-active .leaderboard-entry:hover,
+.theme5-active .leaderboard-entry:hover,
+.theme7-active .leaderboard-entry:hover,
+.theme8-active .leaderboard-entry:hover,
+.theme9-active .leaderboard-entry:hover,
+.theme10-active .leaderboard-entry:hover,
+.theme12-active .leaderboard-entry:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Animation de mise à jour personnalisée pour chaque thème */
+.theme2-active .leaderboard-entry.updated {
+    animation: highlight-theme2 0.5s ease-out;
+}
+
+.theme3-active .leaderboard-entry.updated {
+    animation: highlight-theme3 0.5s ease-out;
+}
+
 /* Animations spécifiques aux thèmes */
 @keyframes theme2Pulse {
     0%, 100% { box-shadow: 0 0 10px rgba(255, 140, 0, 0.1); }
