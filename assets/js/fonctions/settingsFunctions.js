@@ -34,6 +34,7 @@ export function initializeSettingsButton() {
             cookie.style.display = 'none';
             discord.style.display = 'none';
             theme.style.display = 'none';
+            leaderboardBtn.style.display = 'none';
             extension.style.display = 'none';
             shop.style.display = 'none';
         } else {
@@ -46,6 +47,7 @@ export function initializeSettingsButton() {
             settings.style.display = 'block';
             extension.style.display = 'block';
             shop.style.display = 'block';
+            leaderboardBtn.style.display = 'block';
         }
     });
 }
