@@ -1,39 +1,64 @@
+/******************************************************************************************
+ *                                                                                        *
+ *           ██████╗██╗   ██╗      ██████╗ ██████╗  ██████╗ ██╗  ██╗██╗███████╗           *
+ *           ██╔════╝╚██╗ ██╔╝     ██╔════╝██╔═══██╗██╔═══██╗██║ ██╔╝██║██╔════╝          *
+ *           ██║      ╚████╔╝█████╗██║     ██║   ██║██║   ██║█████╔╝ ██║█████╗            *
+ *           ██║       ╚██╔╝ ╚════╝██║     ██║   ██║██║   ██║██╔═██╗ ██║██╔══╝            *
+ *           ╚██████╗   ██║        ╚██████╗╚██████╔╝╚██████╔╝██║  ██╗██║███████╗          *
+ *            ╚═════╝   ╚═╝         ╚═════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝╚══════╝          *
+ *                                                                                        *
+ *          @project CyberCookie        @creator EndeMythex        @version 1.6.0         *
+ *****************************************************************************************/
+
+
 /* --------------------------------------------------------------------------
-	
-                          Global Setup
-	
+
+                            Setup / Import Resources                                                                                                                                  
+
    -------------------------------------------------------------------------- */
 
-   import { themeState, applyTheme, updateThemeButtons, initializeThemeHandlers, initializeThemeButton } from './fonctions/themeFunctions.js';
+   import { themeState, applyTheme, updateThemeButtons, initializeThemeHandlers, initializeThemeButton } from './resources/themeFunctions.js';
 
-   import { initializeResetHandlers } from './fonctions/resetFunctions.js';
+   import { initializeResetHandlers } from './resources/resetFunctions.js';
    
-   import { initializeSettingsButton } from './fonctions/settingsFunctions.js';
+   import { initializeSettingsButton } from './resources/settingsFunctions.js';
    
-   import { shopState, updateAutoclickerCosts, updateAutoclickerButtons, initializeShopHandlers, initializeShopButton, processAutoClicks, startAutoClickInterval, updateCount } from './fonctions/shopFunctions.js';
+   import { shopState, updateAutoclickerCosts, updateAutoclickerButtons, initializeShopHandlers, initializeShopButton, processAutoClicks, startAutoClickInterval, updateCount } from './resources/shopFunctions.js';
    
-   import { otherState, playSound, vibrate, generateMiniCookie, updateRank, initializeToggles, initializeOtherHandlers, initializeAdminCookies, initializeSecurity, updateInterval, playSound2, initializeCookieEffects } from './fonctions/otherFunctions.js';
+   import { otherState, playSound, vibrate, generateMiniCookie, updateRank, initializeToggles, initializeOtherHandlers, initializeAdminCookies, updateInterval, playSound2, initializeCookieEffects } from './resources/otherFunctions.js';
    
-   import { loadFromCookies, saveToCookies } from './fonctions/saveFunctions.js';
+   import { loadFromCookies, saveToCookies } from './resources/saveFunctions.js';
    
-   import { initializeAuthListener, saveToFirestore } from './fonctions/googleFunctions.js';
+   import { initializeAuthListener, saveToFirestore } from './resources/googleFunctions.js';
    
-   import { CookieEffectsManager } from './fonctions/canvasEffects.js';
+   import { CookieEffectsManager } from './resources/canvasEffects.js';
    
-   import { initializeLeaderboard } from './fonctions/LeadboardFonction.js';
+   import { initializeLeaderboard } from './resources/LeadboardFonction.js';
+   
+   import { antiCheat } from './resources/anticheat.js';
    
    // Éléments DOM
    const cookie = document.getElementById('cookie');
    const display = document.getElementById('count');
    
-   // Interface Update
+   /* --------------------------------------------------------------------------
+   
+                                   Interface Updates                                                                                                                                 
+   
+      -------------------------------------------------------------------------- */
+   
    loadFromCookies();
    updateThemeButtons();
    updateAutoclickerCosts();
    updateAutoclickerButtons();
    updateInterval();
    
-   // Écouteur d'événements pour le chargement du DOM
+   /* --------------------------------------------------------------------------
+   
+                               Listen event / DOM loading                                                                                                                                 
+   
+      -------------------------------------------------------------------------- */
+   
    document.addEventListener('DOMContentLoaded', function () {
        initializeThemeHandlers(playSound, saveToCookies);
        initializeThemeButton();
@@ -44,14 +69,15 @@
        initializeOtherHandlers(cookie, playSound, generateMiniCookie);
        initializeResetHandlers(playSound, saveToCookies);
        initializeAdminCookies(saveToCookies);
-       initializeSecurity();
        initializeAuthListener();
        startAutoClickInterval(updateInterval, saveToCookies);
        initializeCookieEffects();
        initializeLeaderboard();
+       
+       // Initialise l'anti-triche
+       antiCheat.init();
    });
    
-   // Créer une instance du gestionnaire d'effets
    const effectsManager = new CookieEffectsManager();
    effectsManager.init();
    
@@ -74,11 +100,13 @@
        };
    }
    
-   // Optimiser le gestionnaire de clic
+   // Modifier le gestionnaire de clic pour inclure la validation
    const debouncedClick = debounce((event) => {
+       if (!antiCheat.validateClick()) return;
+       
        shopState.count += shopState.clickPower;
        display.textContent = shopState.count.toLocaleString('fr-FR');
-       
+   
        effectsManager.generateText(
            event.clientX + 10,
            event.clientY - 10,
@@ -89,8 +117,7 @@
        playSound2();
        saveToCookies();
        updateInterval();
-       generateMiniCookie(event.clientX, event.clientY);
-   }, 50); // 50ms de délai
+   }, 50);
    
    cookie.addEventListener('click', debouncedClick);
    
