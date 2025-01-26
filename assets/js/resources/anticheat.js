@@ -212,7 +212,6 @@ class AntiCheat {
         const checkAndRefresh = () => {
             if (this.isDevToolsOpen()) {
                 localStorage.setItem('devToolsDetected', 'true');
-                window.location.reload();
             } else {
                 localStorage.removeItem('devToolsDetected');
                 this.isHandlingDevTools = false;
