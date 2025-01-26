@@ -1,3 +1,16 @@
+/******************************************************************************************
+ *                                                                                        *
+ *           ██████╗██╗   ██╗      ██████╗ ██████╗  ██████╗ ██╗  ██╗██╗███████╗           *
+ *           ██╔════╝╚██╗ ██╔╝     ██╔════╝██╔═══██╗██╔═══██╗██║ ██╔╝██║██╔════╝          *
+ *           ██║      ╚████╔╝█████╗██║     ██║   ██║██║   ██║█████╔╝ ██║█████╗            *
+ *           ██║       ╚██╔╝ ╚════╝██║     ██║   ██║██║   ██║██╔═██╗ ██║██╔══╝            *
+ *           ╚██████╗   ██║        ╚██████╗╚██████╔╝╚██████╔╝██║  ██╗██║███████╗          *
+ *            ╚═════╝   ╚═╝         ╚═════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝╚══════╝          *
+ *                                                                                        *
+ *          @project CyberCookie        @creator EndeMythex        @version 1.6.0         *
+ *****************************************************************************************/
+
+
 (function oneko() {
     const nekoEl = document.createElement("div");
     nekoEl.className = "oneko";
@@ -79,9 +92,8 @@
 
     function setSprite(name, frame) {
         const sprite = spriteSets[name][frame % spriteSets[name].length];
-        nekoEl.style.backgroundPosition = `${sprite[0] * 32}px ${
-            sprite[1] * 32
-        }px`;
+        nekoEl.style.backgroundPosition = `${sprite[0] * 32}px ${sprite[1] * 32
+            }px`;
     }
 
     function resetIdleAnimation() {
@@ -179,5 +191,4 @@ window.onekoEnabled = true;
 
 function updateNeko() {
     if (!window.onekoEnabled) return;
-    // ... reste du code oneko existant ...
 }
