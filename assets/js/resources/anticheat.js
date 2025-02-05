@@ -268,21 +268,7 @@ class AntiCheat {
                 alert.remove();
             }
         }, 5000);
-    }
-
-    // Enregistre une tentative de triche
-    async logCheatAttempt(reason) {
-        try {
-            const timestamp = new Date().toISOString();
-            const userId = auth.currentUser.uid;
-
-            // Ici vous pouvez implémenter la logique pour enregistrer 
-            // la tentative de triche dans votre base de données
-            console.warn(`Cheat attempt logged for user ${userId} at ${timestamp}: ${reason}`);
-        } catch (error) {
-            console.error("Error logging cheat attempt:", error);
-        }
-    }
+    }
 
     // Met à jour les valeurs précédentes
     updatePreviousValues() {
@@ -319,18 +305,6 @@ class AntiCheat {
             this.updatePreviousValues();
         }, 1000);
 
-        // Surveille les modifications des propriétés de shopState
-        Object.keys(shopState).forEach(key => {
-            let value = shopState[key];
-            Object.defineProperty(shopState, key, {
-                get: () => value,
-                set: (newValue) => {
-                    if (this.validateValueChange(newValue, value, 1000000)) {
-                        value = newValue;
-                    }
-                }
-            });
-        });
 
         // Modifier l'écouteur d'événements pour les raccourcis clavier
         window.addEventListener('keydown', async (e) => {
