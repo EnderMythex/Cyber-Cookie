@@ -1,31 +1,47 @@
 <!DOCTYPE html>
-<html lang="fr" prefix="og: http://ogp.me/ns#">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>CyberCookie - 503</title>
-  <link rel="stylesheet" href="./assets/css/404x503.css">
-  <link rel="manifest" href="./manifest.json">
-  <link rel="icon" href="./assets/icons/48x48cookie.png" />
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CyberCookie - 503</title>
+    <meta name="description" content="CyberCookie Official Website, a game created by EnderMythex">
+    <meta name="keywords" content="Cookie, Click, Game, Cybercookie, Fun, EnderMythex">
+    <meta name="author" content="EnderMythex">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#a6791e">
+    <link rel="canonical" href="https://cybercookie.party">
 
-  <meta name="description" content="CyberCookie Official Website, a game created by EnderMythex" />
-  <meta property="og:title" content="CyberCookie - 503" />
-  <meta property="og:site_name" content="CyberCookie" />
-  <meta property="og:url" content="https://cybercookie.party/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://cybercookie.party/pictures/cookie.png" />
-  <meta property="og:description" content="CyberCookie Official Website, a game created by EnderMythex" />
-  <meta name="theme-color" content="#a6791e">
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="128x128" href="./assets/icons/128x128cookie.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="./assets/icons/64x64cookie.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="./assets/icons/48x48cookie.png">
+
+    <!-- Styles & Manifest -->
+    <link rel="stylesheet" href="./assets/css/404x503.css">
+    <link rel="manifest" href="./manifest.json">
+
+    <!-- Scripts -->
+    <script src="./assets/js/cookie.js" defer type="module"></script>
 </head>
 
 <body>
+  <div class="loader">
+    <div class="loader-content">
+        <div class="loader-spinner"></div>
+        <div class="loader-text">Loading...</div>
+    </div>
+</div>
   <script src="./assets/js/oneko.js"></script>
+
   <div class="overlay"></div>
   <div class="terminal">
     <h1>Error <span class="errorcode">503</span></h1>
-    <p class="output">The server is in maintenance, please retry later (F5)</p>
+    <p class="output">Website is in maintenance, please retry later (F5)</p>
     <p class="output">Please try to <a href="/">refresh</a> or <a href="/">return to the homepage</a>.</p>
+    <p class="output">Need Help ?  Check the <a href="https://discord.cybercookie.party">discord server</a>.</p>
     <p class="output">Good luck.</p>
   </div>
 </body>
