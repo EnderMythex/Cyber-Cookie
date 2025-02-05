@@ -59,24 +59,6 @@ class AntiCheat {
         return true;
     }
 
-    // Vérifie si un nombre est valide
-    isValidNumber(value) {
-        return typeof value === 'number' &&
-            !isNaN(value) &&
-            isFinite(value) &&
-            value >= 0;
-    }
-
-    // Vérifie la cohérence des changements de valeurs
-    validateValueChange(newValue, oldValue, maxChange) {
-        const change = Math.abs(newValue - oldValue);
-        if (change > maxChange) {
-            this.handleCheat(`Suspicious value change detected: ${change}`);
-            return false;
-        }
-        return true;
-    }
-
     // Détecte les clics trop rapides
     validateClick() {
         const currentTime = Date.now();
@@ -268,14 +250,6 @@ class AntiCheat {
                 alert.remove();
             }
         }, 5000);
-    }
-
-    // Met à jour les valeurs précédentes
-    updatePreviousValues() {
-        this.previousValues = {
-            count: shopState.count,
-            clickPower: shopState.clickPower
-        };
     }
 
     // Initialise l'anti-triche
@@ -298,13 +272,6 @@ class AntiCheat {
         if (localStorage.getItem('devToolsDetected')) {
             await this.handleDevToolsOpen();
         }
-
-        // Vérifie périodiquement l'état du jeu
-        setInterval(() => {
-            this.validateGameState();
-            this.updatePreviousValues();
-        }, 1000);
-
 
         // Modifier l'écouteur d'événements pour les raccourcis clavier
         window.addEventListener('keydown', async (e) => {
