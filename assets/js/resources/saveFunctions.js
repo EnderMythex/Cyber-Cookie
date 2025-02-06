@@ -209,22 +209,28 @@ export function saveToCookies() {
     document.cookie = `miniCookiesEnabled=${encrypt(otherState.miniCookiesEnabled)};path=/;max-age=2147483647;secure`;
 }
 
-/* --------------------------------------------------------------------------
- 
-                                Save limit
- 
+/* --------------------------------------------------------------------------  
+                                Save limit  
    -------------------------------------------------------------------------- */
 
-// Throttle les sauvegardes pour éviter les appels trop fréquents
+// Throttle les sauvegardes pour éviter les appels trop fréquents (1 minute)
 export const throttledSave = (() => {
     let lastSave = 0;
-
+    let saveTimeout = null;
 
     return () => {
         const now = Date.now();
-        if (now - lastSave >= SAVE_INTERVAL) {
+        const timeSinceLastSave = now - lastSave;
+
+        if (timeSinceLastSave >= 60000) { // 1 minute (60 000 ms)
             saveToCookies();
             lastSave = now;
+        } else {
+            if (saveTimeout) clearTimeout(saveTimeout);
+            saveTimeout = setTimeout(() => {
+                saveToCookies();
+                lastSave = Date.now();
+            }, 60000 - timeSinceLastSave);
         }
     };
 })();
