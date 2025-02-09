@@ -27,7 +27,7 @@
    
    import { otherState, playSound, vibrate, generateMiniCookie, updateRank, initializeToggles, initializeOtherHandlers, initializeAdminCookies, updateInterval, playSound2, initializeCookieEffects } from './resources/otherFunctions.js';
    
-   import { loadFromCookies, saveToCookies } from './resources/saveFunctions.js';
+   import { loadFromCookies, saveToCookies, initializePeriodicSave } from './resources/saveFunctions.js';
    
    import { initializeAuthListener, saveToFirestore } from './resources/googleFunctions.js';
    
@@ -76,6 +76,9 @@
        
        // Initialise l'anti-triche
        antiCheat.init();
+       
+       // Initialiser la sauvegarde périodique
+       initializePeriodicSave();
    });
    
    const effectsManager = new CookieEffectsManager();
