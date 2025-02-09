@@ -29,6 +29,7 @@
        doc,
        onSnapshot
    } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+   import { SAVE_INTERVAL } from '../config/config.js';
    
    let previousScores = new Map();
    let leaderboardUnsubscribe = null; // Pour stocker la fonction de désabonnement
@@ -49,21 +50,19 @@
                return;
            }
 
-           // Utiliser l'ID de l'utilisateur connecté au lieu de celui passé en paramètre
            const actualUserId = currentUser.uid;
            const actualUsername = username || currentUser.displayName || 'Anonymous';
 
-           // Vérification des paramètres requis
            if (!actualUserId || !actualUsername || score === undefined) {
                console.error("Missing required parameters for leaderboard update");
                return;
            }
 
-           // Add rate limiting
+           // Add rate limiting using SAVE_INTERVAL instead of hardcoded 5000ms
            const now = new Date().getTime();
            const lastUpdate = localStorage.getItem(`lastLeaderboardUpdate_${actualUserId}`);
            
-           if (lastUpdate && now - parseInt(lastUpdate) < 5000) {
+           if (lastUpdate && now - parseInt(lastUpdate) < SAVE_INTERVAL) {
                console.log("Leaderboard update throttled. Please wait.");
                return;
            }
@@ -105,6 +104,7 @@
    
    export async function loadLeaderboard() {
        const leaderboardContent = document.getElementById('leaderboardContent');
+       let lastUpdate = 0;
    
        try {
            const leaderboardQuery = query(
@@ -117,79 +117,90 @@
                leaderboardUnsubscribe();
            }
    
+           // Utiliser un interval plus long pour les mises à jour du leaderboard
+           const LEADERBOARD_UPDATE_INTERVAL = SAVE_INTERVAL * 2; // Double du SAVE_INTERVAL pour réduire la fréquence
+   
            leaderboardUnsubscribe = onSnapshot(leaderboardQuery, (querySnapshot) => {
-               if (!leaderboardContent.querySelector('.leaderboard-list')) {
-                   const leaderboardList = document.createElement('div');
-                   leaderboardList.className = 'leaderboard-list';
-                   leaderboardContent.appendChild(leaderboardList);
-               }
-   
-               const leaderboardList = leaderboardContent.querySelector('.leaderboard-list');
-               let rank = 1;
-               const currentScores = new Map();
-               const entries = new Map();
-   
-               // Première passe : créer ou mettre à jour les entrées
-               querySnapshot.forEach((doc) => {
-                   const data = doc.data();
-                   const userId = doc.id;
-                   currentScores.set(userId, data);
-   
-                   let entry = leaderboardList.querySelector(`[data-user-id="${userId}"]`);
-   
-                   if (!entry) {
-                       entry = document.createElement('div');
-                       entry.className = 'leaderboard-entry';
-                       entry.setAttribute('data-user-id', userId);
+               const now = Date.now();
+               // Ne mettre à jour que si suffisamment de temps s'est écoulé
+               if (now - lastUpdate >= LEADERBOARD_UPDATE_INTERVAL) {
+                   lastUpdate = now;
+                   
+                   if (!leaderboardContent.querySelector('.leaderboard-list')) {
+                       const leaderboardList = document.createElement('div');
+                       leaderboardList.className = 'leaderboard-list';
+                       leaderboardContent.appendChild(leaderboardList);
                    }
    
-                   const previousData = previousScores.get(userId);
-                   if (!previousData ||
-                       previousData.score !== data.score ||
-                       previousData.username !== data.username) {
+                   const leaderboardList = leaderboardContent.querySelector('.leaderboard-list');
+                   let rank = 1;
+                   const currentScores = new Map();
+                   const entries = new Map();
    
-                       entry.innerHTML = `
-                           <span class="rank">#${rank}</span>
-                           <span class="username">${data.username || 'Anonymous'}</span>
-                           <span class="score">${formatNumber(data.score)}</span>
+                   querySnapshot.forEach((doc) => {
+                       const data = doc.data();
+                       const userId = doc.id;
+                       currentScores.set(userId, data);
+   
+                       let entry = leaderboardList.querySelector(`[data-user-id="${userId}"]`);
+   
+                       if (!entry) {
+                           entry = document.createElement('div');
+                           entry.className = 'leaderboard-entry';
+                           entry.setAttribute('data-user-id', userId);
+                       }
+   
+                       const previousData = previousScores.get(userId);
+                       if (!previousData ||
+                           previousData.score !== data.score ||
+                           previousData.username !== data.username) {
+   
+                           entry.innerHTML = `
+                               <span class="rank">#${rank}</span>
+                               <span class="username">${data.username || 'Anonymous'}</span>
+                               <span class="score">${formatNumber(data.score)}</span>
+                           `;
+   
+                           entry.classList.add('updated');
+                           setTimeout(() => entry.classList.remove('updated'), 500);
+                       }
+   
+                       entries.set(userId, { entry, score: data.score });
+                       rank++;
+                   });
+   
+                   // Deuxième passe : réorganiser les entrées dans le bon ordre
+                   leaderboardList.innerHTML = ''; // Vider la liste
+                   const sortedEntries = Array.from(entries.values())
+                       .sort((a, b) => b.score - a.score);
+   
+                   sortedEntries.forEach((item, index) => {
+                       const rankSpan = item.entry.querySelector('.rank');
+                       if (rankSpan) {
+                           rankSpan.textContent = `#${index + 1}`;
+                       }
+                       leaderboardList.appendChild(item.entry);
+                   });
+   
+                   // Supprimer les entrées qui ne sont plus dans le top 10
+                   const oldEntries = leaderboardList.querySelectorAll('.leaderboard-entry');
+                   oldEntries.forEach(entry => {
+                       const userId = entry.getAttribute('data-user-id');
+                       if (!currentScores.has(userId)) {
+                           entry.remove();
+                       }
+                   });
+   
+                   // Mise à jour du DOM seulement si nécessaire
+                   if (JSON.stringify([...currentScores]) !== JSON.stringify([...previousScores])) {
+                       previousScores = currentScores;
+                   }
+   
+                   if (rank === 1) {
+                       leaderboardList.innerHTML = `
+                           <div class="leaderboard-empty">No scores yet. Be the first!</div>
                        `;
-   
-                       entry.classList.add('updated');
-                       setTimeout(() => entry.classList.remove('updated'), 500);
                    }
-   
-                   entries.set(userId, { entry, score: data.score });
-                   rank++;
-               });
-   
-               // Deuxième passe : réorganiser les entrées dans le bon ordre
-               leaderboardList.innerHTML = ''; // Vider la liste
-               const sortedEntries = Array.from(entries.values())
-                   .sort((a, b) => b.score - a.score);
-   
-               sortedEntries.forEach((item, index) => {
-                   const rankSpan = item.entry.querySelector('.rank');
-                   if (rankSpan) {
-                       rankSpan.textContent = `#${index + 1}`;
-                   }
-                   leaderboardList.appendChild(item.entry);
-               });
-   
-               // Supprimer les entrées qui ne sont plus dans le top 10
-               const oldEntries = leaderboardList.querySelectorAll('.leaderboard-entry');
-               oldEntries.forEach(entry => {
-                   const userId = entry.getAttribute('data-user-id');
-                   if (!currentScores.has(userId)) {
-                       entry.remove();
-                   }
-               });
-   
-               previousScores = currentScores;
-   
-               if (rank === 1) {
-                   leaderboardList.innerHTML = `
-                       <div class="leaderboard-empty">No scores yet. Be the first!</div>
-                   `;
                }
            }, (error) => {
                if (error.code === 'resource-exhausted') {
@@ -222,6 +233,14 @@
            });
    
            observer.observe(leaderboardContent, { childList: true, subtree: true });
+   
+           // Retourner une fonction de nettoyage
+           return JSON.stringify(() => {
+               if (leaderboardUnsubscribe) {
+                   leaderboardUnsubscribe();
+                   leaderboardUnsubscribe = null;
+               }
+           });
    
        } catch (error) {
            console.error("Error setting up leaderboard:", error);
@@ -271,7 +290,11 @@
                extension.style.display = 'none';
                shop.style.display = 'none';
                settings.style.display = 'none';
-               loadLeaderboard(); // Charger le leaderboard quand on l'affiche
+               
+               // Démarrer le chargement périodique
+               const cleanupFn = await loadLeaderboard();
+               leaderboardContainer.dataset.cleanup = cleanupFn;
+               
            } else {
                leaderboardContainer.style.display = "none";
                cookie.style.display = 'block';
@@ -281,10 +304,12 @@
                extension.style.display = 'block';
                shop.style.display = 'block';
                settings.style.display = 'block';
-               // Désabonner quand on cache le leaderboard
-               if (leaderboardUnsubscribe) {
-                   leaderboardUnsubscribe();
-                   leaderboardUnsubscribe = null;
+               
+               // Exécuter la fonction de nettoyage
+               if (leaderboardContainer.dataset.cleanup) {
+                   const cleanupFn = new Function(`return ${leaderboardContainer.dataset.cleanup}`)();
+                   cleanupFn();
+                   delete leaderboardContainer.dataset.cleanup;
                }
            }
        });
