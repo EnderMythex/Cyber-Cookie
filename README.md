@@ -2,7 +2,8 @@
   <img src="https://github.com/user-attachments/assets/0b9057e2-54dc-4a9b-b0fe-73428fec8af6" alt="Cyber-Cookie Logo" width="120" height="120">
 </p>
 
-<h1 align="center">🍪 Cyber-Cookie</h1>
+<h1 align="center">🍪 Cyber-Cookie V1</h1>
+<p align="center">----------___________ CyberCookie V2 (coming soon) ___________----------</p>
 
 <p align="center">
   A modern, cyberpunk reinvention of Cookie Clicker available as a browser extension and web game.
@@ -28,16 +29,6 @@
 ## 🎮 About the Game
 
 Cyber-Cookie is a futuristic reinterpretation of the classic Cookie Clicker. Set in a captivating cyberpunk universe, click to collect cookies and grow your automated production empire. Featuring neon-styled graphics and innovative gameplay mechanics, Cyber-Cookie offers a unique experience that will keep you engaged for hours.
-
-### ✨ Key Features (coming soon)
-
-- 🌐 Futuristic cyberpunk interface
-- 🔄 Reimagined progression system
-- 🛠️ Numerous upgrades and bonuses
-- 🏆 Achievement system
-- 💾 Automatic save feature
-- 📱 Multi-platform compatibility
- 
  
 ## 📥 Download / Play
 
@@ -83,4 +74,4 @@ For full documentation on features, gameplay strategies, and updates, visit our 
   <i>Join the Cyber-Cookie adventure and start building your cookie empire today! 🍪✨</i>
 </p>
 
-<h6 align="center">This game currently in beta and more features is coming!</h6>
+<h6 align="center">The V1 of this game is currently closed to updates (V2 is coming soon)</h6>
