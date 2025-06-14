@@ -24,6 +24,7 @@
     <link rel="manifest" href="./manifest.json">
 
     <!-- Scripts -->
+    <script src="https://discord.com/api/embedded-sdk-stub.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
     <script src="./assets/js/cookie.js" defer type="module"></script>
     <script src="./assets/js/library/pixi.js" defer type="module"></script>
@@ -127,6 +128,25 @@
             Rank : <span id="rankIndicator"></span> | <span id="cps">0</span> cookies/s
         </div>
     </div>
+<script>
+// Discord SDK (optionnel pour améliorer l'intégration)
+if (typeof DiscordSDK !== 'undefined') {
+    const discordSdk = new DiscordSDK('1205192151881752636');
+    
+    discordSdk.ready().then(() => {
+        console.log('Discord SDK initialisé !');
+        
+        // Optionnel : récupérer les participants du vocal
+        discordSdk.commands.getChannelParticipants({
+            channel_id: discordSdk.channelId,
+        }).then(participants => {
+            console.log('Participants:', participants);
+            // Vous pouvez utiliser ces infos dans votre jeu
+        }).catch(console.error);
+        
+    }).catch(console.error);
+}
+</script>
 </body>
 
 </html>
