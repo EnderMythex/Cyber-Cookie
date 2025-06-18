@@ -25,6 +25,8 @@
    
    import { TURNSTILE_SITE_KEY, TURNSTILE_SECRET_KEY } from './config/config.js';
    
+   import { showClosureAnnouncement } from './resources/closureAnnouncement.js';
+   
    /* --------------------------------------------------------------------------
    
                                      Google Login                                                                                                                                  
@@ -171,6 +173,9 @@
       -------------------------------------------------------------------------- */
    
    document.addEventListener('DOMContentLoaded', function () {
+       // Afficher le pop-up de fermeture de la plateforme
+       showClosureAnnouncement();
+       
        // Désactive les boutons au chargement
        const googleLoginBtn = document.getElementById('google-login-btn');
        const guestButton = document.getElementById('guest-button');
@@ -248,4 +253,3 @@
      // Optionnel: Stocker le token pour validation côté serveur
      localStorage.setItem('turnstileToken', token);
    };
-   

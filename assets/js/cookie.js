@@ -37,6 +37,8 @@
    
    import { antiCheat } from './resources/anticheat.js';
    
+   import { showClosureAnnouncement } from './resources/closureAnnouncement.js';
+   
    // Éléments DOM
    const cookie = document.getElementById('cookie');
    const display = document.getElementById('count');
@@ -60,6 +62,9 @@
       -------------------------------------------------------------------------- */
    
    document.addEventListener('DOMContentLoaded', function () {
+       // Afficher le pop-up de fermeture de la plateforme
+       showClosureAnnouncement(playSound);
+       
        initializeThemeHandlers(playSound, saveToCookies);
        initializeThemeButton();
        initializeShopHandlers(playSound, saveToCookies);
