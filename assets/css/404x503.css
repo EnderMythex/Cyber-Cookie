@@ -39,7 +39,7 @@ body {
     box-sizing: border-box;
     height: 100%;
     background-color: #000000;
-    background-image: url('./assets/backgrounds/main_background.jpg');
+    background-image: url('../backgrounds/main_background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-size: cover;
@@ -134,4 +134,4 @@ a::after {
 
 .errorcode {
     color: white;
-} 
+}
