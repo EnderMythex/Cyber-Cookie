@@ -1,10 +1,10 @@
 /******************************************************************************************
  *                                                                                        *
  *           ██████╗██╗   ██╗      ██████╗ ██████╗  ██████╗ ██╗  ██╗██╗███████╗           *
- *           ██╔════╝╚██╗ ██╔╝     ██╔════╝██╔═══██╗██╔═══██╗██║ ██╔╝██║██╔════╝          *
+ *           ██╔════╝╚██╗ ██╔╝     ██╔════╝██╔═══██╗██╔═══██╗██║ ██╔╝██║██╔════╗           *
  *           ██║      ╚████╔╝█████╗██║     ██║   ██║██║   ██║█████╔╝ ██║█████╗            *
  *           ██║       ╚██╔╝ ╚════╝██║     ██║   ██║██║   ██║██╔═██╗ ██║██╔══╝            *
- *           ╚██████╗   ██║        ╚██████╗╚██████╔╝╚██████╔╝██║  ██╗██║███████╗          *
+ *           ╚██████╗   ██║        ╚██████╗╚██████╔╝╚██████╔╝██║  ██╗██║███████╗         *
  *            ╚═════╝   ╚═╝         ╚═════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝╚══════╝          *
  *                                                                                        *
  *          @project CyberCookie        @creator EndeMythex        @version 1.6.0         *
@@ -17,7 +17,7 @@ export class CookieEffectsManager {
         this.ctx = this.canvas.getContext('2d');
         this.particles = [];
         this.cookieImage = new Image();
-        this.cookieImage.src = '/assets/icons/48x48cookie.png';
+        this.cookieImage.src = './assets/icons/48x48cookie.png';
         this.textParticles = [];
         this.ctx.font = '24px clockDigital';
         
@@ -153,4 +153,4 @@ export class CookieEffectsManager {
     generateText(x, y, text) {
         this.addTextParticle(x, y, text);
     }
-} 
+}

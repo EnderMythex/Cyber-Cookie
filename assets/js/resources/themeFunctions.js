@@ -1,10 +1,10 @@
 /******************************************************************************************
  *                                                                                        *
  *           ██████╗██╗   ██╗      ██████╗ ██████╗  ██████╗ ██╗  ██╗██╗███████╗           *
- *           ██╔════╝╚██╗ ██╔╝     ██╔════╝██╔═══██╗██╔═══██╗██║ ██╔╝██║██╔════╝          *
+ *           ██╔════╝╚██╗ ██╔╝     ██╔════╝██╔═══██╗██╔═══██╗██║ ██╔╝██║██╔════╗           *
  *           ██║      ╚████╔╝█████╗██║     ██║   ██║██║   ██║█████╔╝ ██║█████╗            *
  *           ██║       ╚██╔╝ ╚════╝██║     ██║   ██║██║   ██║██╔═██╗ ██║██╔══╝            *
- *           ╚██████╗   ██║        ╚██████╗╚██████╔╝╚██████╔╝██║  ██╗██║███████╗          *
+ *           ╚██████╗   ██║        ╚██████╗╚██████╔╝╚██████╔╝██║  ██╗██║███████╗         *
  *            ╚═════╝   ╚═╝         ╚═════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝╚══════╝          *
  *                                                                                        *
  *          @project CyberCookie        @creator EndeMythex        @version 1.6.0         *
@@ -13,9 +13,9 @@
 
 /* --------------------------------------------------------------------------
 
-                              Setup / Import Resources                                                                                                                                  
+                               Setup / Import Resources                                                                                                                                  
 
-   -------------------------------------------------------------------------- */
+    -------------------------------------------------------------------------- */
 
 import { shopState } from './shopFunctions.js';
 
@@ -23,9 +23,9 @@ import { playSound } from './otherFunctions.js';
 
 /* --------------------------------------------------------------------------
  
-                              Variables des thèmes
- 
-   -------------------------------------------------------------------------- */
+                               Variables des thèmes
+  
+    -------------------------------------------------------------------------- */
 
 export const themeState = {
     theme1Purchased: false,
@@ -45,9 +45,9 @@ export const themeState = {
 
 /* --------------------------------------------------------------------------
  
-                              Fonctions des thèmes
- 
-   -------------------------------------------------------------------------- */
+                               Fonctions des thèmes
+  
+    -------------------------------------------------------------------------- */
 
 export function applyTheme(themeName, backgroundPath) {
     const container = document.querySelector('.container');
@@ -91,9 +91,9 @@ export function updateThemeButtons() {
 
 /* --------------------------------------------------------------------------
  
-                        Gestionnaires d'événements des thèmes
- 
-   -------------------------------------------------------------------------- */
+                         Gestionnaires d'événements des thèmes
+  
+    -------------------------------------------------------------------------- */
 
 export function initializeThemeHandlers(playSound, saveToCookies) {
     const buytheme1 = document.getElementById('buytheme1');
@@ -124,25 +124,25 @@ export function initializeThemeHandlers(playSound, saveToCookies) {
         }
     }
 
-    buytheme1.addEventListener('click', () => handleThemeClick(buytheme1, 0.5, 1, '/assets/backgrounds/background_1.gif'));
-    buytheme2.addEventListener('click', () => handleThemeClick(buytheme2, 7000, 2, '/assets/backgrounds/background_2.jpg'));
-    buytheme3.addEventListener('click', () => handleThemeClick(buytheme3, 16000, 3, '/assets/backgrounds/background_3.gif'));
-    buytheme4.addEventListener('click', () => handleThemeClick(buytheme4, 120000, 4, '/assets/backgrounds/background_4.gif'));
-    buytheme5.addEventListener('click', () => handleThemeClick(buytheme5, 670000, 5, '/assets/backgrounds/background_5.gif'));
-    buytheme6.addEventListener('click', () => handleThemeClick(buytheme6, 1300000, 6, '/assets/backgrounds/background_6.gif'));
-    buytheme7.addEventListener('click', () => handleThemeClick(buytheme7, 2000000, 7, '/assets/backgrounds/background_7.gif'));
-    buytheme8.addEventListener('click', () => handleThemeClick(buytheme8, 4000000, 8, '/assets/backgrounds/background_8.gif'));
-    buytheme9.addEventListener('click', () => handleThemeClick(buytheme9, 8000000, 9, '/assets/backgrounds/background_9.gif'));
-    buytheme10.addEventListener('click', () => handleThemeClick(buytheme10, 16000000, 10, '/assets/backgrounds/background_10.gif'));
-    buytheme11.addEventListener('click', () => handleThemeClick(buytheme11, 32000000, 11, '/assets/backgrounds/background_11.gif'));
-    buytheme12.addEventListener('click', () => handleThemeClick(buytheme12, 64000000, 12, '/assets/backgrounds/background_12.gif'));
+    buytheme1.addEventListener('click', () => handleThemeClick(buytheme1, 0.5, 1, './assets/backgrounds/background_1.gif'));
+    buytheme2.addEventListener('click', () => handleThemeClick(buytheme2, 7000, 2, './assets/backgrounds/background_2.jpg'));
+    buytheme3.addEventListener('click', () => handleThemeClick(buytheme3, 16000, 3, './assets/backgrounds/background_3.gif'));
+    buytheme4.addEventListener('click', () => handleThemeClick(buytheme4, 120000, 4, './assets/backgrounds/background_4.gif'));
+    buytheme5.addEventListener('click', () => handleThemeClick(buytheme5, 670000, 5, './assets/backgrounds/background_5.gif'));
+    buytheme6.addEventListener('click', () => handleThemeClick(buytheme6, 1300000, 6, './assets/backgrounds/background_6.gif'));
+    buytheme7.addEventListener('click', () => handleThemeClick(buytheme7, 2000000, 7, './assets/backgrounds/background_7.gif'));
+    buytheme8.addEventListener('click', () => handleThemeClick(buytheme8, 4000000, 8, './assets/backgrounds/background_8.gif'));
+    buytheme9.addEventListener('click', () => handleThemeClick(buytheme9, 8000000, 9, './assets/backgrounds/background_9.gif'));
+    buytheme10.addEventListener('click', () => handleThemeClick(buytheme10, 16000000, 10, './assets/backgrounds/background_10.gif'));
+    buytheme11.addEventListener('click', () => handleThemeClick(buytheme11, 32000000, 11, './assets/backgrounds/background_11.gif'));
+    buytheme12.addEventListener('click', () => handleThemeClick(buytheme12, 64000000, 12, './assets/backgrounds/background_12.gif'));
 }
 
 /* --------------------------------------------------------------------------
  
-                              Themes Sections
- 
-   -------------------------------------------------------------------------- */
+                               Themes Sections
+  
+    -------------------------------------------------------------------------- */
 
 export function initializeThemeButton() {
     const theme = document.getElementById('theme');
