@@ -1,10 +1,10 @@
 /******************************************************************************************
  *                                                                                        *
  *           ██████╗██╗   ██╗      ██████╗ ██████╗  ██████╗ ██╗  ██╗██╗███████╗           *
- *           ██╔════╝╚██╗ ██╔╝     ██╔════╝██╔═══██╗██╔═══██╗██║ ██╔╝██║██╔════╝          *
+ *           ██╔════╝╚██╗ ██╔╝     ██╔════╝██╔═══██╗██╔═══██╗██║ ██╔╝██║██╔════╗           *
  *           ██║      ╚████╔╝█████╗██║     ██║   ██║██║   ██║█████╔╝ ██║█████╗            *
  *           ██║       ╚██╔╝ ╚════╝██║     ██║   ██║██║   ██║██╔═██╗ ██║██╔══╝            *
- *           ╚██████╗   ██║        ╚██████╗╚██████╔╝╚██████╔╝██║  ██╗██║███████╗          *
+ *           ╚██████╗   ██║        ╚██████╗╚██████╔╝╚██████╔╝██║  ██╗██║███████╗         *
  *            ╚═════╝   ╚═╝         ╚═════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝╚══════╝          *
  *                                                                                        *
  *          @project CyberCookie        @creator EndeMythex        @version 1.6.0         *
@@ -13,9 +13,9 @@
 
 /* --------------------------------------------------------------------------
 
-                              Import Resources                                                                                                                                  
+                               Import Resources                                                                                                                                  
 
-   -------------------------------------------------------------------------- */
+    -------------------------------------------------------------------------- */
 
 @import 'anticheat.css';
 @import 'container.css';
@@ -38,7 +38,7 @@ html {
     overflow: hidden;
     display: flex;
     justify-content: center;
-    background-image: url('/assets/backgrounds/main_background.jpg');
+    background-image: url('./assets/backgrounds/main_background.jpg');
     background-size: cover;
     align-items: center;
     -webkit-user-select: none;
@@ -55,6 +55,6 @@ div {
 /*Custom Font Import*/
 @font-face {
     font-family: "clockDigital";
-    src: url("/assets/fonts/digital-7.woff2") format("woff2"),
-        url("/assets/fonts/digital-7.woff") format("woff");
+    src: url("./assets/fonts/digital-7.woff2") format("woff2"),
+        url("./assets/fonts/digital-7.woff") format("woff");
 } 
