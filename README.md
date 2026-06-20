@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">🍪 Cyber-Cookie V1</h1>
-<p align="center">----------___________ CyberCookie V2 (coming soon) ___________----------</p>
+<p align="center">----------___________ CyberCookie V2 : https://cybercookie.party ___________----------</p>
 
 <p align="center">
   A modern, cyberpunk reinvention of Cookie Clicker available as a browser extension and web game.
@@ -34,13 +34,11 @@ Cyber-Cookie is a futuristic reinterpretation of the classic Cookie Clicker. Set
 
 ### Web Version
 - 🌐 [Official Website](https://cybercookie.party/) - BETA 1.6.0
-- 📱 [Telegram Bot](http://t.me/cyber_cookiebot) - BETA 1.6.0
 
 ### Extensions
 - [<img src="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/chrome.svg" width="16" height="16"> Chrome](https://chromewebstore.google.com/detail/cyber-cookie/kbjidhhmcehbnejmdpgfhnaipenoinjb) - V1.6.0 BETA
 - [<img src="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/edge.svg" width="16" height="16"> Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/cyber-cookie/bnemlfjjhljainjpopobgpmondlckejj) - V1.5.9
 - [<img src="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/firefox.svg" width="16" height="16"> Firefox](https://addons.mozilla.org/en/firefox/addon/cyber-cookie/) - V1.5.9
-- [<img src="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/opera.svg" width="16" height="16"> Opera](/) - V1.5.9 (Coming Soon)
  
  
 ## ⚠️ Important
@@ -53,13 +51,7 @@ Cyber-Cookie is a futuristic reinterpretation of the classic Cookie Clicker. Set
 > To suggest changes, additions, or report bugs, join our [Discord server](https://discord.cybercookie.party/).
 
 > [!NOTE]
-> For more technical details, visit the [CyberCookie Wiki](https://wiki.cybercookie.party/).
- 
- 
-## 📚 Documentation
-
-For full documentation on features, gameplay strategies, and updates, visit our [Wiki](https://wiki.cybercookie.party/).
- 
+> For the version 2, visit [CyberCookie](https://cybercookie.party/).
  
 ## 🎨 Credits
 
@@ -74,4 +66,4 @@ For full documentation on features, gameplay strategies, and updates, visit our 
   <i>Join the Cyber-Cookie adventure and start building your cookie empire today! 🍪✨</i>
 </p>
 
-<h6 align="center">The V1 of this game is currently closed to updates (V2 is coming soon)</h6>
+<h6 align="center">The V1 of this game is currently closed to updates (V2 : https://cybercookie.party )</h6>
